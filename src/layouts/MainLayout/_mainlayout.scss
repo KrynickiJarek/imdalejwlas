@@ -1,7 +1,8 @@
-.bg_z0 .overflow_container .bg_z1 .bg_z2 .bg_z3{
+.bg_z0 .overflow_container .bg_z1 .bg_z2 .bg_z3 {
   margin: 0;
   padding: 0;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -55,6 +56,65 @@
     }
   }
 }
+
+
+.billboard_container {
+  .pole {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vw;
+    background-image: url("../../images/pole.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 30vw;
+  }
+
+  .billboard {
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60vw;
+    height: (1000/1800)*60vw;
+    background-image: url("../../images/billboard_yellow.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 97vw;
+    left: 20vw;
+
+    .js_logo {
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 10%;
+      height: 20%;
+      background-image: url("../../images/js_logo.png");
+      background-size: contain;
+      position: absolute;
+      top: 67%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .billbord_head{
+      text-align: center;
+      font-size: 4rem;
+      line-height: 5rem;
+      color: #000;
+      font-weight: 900;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+
+//.hide_scroll{
+//  display: none;
+//}
 
 /////czyszczenie, na media się rozjechało. nie można dać wszystkim background-size : contain oraz position" absolute (nawet bez bg_z0
 //.bg_z0 .overflow_container .bg_z1 .bg_z2 .bg_z3{
@@ -116,7 +176,7 @@
 //}
 
 
-////////////// do skoryggowania szerokość - pasek do przewijania. Przed porządkami
+////////////// do skorygowania szerokość - pasek do przewijania. Przed porządkami
 //.bg_z0 {
 //  margin: 0;
 //  padding: 0;
