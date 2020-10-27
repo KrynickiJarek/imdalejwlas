@@ -1,12 +1,12 @@
+import React from "react";
 import './App.scss';
+import MainLayout from "../MainLayout/MainLayout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Im dalej w las tym więcej JS</h1>
-      </header>
-    </div>
+      <>
+      <MainLayout/>
+      </>
   );
 }
 

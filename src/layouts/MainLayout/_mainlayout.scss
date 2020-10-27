@@ -1,0 +1,187 @@
+.bg_z0 .overflow_container .bg_z1 .bg_z2 .bg_z3{
+  margin: 0;
+  padding: 0;
+  background-position: center;
+}
+
+
+.bg_z0 {
+  width: 100vw;
+  height: 150vw;
+  background-image: url("../../images/bg_z0.jpg");
+  background-size: contain;
+  position: relative;
+  //z-index: 0;
+
+  .overflow_container {
+    width: 100vw;
+    height: (1300 / 1920)*100vw;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+
+    .bg_z1 {
+      width: (2000 / 1920)*100vw;
+      height: (1300 / 1920)*100vw;
+      background-image: url("../../images/bg_z1_2000.png");
+      background-size: contain;
+      position: absolute;
+      bottom: -2vw;
+      left: -2vw;
+      //z-index: 1;
+    }
+  }
+
+  .bg_z2 {
+    width: 100vw;
+    height: (2880 / 1920)*100vw;
+    background-image: url("../../images/bg_z2.png");
+    background-size: contain;
+    position: absolute;
+    bottom: -55vw;
+    left: 0;
+    //z-index: 2;
+
+    .bg_z3 {
+      width: 100vw;
+      height: (2880 / 1920)*100vw;
+      background-image: url("../../images/bg_z3_blur.png");
+      background-size: contain;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      //z-index: 3;
+    }
+  }
+}
+
+/////czyszczenie, na media się rozjechało. nie można dać wszystkim background-size : contain oraz position" absolute (nawet bez bg_z0
+//.bg_z0 .overflow_container .bg_z1 .bg_z2 .bg_z3{
+//  margin: 0;
+//  padding: 0;
+//  background-position: center;
+//  background-size: contain;
+//}
+//
+//
+//.bg_z0 {
+//  width: 100vw;
+//  height: 150vw;
+//  background-image: url("../../images/bg_z0.jpg");
+//  position: relative;
+//  //z-index: 0;
+//  //overflow: hidden;
+//  //overflow-y: hidden;
+//
+//  .overflow_container {
+//
+//    width: 100vw;
+//    height: (1300 / 1920)*100vw;
+//    bottom: 0;
+//    left: 0;
+//    overflow: hidden;
+//
+//
+//    .bg_z1 {
+//      width: (2000 / 1920)*100vw;
+//      height: (1300 / 1920)*100vw;
+//      background-image: url("../../images/bg_z1_2000.png");
+//      position: absolute;
+//      bottom: -2vw;
+//      left: -2vw;
+//      //z-index: 1;
+//    }
+//  }
+//
+//  .bg_z2 {
+//    width: 100vw;
+//    height: (2880 / 1920)*100vw;
+//    background-image: url("../../images/bg_z2.png");
+//    position: absolute;
+//    bottom: -55vw;
+//    left: 0;
+//    //z-index: 2;
+//
+//    .bg_z3 {
+//      width: 100vw;
+//      height: (2880 / 1920)*100vw;
+//      background-image: url("../../images/bg_z3_blur.png");
+//      position: absolute;
+//      bottom: 0;
+//      left: 0;
+//      //z-index: 3;
+//    }
+//  }
+//}
+
+
+////////////// do skoryggowania szerokość - pasek do przewijania. Przed porządkami
+//.bg_z0 {
+//  margin: 0;
+//  padding: 0;
+//  width: 100vw;
+//  height: 150vw;
+//  background-image: url("../../images/bg_z0.jpg");
+//  background-size: contain;
+//  background-position: center;
+//  //z-index: 0;
+//  position: relative;
+//  //overflow: hidden;
+//  //overflow-y: hidden;
+//
+//  .overflow_container {
+//    margin: 0;
+//    padding: 0;
+//    width: 100vw;
+//    height: (1300 / 1920)*100vw;
+//    position: absolute;
+//    bottom: 0;
+//    left: 0;
+//    overflow: hidden;
+//
+//    .bg_z1 {
+//      margin: 0;
+//      padding: 0;
+//      width: (2000 / 1920)*100vw;
+//      height: (1300 / 1920)*100vw;
+//      background-image: url("../../images/bg_z1_2000.png");
+//      background-size: contain;
+//      background-position: center;
+//      position: absolute;
+//      bottom: -2vw;
+//      left: -2vw;
+//      //overflow: hidden;
+//      //z-index: 1;
+//    }
+//  }
+//
+//  .bg_z2 {
+//    margin: 0;
+//    padding: 0;
+//    width: 100vw;
+//    height: (2880 / 1920)*100vw;
+//    background-image: url("../../images/bg_z2.png");
+//    background-size: contain;
+//    background-position: center;
+//    position: absolute;
+//    bottom: -55vw;
+//    left: 0;
+//    //z-index: 2;
+//
+//    .bg_z3 {
+//      margin: 0;
+//      padding: 0;
+//      width: 100vw;
+//      height: (2880 / 1920)*100vw;
+//      background-image: url("../../images/bg_z3_blur.png");
+//      background-size: contain;
+//      background-position: center;
+//      position: absolute;
+//      bottom: 0;
+//      left: 0;
+//      //z-index: 3;
+//    }
+//  }
+//}
+
