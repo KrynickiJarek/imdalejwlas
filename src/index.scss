@@ -1,0 +1,13 @@
+@import "./styles/reset";
+@import "./styles/fonts";
+
+body {
+  margin: 0;
+  font-family: $main-fonts;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: $code-fonts;
+}
