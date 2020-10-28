@@ -8,21 +8,19 @@ const LeavesFocus = () => {
     opacityStyle.opacity = opacity;
 
 
-useEffect(() => {
-        window.onscroll = () => {
-            const opacityCalc = (4.5 - 5 * ((window.scrollY + window.innerHeight) / document.body.scrollHeight)).toFixed(2)
-            setOpacity(opacityCalc > 1 ? 1 : opacityCalc < 0 ? 0 : opacityCalc);
-            // console.log("xxx" + window.scrollY);
-            // console.log(document.body.scrollHeight);
-            console.log(opacityCalc);
+    useEffect(() => {
+            window.onscroll = () => {
+                const opacityCalc = (4.5 - 5 * ((window.scrollY + window.innerHeight) / document.body.scrollHeight)).toFixed(2)
+                setOpacity(opacityCalc > 1 ? 1 : opacityCalc < 0 ? 0 : opacityCalc);
+                // console.log(opacityCalc);
 
-        }
-    },[]
-)
-return (
-    <div style={opacityStyle} className="bg_z3">
-    </div>
-)
+            }
+        }, []
+    )
+    return (
+        <div style={opacityStyle} className="bg_z3">
+        </div>
+    )
 }
 
 
@@ -33,8 +31,10 @@ const MainLayout = () => {
             <div className="billboard_container">
                 <div className="pole"/>
                 <div className="billboard">
-                    <h2 className="billbord_head">IM DALEJ W LAS<br/>TYM WIĘCEJ</h2>
+                    <h2 className="billboard_head">IM DALEJ W LAS<br/>TYM WIĘCEJ</h2>
+                    <div className="js_logo-black"/>
                     <div className="js_logo"/>
+                    <a href="" className="billboard_link">by Jarosław Krynicki</a>
                 </div>
             </div>
 
