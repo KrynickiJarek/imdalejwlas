@@ -34,7 +34,7 @@ const MainLayout = () => {
                     <h2 className="billboard_head">IM DALEJ W LAS<br/>TYM WIĘCEJ</h2>
                     <div className="js_logo-black"/>
                     <div className="js_logo"/>
-                    <a href="" className="billboard_link">by Jarosław Krynicki</a>
+                    <a href="#" className="billboard_link">by Jarosław Krynicki</a>
                 </div>
             </div>
 
