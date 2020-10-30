@@ -14,18 +14,18 @@ const Flashcard = () => {
     })
 
 
-    const [flipPosition, setFlipPosition] = useState("");
-    const flipStyle = {}
-    flipStyle.transform = flipPosition;
+    const [turn, setTurn] = useState("");
+    const turnStyle = {}
+    turnStyle.transform = turn;
 
     const handleTurnY = () => {
-        setFlipPosition("rotateY(180deg)");
+        setTurn("rotateY(180deg)");
     }
     const handleTurnYBack = () => {
-        setFlipPosition("rotateY(0)");
+        setTurn("rotateY(0)");
     }
     const handleTurnX = () => {
-        setFlipPosition("rotateY(360deg)");
+        setTurn("rotateY(360deg)");
     }
 
     const [currQuestion, setCurrQuestion] = useState(questions[0]);
@@ -38,24 +38,13 @@ const Flashcard = () => {
         setCurrQuestion(arr[questionNumber]);
     }
 
-    //     for (let number of questionNumber) {
-    //         number.innerHTML = `Pytanie nr: ${randomQuestionNumber + 1}`
-    //     }
-    //     questionContent.innerHTML = `${array[randomQuestionNumber].questionContent}`
-    //     questionCode.innerHTML = `${array[randomQuestionNumber].questionCode}`
-    //     answerContent.innerHTML = `${array[randomQuestionNumber].answerContent}`
-    //     answerCode.innerHTML = `${array[randomQuestionNumber].answerCode}`
-    //     for (let tag of tagList) {
-    //         tag.innerHTML = `Tagi: ${array[randomQuestionNumber].tags.join(", ")}`
-    //     }
-    // }
 
     return (
         <div className="flashcard_container">
 
             <div style={flashcardStyle} className="flashcard_box">
 
-                <div style={flipStyle} className="flipping_card">
+                <div style={turnStyle} className="flipping_card">
                     <div className="question_box">
                         <div className="question_number">Pytanie nr: {questionNumber+1}</div>
                         <div className="question_content">{currQuestion.questionContent}</div>

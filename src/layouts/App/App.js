@@ -21,7 +21,7 @@ useEffect(() => {
         <>
             <MainLayout/>
             <StartBox/>
-            <Flashcard/>
+            {/*<Flashcard/>*/}
         </>
     );
 }
