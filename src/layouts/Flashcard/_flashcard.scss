@@ -1,0 +1,79 @@
+@import "src/styles/fonts";
+@import "src/styles/colors";
+
+
+.flashcard_container {
+  position: relative;
+  width: 100vw;
+  height: 55vw;
+  
+  .flashcard_box {
+    position: absolute;
+    width: 650px;
+    height: 400px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, +50%);
+
+    .flipping_card {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all 0.8s ease;
+
+      .question_box, .answer_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        //overflow: hidden;
+        border-radius: 20px;
+        color: $font-color;
+
+
+      }
+
+      .question_box {
+        background: $question-color-bg;
+        border: 10px solid $question-color-br;
+      }
+
+      .answer_box {
+
+        background: $answer-color-bg;
+        border: 10px solid $answer-color-br;
+        transform: rotateY(180deg);
+      }
+
+      .question_number {
+        align-self: flex-end;
+        padding: 10px;
+      }
+
+      .tag_list {
+        align-self: flex-start;
+        padding: 10px;
+      }
+
+    }
+
+
+  }
+
+
+}
+
+
+
+
+
