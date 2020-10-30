@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import './App.scss';
 import MainLayout from "../MainLayout/MainLayout";
 import StartBox from "../StartBox/StartBox";
-import Flashcard from "../Flashcard/Flashcard";
+// import Flashcard from "../Flashcard/Flashcard";
 
 
 function App() {

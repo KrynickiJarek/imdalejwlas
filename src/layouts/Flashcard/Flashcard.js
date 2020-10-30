@@ -24,9 +24,9 @@ const Flashcard = () => {
     const handleTurnYBack = () => {
         setTurn("rotateY(0)");
     }
-    const handleTurnX = () => {
-        setTurn("rotateY(360deg)");
-    }
+    // const handleTurnX = () => {
+    //     setTurn("rotateY(360deg)");
+    // }
 
     const [currQuestion, setCurrQuestion] = useState(questions[0]);
     const [questionNumber, setQuestionNumber] = useState(0);
@@ -97,7 +97,7 @@ const questions = [
         questionContent: `W jaki sposób możemy skorzystać z funkcji biblioteki React w pliku JavaScript? `,
         questionCode: ``,
         answerContent: `Należy go zaimportować moduł react jako React:`,
-        answerCode: `import React from \"react\";`,
+        answerCode: `import React from "react";`,
         tags: ["JS", "React"]
     },
     {
@@ -105,7 +105,7 @@ const questions = [
         questionCode: ``,
         answerContent: `Moduł react-dom importujemy jednorazowo, tylko w głównym pliku aplikacji,
         wpisując następujący kod:`,
-        answerCode: `import ReactDOM from \"react-dom\";`,
+        answerCode: `import ReactDOM from "react-dom";`,
         tags: ["JS", "React"]
     },
     {
