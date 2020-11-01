@@ -1,0 +1,161 @@
+@import "../../styles/colors";
+
+.bottomPosition {
+  position: relative;
+  //width: 100vw;
+
+  .leaves_focus {
+    width: 100vw;
+    height: (2880 / 1920)*100vw;
+    background-image: url("../../images/bg_z3_blur.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .bottomWindow {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .startBox_container {
+    width: 900px;
+    height: 600px;
+
+    .flipping_box {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all 0.8s ease;
+
+      .arrow_box, .gameBox_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 20px;
+        box-sizing: border-box;
+      }
+
+      .arrow_box {
+        font-size: 250px;
+        color: $arrow-color;
+      }
+
+      .gameBox_container {
+        transform: rotateY(180deg) rotate(180deg);
+
+        .startBox_green{
+          width: 100%;
+          height: 100%;
+          background: $startbox-color-bg;
+          border: 15px solid $startbox-color-br;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+        }
+        .startBox_white{
+          width: 650px;
+          height: 400px;
+          background: $question-color-bg;
+          border: 10px solid $question-color-br;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s ease;
+          box-sizing: border-box;
+
+        }
+      }
+    }
+  }
+}
+
+
+//@import "../../styles/colors";
+//
+//.bottomPosition {
+//  position: relative;
+//  width: 100vw;
+//  background-color: $startbox-color-bg;
+//
+//  .leaves_focus {
+//    width: 100vw;
+//    max-width: 100%;
+//    height: (2880 / 1920)*100vw;
+//    background-image: url("../../images/bg_z3_blur.png");
+//    background-size: contain;
+//    position: absolute;
+//    bottom: 0;
+//    left: 0;
+//  }
+//
+//  .bottomWindow {
+//    position: absolute;
+//    height: 100vh;
+//    width: 100vw;
+//    bottom: 0;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//  }
+//
+//  .startBox_container {
+//    width: 900px;
+//    height: 600px;
+//
+//    .flipping_box {
+//      position: relative;
+//      top: 0;
+//      left: 0;
+//      width: 100%;
+//      height: 100%;
+//      transform-style: preserve-3d;
+//      transition: all 0.8s ease;
+//
+//      .arrow_box, .gameBox_container {
+//        display: flex;
+//        justify-content: center;
+//        align-items: center;
+//        text-align: center;
+//        position: absolute;
+//        top: 0;
+//        left: 0;
+//        width: 100%;
+//        height: 100%;
+//        backface-visibility: hidden;
+//        border-radius: 20px;
+//        box-sizing: border-box;
+//      }
+//
+//      .arrow_box {
+//        font-size: 250px;
+//        color: $arrow-color;
+//      }
+//
+//      .gameBox_container {
+//        background: $startbox-color-bg;
+//        border: 15px solid $startbox-color-br;
+//        transform: rotateY(180deg) rotate(180deg);
+//      }
+//    }
+//  }
+//}

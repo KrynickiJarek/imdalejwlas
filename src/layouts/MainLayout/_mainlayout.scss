@@ -1,5 +1,5 @@
-body{
-overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
 .bg_z0 .bg_z1 .bg_z2 .bg_z3 {
@@ -9,14 +9,17 @@ overflow-x: hidden;
   background-repeat: no-repeat;
 }
 
-
-.bg_z0 {
+.all_layout {
   width: 100vw;
-  height: 150vw;
-  background-image: url("../../images/bg_z0.jpg");
-  background-size: contain;
-  position: relative;
-  //z-index: 0;
+  height: 205vw;
+
+  .bg_z0 {
+    width: 100vw;
+    height: 150vw;
+    background-image: url("../../images/bg_z0.jpg");
+    background-size: contain;
+    position: relative;
+    //z-index: 0;
 
     .bg_z1 {
       width: (2000 / 1920)*100vw;
@@ -41,6 +44,7 @@ overflow-x: hidden;
     //z-index: 2;
 
   }
+}
 
 
 
