@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "./_flashcard.scss"
 
 
-const Flashcard = () => {
+const Flashcard = ({goBack}) => {
 
     const [turn, setTurn] = useState("");
     const turnStyle = {}
@@ -30,18 +30,36 @@ const Flashcard = () => {
             setFlashStyle("no_flash")
         }, 400)
     }
-const handleTurnPrint = ()=>{
-    handleTurnYBack();
-    setTimeout(() => {
-        printQuestion(questions);
-    }, 100)
-}
+    const handleTurnPrint = () => {
+        handleTurnYBack();
+        setTimeout(() => {
+            printQuestion(questions);
+        }, 100)
+    }
+
+
+    const [settings, setSettings] = useState("settings")
+    const handleSettings = ()=>{
+        setSettings("settings_flash")
+        setTimeout(() => {
+            setSettings("settings")
+            goBack();
+        }, 500)
+    }
+
+
+
+
 
     return (
         <div className="to_overflow">
+            <div className={settings}/>
             <div style={turnStyle} className="flashcard_container">
                 <div className="question_box">
-                    <div className="question_number">Pytanie nr: {questionNumber + 1}</div>
+                    <div className="flashcard_header">
+                        <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
+                        <div className="question_number">Pytanie nr: {questionNumber + 1}</div>
+                    </div>
                     <div className="question_content">{currQuestion.questionContent}</div>
                     <div className="question_code">{currQuestion.questionCode}</div>
                     <div className="button_box">
@@ -54,7 +72,10 @@ const handleTurnPrint = ()=>{
                 </div>
 
                 <div className="answer_box">
-                    <div className="question_number">Pytanie nr: {questionNumber + 1}</div>
+                    <div className="flashcard_header">
+                        <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
+                        <div className="question_number">Pytanie nr: {questionNumber + 1}</div>
+                    </div>
                     <div className="answer_content">{currQuestion.answerContent}</div>
                     <div className="answer_code">{currQuestion.answerCode}</div>
                     <div className="button_box">

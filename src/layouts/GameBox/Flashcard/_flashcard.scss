@@ -41,10 +41,26 @@
       border: 10px solid $answer-color-br;
       transform: rotateY(180deg);
     }
+    .flashcard_header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
 
-    .question_number {
-      align-self: flex-end;
-      padding: 10px;
+      .flashcard_settings{
+        padding: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        transition: all 1.0s linear;
+      }
+      .flashcard_settings:hover{
+        transform: rotate(360deg);
+      }
+
+
+      .question_number {
+        align-self: flex-end;
+        padding: 10px;
+      }
     }
 
     .tag_list {
@@ -103,6 +119,32 @@
   border-radius: 50%;
   transition: all 0.5s ease;
 
+}
+
+.settings {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: $question-color-br;
+  border-radius: 50%;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+.settings_flash {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 2000px;
+  height: 2000px;
+  background-color: $question-color-br;
+  border-radius: 50%;
+  z-index: 99;
+  transition: all 0.5s ease;
 }
 
 

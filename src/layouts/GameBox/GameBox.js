@@ -18,7 +18,7 @@ const GameBox = () => {
     window.onscroll = () => {
         const opacityCalc = (4.5 - 5 * ((window.scrollY + window.innerHeight) / document.body.scrollHeight)).toFixed(1)
         setOpacity(opacityCalc > 1 ? 1 : opacityCalc < 0 ? 0 : opacityCalc);
-        console.log(opacityCalc);
+        // console.log(opacityCalc);
 
         const screenPosition = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
         setTurn(screenPosition >= 0.95 ? "rotateX(180deg)" : "");
@@ -37,16 +37,19 @@ const GameBox = () => {
 
     const [transitionClass, setTransitionClass] = useState("startBox_green");
     const handleClick = () => {
-        if (transitionClass === "startBox_green") {
-            setTransitionClass("startBox_white");
-        } else {
-            setTransitionClass("startBox_green");
-        }
+        setTransitionClass("startBox_white");
         setTimeout(() => {
             setHide("none");
-            setShow("block");
+            setShow("flex");
         }, 300)
+    }
 
+    const handleClickBack = () => {
+        setShow("none");
+        setHide("flex");
+        setTimeout(() => {
+            setTransitionClass("startBox_green");
+        }, 300)
     }
 
     return (
@@ -66,7 +69,7 @@ const GameBox = () => {
                                     <button onClick={handleClick} className="start_button">START</button>
                                 </div>
                                 <div style={showStyle}>
-                                    <Flashcard/>
+                                    <Flashcard goBack={handleClickBack}/>
                                 </div>
                             </div>
                         </div>
