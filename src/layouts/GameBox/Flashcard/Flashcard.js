@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 import "./_flashcard.scss"
+// import CodeSyntaxHigh from "./CodeSyntaxHighlighter/CodeSyntaxHighlighter";
+
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import {anOldHope} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 
 const Flashcard = ({goBack}) => {
@@ -24,10 +28,17 @@ const Flashcard = ({goBack}) => {
     const printQuestion = (arr) => {
         handleTurnYBack();
         setFlashStyle("flash")
+        let randomQuestionNumber = Math.floor(Math.random() * (arr.length));
+        do {
+            randomQuestionNumber = Math.floor(Math.random() * (arr.length));
+            setQuestionNumber(randomQuestionNumber);
+            console.log("poprzednie " + arr[questionNumber].number);
+            console.log(arr[randomQuestionNumber].number);
+        } while ((arr[randomQuestionNumber].number) === (arr[questionNumber].number));
         setTimeout(() => {
-            setQuestionNumber(Math.floor(Math.random() * (arr.length)));
             setCurrQuestion(arr[questionNumber]);
             setFlashStyle("no_flash")
+            window.scrollTo(0, document.body.scrollHeight)
         }, 400)
     }
     const handleTurnPrint = () => {
@@ -39,16 +50,13 @@ const Flashcard = ({goBack}) => {
 
 
     const [settings, setSettings] = useState("settings")
-    const handleSettings = ()=>{
+    const handleSettings = () => {
         setSettings("settings_flash")
         setTimeout(() => {
             setSettings("settings")
             goBack();
         }, 500)
     }
-
-
-
 
 
     return (
@@ -58,10 +66,13 @@ const Flashcard = ({goBack}) => {
                 <div className="question_box">
                     <div className="flashcard_header">
                         <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                        <div className="question_number">Pytanie nr: {questionNumber + 1}</div>
+                        <div className="question_number">Pytanie nr: {currQuestion.number}</div>
                     </div>
                     <div className="question_content">{currQuestion.questionContent}</div>
-                    <div className="question_code">{currQuestion.questionCode}</div>
+                    {currQuestion.questionCode === "" ? null :
+                        <SyntaxHighlighter language="javascript" style={anOldHope}>
+                            {currQuestion.questionCode}
+                        </SyntaxHighlighter>}
                     <div className="button_box">
                         <button onClick={() => printQuestion(questions)} className="next_question1">Następne pytanie
                             <div className={flashStyle}/>
@@ -74,13 +85,25 @@ const Flashcard = ({goBack}) => {
                 <div className="answer_box">
                     <div className="flashcard_header">
                         <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                        <div className="question_number">Pytanie nr: {questionNumber + 1}</div>
+                        <div className="question_number">Pytanie nr: {currQuestion.number}</div>
                     </div>
                     <div className="answer_content">{currQuestion.answerContent}</div>
-                    <div className="answer_code">{currQuestion.answerCode}</div>
+                    {currQuestion.answerCode === "" ? null :
+                        <SyntaxHighlighter language="javascript" style={anOldHope}>
+                            {currQuestion.answerCode}
+                        </SyntaxHighlighter>}
                     <div className="button_box">
                         <button onClick={handleTurnPrint} className="next_question2">Następne pytanie</button>
                         <button onClick={handleTurnYBack} className="turn_back">Wróć do pytania</button>
+                    </div>
+                    <div className="scale_box">
+                        <p> jak trudne było to pytanie?</p>
+                        <button onClick={handleTurnPrint} className="emojiClass">&#128514;</button>
+                        <button onClick={handleTurnPrint} className="emojiClass">&#128527;</button>
+                        <button onClick={handleTurnPrint} className="emojiClass">&#128528;</button>
+                        <button onClick={handleTurnPrint} className="emojiClass">&#128529;</button>
+                        <button onClick={handleTurnPrint} className="emojiClass">&#128530;</button>
+                        <button onClick={handleTurnPrint} className="emojiClass">&#128544;</button>
                     </div>
                     <div className="tag_list">{currQuestion.tags.join(", ")}</div>
                 </div>
@@ -97,7 +120,8 @@ const questions = [
         questionCode: `testowy kod pytania`,
         answerContent: `testowa treść odpowiedzi`,
         answerCode: `testowy kod odpowiedzi`,
-        tags: ["testTag1", "testTag2"]
+        tags: ["testTag1", "testTag2"],
+        number: 1
     },
     {
         questionContent: `Za co odpowiadają argumenty modułu react-dom?`,
@@ -108,14 +132,16 @@ const questions = [
                     <h1>Hello, world!</h1>,
                     document.getElementById("app")
                     );`,
-        tags: ["JS", "React"]
+        tags: ["JS", "React"],
+        number: 2
     },
     {
         questionContent: `W jaki sposób możemy skorzystać z funkcji biblioteki React w pliku JavaScript? `,
         questionCode: ``,
-        answerContent: `Należy go zaimportować moduł react jako React:`,
+        answerContent: `Należy zaimportować moduł react jako React:`,
         answerCode: `import React from "react";`,
-        tags: ["JS", "React"]
+        tags: ["JS", "React"],
+        number: 3
     },
     {
         questionContent: `Gdzie i jak importujemy moduł react-dom?`,
@@ -123,7 +149,8 @@ const questions = [
         answerContent: `Moduł react-dom importujemy jednorazowo, tylko w głównym pliku aplikacji,
         wpisując następujący kod:`,
         answerCode: `import ReactDOM from "react-dom";`,
-        tags: ["JS", "React"]
+        tags: ["JS", "React"],
+        number: 4
     },
     {
         questionContent: `Czym jest JSX?`,
@@ -131,14 +158,16 @@ const questions = [
         answerContent: `JSX jest rozszerzeniem języka JavaScript pozwalającym używać tagów przypominających tagi
                         HTML wewnątrz plików JavaScriptowych.`,
         answerCode: ``,
-        tags: ["JS", "React"]
+        tags: ["JS", "React"],
+        number: 5
     },
     {
         questionContent: `Czy w składni JSX dopuszczalne jest nie wpisanie cudzysłowiu dla wartości atrybutu?`,
         questionCode: `<table border=0>`,
         answerContent: `W składi JSX nie jest dopuszczalne nie wpisanie cudzysłowiu dla wartości atrybutu`,
         answerCode: `<table border="0">`,
-        tags: ["JS", "React"]
+        tags: ["JS", "React"],
+        number: 6
     },
     {
         questionContent: `Czy w składni JSX wszystkie tagi muszą być zamknięte?`,
@@ -147,7 +176,8 @@ const questions = [
                         znakiem / na końcu elementu.`,
         answerCode: `<img src="logo.png"></img>
                     <img src="logo.png" />`,
-        tags: ["JS", "React"]
+        tags: ["JS", "React"],
+        number: 7
     },
     {
         questionContent: `W co są zmieniane tagi JSX podczas kompilacji?`,
@@ -159,17 +189,19 @@ const questions = [
                       {id: "test"},
                       "Hello, World"
                     );`,
-        tags: ["JS", "React"]
+        tags: ["JS", "React"],
+        number: 8
     },
     {
         questionContent: `W jaki sposób JSX umożliwia zagnieżdżanie wyrażeń?`,
         questionCode: ``,
         answerContent: `Aby umieścić wyrażenie w dowolnym miejscu elementu JSX należy otoczyć je nawiasami klamrowymi`,
         answerCode: `<span>{2+2}</span>
-                    <span>Twoje imię ma {count} znaków</span>
-                    <span>{ person.name}</span>
-                    <span>{ print(name)}</span>`,
-        tags: ["JS", "React"]
+<span>Twoje imię ma {count} znaków</span>
+<span>{ person.name}</span>
+<span>{ print(name)}</span>`,
+        tags: ["JS", "React"],
+        number: 9
     },
 ]
 

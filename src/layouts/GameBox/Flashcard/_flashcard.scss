@@ -93,6 +93,18 @@
         font-family: $billboard-font;
       }
     }
+
+    .emojiClass{
+      font-size: 25px;
+      background: none;
+      border: none;
+      padding-top: 10px;
+      transition: all 0.15s linear;
+
+    }
+    .emojiClass:hover{
+      transform: scale(1.5,1.5);
+    }
   }
 }
 
