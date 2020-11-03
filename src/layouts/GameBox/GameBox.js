@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Flashcard from "./Flashcard/Flashcard";
+import NewQuestionAdd from "./NewQuestionAdd/NewQuestionAdd";
+
 
 import "./_gamebox.scss"
 
@@ -66,6 +68,7 @@ const GameBox = () => {
 
                             <div className="gameBox_container">
                                 <div style={hideStyle} className={transitionClass}>
+                                    <NewQuestionAdd/>
                                     <button onClick={handleClick} className="start_button">START</button>
                                 </div>
                                 <div style={showStyle}>
