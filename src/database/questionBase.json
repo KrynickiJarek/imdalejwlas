@@ -1,6 +1,17 @@
 {
   "questions": [
     {
+      "id": 0,
+      "questionContent": "testowa treść pytania",
+      "questionCode": "testowy kod pytania",
+      "answerContent": "testowa treść odpowiedzi",
+      "answerCode": "testowy kod odpowiedzi",
+      "tags": [
+        "testTag1",
+        "testTag2"
+      ]
+    },
+    {
       "id": 1,
       "questionContent": "testowa treść pytania",
       "questionCode": "testowy kod pytania",
@@ -9,8 +20,7 @@
       "tags": [
         "testTag1",
         "testTag2"
-      ],
-      "number": 1
+      ]
     },
     {
       "id": 2,
@@ -21,8 +31,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 2
+      ]
     },
     {
       "id": 3,
@@ -33,8 +42,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 3
+      ]
     },
     {
       "id": 4,
@@ -45,8 +53,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 4
+      ]
     },
     {
       "id": 5,
@@ -57,8 +64,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 5
+      ]
     },
     {
       "id": 6,
@@ -69,8 +75,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 6
+      ]
     },
     {
       "id": 7,
@@ -81,8 +86,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 7
+      ]
     },
     {
       "id": 8,
@@ -93,8 +97,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 8
+      ]
     },
     {
       "id": 9,
@@ -105,17 +108,7 @@
       "tags": [
         "JS",
         "React"
-      ],
-      "number": 9
-    },
-    {
-      "questionContent": "PRÓBA1",
-      "questionCode": "PRÓBA1",
-      "answerContent": "PRÓBA1",
-      "answerCode": "PRÓBA1",
-      "tags": "PRÓBA1",
-      "number": "11",
-      "id": 10
+      ]
     }
   ]
 }

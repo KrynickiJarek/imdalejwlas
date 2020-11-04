@@ -65,10 +65,11 @@
         .startBox_green{
           width: 100%;
           height: 100%;
-          background: $startbox-color-bg;
+          background: $question-color-bg;
           border: 15px solid $startbox-color-br;
           border-radius: 20px;
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
           transition: all 0.3s ease;
@@ -80,6 +81,7 @@
           border: 10px solid $question-color-br;
           border-radius: 20px;
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
           transition: all 0.3s ease;

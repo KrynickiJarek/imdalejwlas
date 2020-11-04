@@ -54,7 +54,7 @@ const Flashcard = ({goBack}) => {
         do {
             randomQuestionNumber = Math.floor(Math.random() * (arr.length));
             setQuestionNumber(randomQuestionNumber);
-        } while ((arr[randomQuestionNumber].number) === (arr[questionNumber].number));
+        } while ((arr[randomQuestionNumber].id) === (arr[questionNumber].id));
         setTimeout(() => {
             setCurrQuestion(arr[questionNumber]);
             setFlashStyle("no_flash")
@@ -110,7 +110,7 @@ const Flashcard = ({goBack}) => {
                     <div className="question_box">
                         <div className="flashcard_header">
                             <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                            <div className="question_number">Pytanie nr: {currQuestion.number}</div>
+                            <div className="question_number">Pytanie nr: {currQuestion.id}</div>
                         </div>
                         <div className="question_content">{currQuestion.questionContent}</div>
                         {currQuestion.questionCode === "" ? null :
@@ -129,7 +129,7 @@ const Flashcard = ({goBack}) => {
                     <div className="answer_box">
                         <div className="flashcard_header">
                             <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                            <div className="question_number">Pytanie nr: {currQuestion.number}</div>
+                            <div className="question_number">Pytanie nr: {currQuestion.id}</div>
                         </div>
                         <div className="answer_content">{currQuestion.answerContent}</div>
                         {currQuestion.answerCode === "" ? null :
@@ -167,7 +167,6 @@ const startQuestion = [
         answerContent: `testowa treść odpowiedzi`,
         answerCode: `testowy kod odpowiedzi`,
         tags: ["testTag1", "testTag2"],
-        number: 0
     }
 ]
 
