@@ -20,8 +20,23 @@ const Flashcard = ({goBack}) => {
     turnStyle.transform = turn;
 
     useEffect(() => {
+        const fetchQuestions = () => {
+            fetch("http://localhost:3000/questions")
+                .then((r) => r.json())
+                .then((data) => {
+                    setQuestions(data);
+                    setDifficultyArray([]);
+                    data.forEach(el => {
+                        for (let i = 0; i < el.difficulty; i++) {
+                            setDifficultyArray(prev => [...prev, el.id])
+                        }
+                        console.log("POBRANO Z SERWERA", difficultyArray);
+                    });
+                })
+                .catch((err) => console.log(err));
+        };
         fetchQuestions();
-    }, [turn]);
+    }, []);
 
     useEffect(() => {
         if (questions.length !== 0 || difficultyArray.length !== 0) {
