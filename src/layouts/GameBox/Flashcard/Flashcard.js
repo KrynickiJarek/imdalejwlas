@@ -20,21 +20,6 @@ const Flashcard = ({goBack}) => {
     turnStyle.transform = turn;
 
     useEffect(() => {
-        const fetchQuestions = () => {
-            fetch("http://localhost:3000/questions")
-                .then((r) => r.json())
-                .then((data) => {
-                    setQuestions(data);
-                    setDifficultyArray([]);
-                    data.forEach(el => {
-                        for (let i = 0; i < el.difficulty; i++) {
-                            setDifficultyArray(prev => [...prev, el.id])
-                        }
-                        console.log("POBRANO Z SERWERA", difficultyArray);
-                    });
-                })
-                .catch((err) => console.log(err));
-        };
         fetchQuestions();
     }, []);
 
@@ -47,7 +32,8 @@ const Flashcard = ({goBack}) => {
     }, []);
 
     const fetchQuestions = () => {
-        fetch("http://localhost:3000/questions")
+        // fetch("http://localhost:3000/questions")
+        fetch("https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions")
             .then((r) => r.json())
             .then((data) => {
                 setQuestions(data);
@@ -106,7 +92,8 @@ const Flashcard = ({goBack}) => {
     }
 
     const setQuestionDifficulty = (dataCurrQuestion, dataCurrQuestionID) => {
-        fetch(`http://localhost:3000/questions/${dataCurrQuestionID}`, {
+        // fetch(`http://localhost:3000/questions/${dataCurrQuestionID}`, {
+        fetch(`https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions/${dataCurrQuestionID}`, {
             method: "PUT",
             body: JSON.stringify(dataCurrQuestion),
             headers: {

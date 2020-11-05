@@ -29,7 +29,8 @@ const NewQuestionAdd = () => {
 
 
     const fetchTags = () => {
-        fetch("http://localhost:3000/questions")
+        // fetch("http://localhost:3000/questions")
+        fetch("https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions")
             .then((r) => r.json())
             .then((data) => {
                 data.forEach(el => {
@@ -50,7 +51,8 @@ const NewQuestionAdd = () => {
     // console.log(filteredTags);
 
     const fetchNewQuestion = (dataNewQuestion) => {
-        fetch("http://localhost:3000/questions", {
+        // fetch("http://localhost:3000/questions", {
+        fetch("https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions", {
             method: "POST",
             body: JSON.stringify(dataNewQuestion),
             headers: {
