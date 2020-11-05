@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Flashcard from "./Flashcard/Flashcard";
 import NewQuestionAdd from "./NewQuestionAdd/NewQuestionAdd";
 
@@ -30,6 +30,7 @@ const GameBox = () => {
     const [hide, setHide] = useState("flex");
     const [show, setShow] = useState("none");
 
+
     const hideStyle = {};
     const showStyle = {};
 
@@ -49,10 +50,14 @@ const GameBox = () => {
     const handleClickBack = () => {
         setShow("none");
         setHide("flex");
+        // setReloadBase(prev => !prev)
         setTimeout(() => {
             setTransitionClass("startBox_green");
         }, 300)
     }
+
+
+
 
     return (
         <>

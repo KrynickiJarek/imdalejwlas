@@ -34,7 +34,7 @@ const NewQuestionAdd = () => {
             .then((data) => {
                 data.forEach(el => {
                     setAllCurrTags(prev => [...prev, ...el.tags])
-                })
+                });
             })
             .catch((err) => console.log(err));
     };
@@ -47,7 +47,7 @@ const NewQuestionAdd = () => {
         })
     }
     filtrTags();
-    console.log(filteredTags);
+    // console.log(filteredTags);
 
     const fetchNewQuestion = (dataNewQuestion) => {
         fetch("http://localhost:3000/questions", {
@@ -67,22 +67,22 @@ const NewQuestionAdd = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log("newTagOne>>>>>", newTagOne);
-        console.log("newTagTwo>>>>>", newTagTwo);
-        console.log("newTagThree>>>>>", newTagThree);
 
         let dataNewQuestion;
 
-        if (newTagTwo === "(wybierz)" && newTagThree === "(wybierz)") {
+
+        if ((newTagTwo === "" || newTagTwo === "(wybierz)") && (newTagThree === "" || newTagThree === "(wybierz)")) {
             dataNewQuestion = {
+                difficulty: 1,
                 questionContent: newQuestionContent,
                 questionCode: newQuestionCode,
                 answerContent: newAnswerContent,
                 answerCode: newAnswerCode,
                 tags: [newTagOne]
             }
-        } else if (newTagThree === "(wybierz)") {
+        } else if (newTagThree === "" || newTagThree === "(wybierz)") {
             dataNewQuestion = {
+                difficulty: 1,
                 questionContent: newQuestionContent,
                 questionCode: newQuestionCode,
                 answerContent: newAnswerContent,
@@ -91,6 +91,7 @@ const NewQuestionAdd = () => {
             }
         } else {
             dataNewQuestion = {
+                difficulty: 1,
                 questionContent: newQuestionContent,
                 questionCode: newQuestionCode,
                 answerContent: newAnswerContent,
@@ -98,6 +99,7 @@ const NewQuestionAdd = () => {
                 tags: [newTagOne, newTagTwo, newTagThree]
             }
         }
+
 
         fetchNewQuestion(dataNewQuestion);
 

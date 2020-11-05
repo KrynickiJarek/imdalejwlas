@@ -1,7 +1,7 @@
 {
   "questions": [
     {
-      "id": 0,
+      "difficulty": 1,
       "questionContent": "testowa treść pytania",
       "questionCode": "testowy kod pytania",
       "answerContent": "testowa treść odpowiedzi",
@@ -9,10 +9,11 @@
       "tags": [
         "testTag1",
         "testTag2"
-      ]
+      ],
+      "id": 0
     },
     {
-      "id": 1,
+      "difficulty": 1,
       "questionContent": "testowa treść pytania",
       "questionCode": "testowy kod pytania",
       "answerContent": "testowa treść odpowiedzi",
@@ -20,10 +21,11 @@
       "tags": [
         "testTag1",
         "testTag2"
-      ]
+      ],
+      "id": 1
     },
     {
-      "id": 2,
+      "difficulty": 1,
       "questionContent": "Za co odpowiadają argumenty modułu react-dom?",
       "questionCode": "ReactDOM.render(argument1, argument2)",
       "answerContent": "Argument1 (element) to dowolna przyjmowana przez React rzecz do wyrenderowania, Argument2 (miejsce) to element DOM do którego będziemy renderować element.",
@@ -31,10 +33,11 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 2
     },
     {
-      "id": 3,
+      "difficulty": 1,
       "questionContent": "W jaki sposób możemy skorzystać z funkcji biblioteki React w pliku JavaScript?",
       "questionCode": "",
       "answerContent": "Należy zaimportować moduł react jako React:",
@@ -42,10 +45,11 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 3
     },
     {
-      "id": 4,
+      "difficulty": 1,
       "questionContent": "Gdzie i jak importujemy moduł react-dom?",
       "questionCode": "",
       "answerContent": "Moduł react-dom importujemy jednorazowo, tylko w głównym pliku aplikacji, wpisując następujący kod:",
@@ -53,10 +57,11 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 4
     },
     {
-      "id": 5,
+      "difficulty": 1,
       "questionContent": "Czym jest JSX?",
       "questionCode": "",
       "answerContent": "JSX jest rozszerzeniem języka JavaScript pozwalającym używać tagów przypominających tagi HTML wewnątrz plików JavaScriptowych.",
@@ -64,10 +69,11 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 5
     },
     {
-      "id": 6,
+      "difficulty": 1,
       "questionContent": "Czy w składni JSX dopuszczalne jest nie wpisanie cudzysłowiu dla wartości atrybutu?",
       "questionCode": "<table border=0>",
       "answerContent": "W składi JSX nie jest dopuszczalne nie wpisanie cudzysłowiu dla wartości atrybutu",
@@ -75,10 +81,11 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 6
     },
     {
-      "id": 7,
+      "difficulty": 1,
       "questionContent": "Czy w składni JSX wszystkie tagi muszą być zamknięte?",
       "questionCode": "<img src=\"logo.png\">",
       "answerContent": "W składi JSX wszystkie tagi musza być zamknięte. Dopuszcza się zamknięcie znakiem / na końcu elementu.",
@@ -86,10 +93,11 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 7
     },
     {
-      "id": 8,
+      "difficulty": 1,
       "questionContent": "W co są zmieniane tagi JSX podczas kompilacji?",
       "questionCode": "<span id=\"test\">Hello, World</span>",
       "answerContent": "Tagi JSX podczas kompilacji są zamieniane w wywołania React.createElement(). Wywołania te zwracają obiekt reprezentujący element.",
@@ -97,10 +105,11 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 8
     },
     {
-      "id": 9,
+      "difficulty": 1,
       "questionContent": "W jaki sposób JSX umożliwia zagnieżdżanie wyrażeń?",
       "questionCode": "",
       "answerContent": "Aby umieścić wyrażenie w dowolnym miejscu elementu JSX należy otoczyć je nawiasami klamrowymi",
@@ -108,7 +117,8 @@
       "tags": [
         "JS",
         "React"
-      ]
+      ],
+      "id": 9
     }
   ]
 }
