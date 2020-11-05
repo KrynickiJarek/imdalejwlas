@@ -119,6 +119,17 @@
         "React"
       ],
       "id": 9
+    },
+    {
+      "difficulty": 5,
+      "questionContent": "xxxxxxxxxxx",
+      "questionCode": "const data = {\n  name: \"Polonez\",\n  brand: \"FSO\"\n};",
+      "answerContent": "xxxxxxxxxxxxx",
+      "answerCode": "const data = {\n  name: \"Polonez\",\n  brand: \"FSO\"\n};",
+      "tags": [
+        "JS"
+      ],
+      "id": 10
     }
   ]
 }

@@ -72,8 +72,6 @@ const Flashcard = ({goBack}) => {
     }
 
 
-
-
     const printQuestion = (arr) => {
         setDifficultyArray([]);
         fetchQuestions();
@@ -121,93 +119,97 @@ const Flashcard = ({goBack}) => {
         }
         setQuestionDifficulty(dataCurrQuestion, currQuestion.id);
 
-        setDifficultyArray(prev=>prev.filter((el)=>el!==currQuestion.id));
+        setDifficultyArray(prev => prev.filter((el) => el !== currQuestion.id));
         for (let i = 0; i < +e.target.value; i++) {
             setDifficultyArray(prev => [...prev, currQuestion.id])
         }
-        setDifficultyArray(prev=>prev.sort((a,b)=>a-b));
+        setDifficultyArray(prev => prev.sort((a, b) => a - b));
     }
 
 
-    if (questions.length === 0 || difficultyArray.length === 0) {
-        return (
-            <div className="to_overflow">
-                <div className={settings}/>
-                <div style={turnStyle} className="flashcard_container">
-                    <div className="question_box">
-                        <div className="flashcard_header">
-                            <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                            <div className="question_number"/>
-                        </div>
-                        <div className="question_content">Baza pytań nie została jeszcze wczytana...</div>
+    // if (questions.length === 0 || difficultyArray.length === 0) {
+    //     return (
+    //         <div className="to_overflow">
+    //             <div className={settings}/>
+    //             <div style={turnStyle} className="flashcard_container">
+    //                 <div className="question_box">
+    //                     <div className="flashcard_header">
+    //                         <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
+    //                         <div className="question_number"/>
+    //                     </div>
+    //                     <div className="question_content">Baza pytań nie została jeszcze wczytana...</div>
+    //                 </div>
+    //
+    //                 <div className="answer_box">
+    //                     <div className="flashcard_header">
+    //                         <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
+    //                         <div className="question_number"/>
+    //                     </div>
+    //                     <div className="answer_content">Baza pytań nie została jeszcze wczytana...</div>
+    //                 </div>
+    //             </div>
+    //         </div>
+    //
+    //     )
+    // } else {
+    return (
+        <div className="to_overflow">
+            <div className={settings}/>
+            <div style={turnStyle} className="flashcard_container">
+                <div className="question_box">
+                    <div className="flashcard_header">
+                        <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
+                        <div className="question_number">Pytanie nr: {currQuestion.id}</div>
                     </div>
-
-                    <div className="answer_box">
-                        <div className="flashcard_header">
-                            <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                            <div className="question_number"/>
-                        </div>
-                        <div className="answer_content">Baza pytań nie została jeszcze wczytana...</div>
-                    </div>
-                </div>
-            </div>
-
-        )
-    } else {
-        return (
-            <div className="to_overflow">
-                <div className={settings}/>
-                <div style={turnStyle} className="flashcard_container">
-                    <div className="question_box">
-                        <div className="flashcard_header">
-                            <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                            <div className="question_number">Pytanie nr: {currQuestion.id}</div>
-                        </div>
-                        <div className="question_content">{currQuestion.questionContent}</div>
-                        {currQuestion.questionCode === "" ? null :
+                    <div className="question_content">{currQuestion.questionContent}</div>
+                    {currQuestion.questionCode === "" ? null :
+                        <div className="codeContainer">
                             <SyntaxHighlighter language="javascript" style={anOldHope}>
                                 {currQuestion.questionCode}
-                            </SyntaxHighlighter>}
-                        <div className="button_box">
-                            <button onClick={() => printQuestion(questions)} className="next_question1">Następne
-                                pytanie
-                                <div className={flashStyle}/>
-                            </button>
-                            <button onClick={handleTurnY} className="show_answer">Pokaż odpowiedź</button>
-                        </div>
-                        <div className="tag_list">{currQuestion.tags.join(", ")}</div>
+                            </SyntaxHighlighter>
+                        </div>}
+                    <div className="button_box">
+                        <button onClick={() => printQuestion(questions)} className="next_question1">Następne
+                            pytanie
+                            <div className={flashStyle}/>
+                        </button>
+                        <button onClick={handleTurnY} className="show_answer">Pokaż odpowiedź</button>
                     </div>
+                    <div className="tag_list">Tagi: {currQuestion.tags.join(", ")}</div>
+                </div>
 
-                    <div className="answer_box">
-                        <div className="flashcard_header">
-                            <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
-                            <div className="question_number">Pytanie nr: {currQuestion.id}</div>
-                        </div>
-                        <div className="answer_content">{currQuestion.answerContent}</div>
-                        {currQuestion.answerCode === "" ? null :
+                <div className="answer_box">
+                    <div className="flashcard_header">
+                        <i onClick={handleSettings} className="fas fa-cog flashcard_settings"/>
+                        <div className="question_number">Pytanie nr: {currQuestion.id}</div>
+                    </div>
+                    <div className="answer_content">{currQuestion.answerContent}</div>
+                    {currQuestion.answerCode === "" ? null :
+                        <div className="codeContainer">
                             <SyntaxHighlighter language="javascript" style={anOldHope}>
                                 {currQuestion.answerCode}
-                            </SyntaxHighlighter>}
-                        <div className="button_box">
-                            <button onClick={handleTurnPrint} className="next_question2">Następne pytanie</button>
-                            <button onClick={handleTurnYBack} className="turn_back">Wróć do pytania</button>
-                        </div>
-                        <div className="scale_box">
-                            <p> jak trudne było to pytanie?</p>
-                            <button onClick={handleDifficulty} value={0} className="emojiClass">&#128514;</button>
-                            <button onClick={handleDifficulty} value={1} className="emojiClass">&#128527;</button>
-                            <button onClick={handleDifficulty} value={2} className="emojiClass">&#128528;</button>
-                            <button onClick={handleDifficulty} value={3} className="emojiClass">&#128529;</button>
-                            <button onClick={handleDifficulty} value={4} className="emojiClass">&#128530;</button>
-                            <button onClick={handleDifficulty} value={5} className="emojiClass">&#128544;</button>
-                        </div>
-                        <div className="tag_list">{currQuestion.tags.join(", ")}</div>
+                            </SyntaxHighlighter>
+                        </div>}
+                    <div className="button_box">
+                        <button onClick={handleTurnPrint} className="next_question2">Następne pytanie</button>
+                        <button onClick={handleTurnYBack} className="turn_back">Wróć do pytania</button>
                     </div>
+                    <div className="scale_box">
+                        <p> jak trudne było to pytanie?</p>
+                        <button onClick={handleDifficulty} value={0} className="emojiClass">&#128514;</button>
+                        <button onClick={handleDifficulty} value={1} className="emojiClass">&#128527;</button>
+                        <button onClick={handleDifficulty} value={2} className="emojiClass">&#128528;</button>
+                        <button onClick={handleDifficulty} value={3} className="emojiClass">&#128529;</button>
+                        <button onClick={handleDifficulty} value={4} className="emojiClass">&#128530;</button>
+                        <button onClick={handleDifficulty} value={5} className="emojiClass">&#128544;</button>
+                    </div>
+                    <div className="tag_list">Tagi: {currQuestion.tags.join(", ")}</div>
                 </div>
             </div>
+        </div>
 
-        )
-    }
+    )
+    // }
 }
 
 const startQuestion = [

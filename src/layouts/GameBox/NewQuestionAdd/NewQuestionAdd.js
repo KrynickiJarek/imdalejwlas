@@ -120,16 +120,24 @@ const NewQuestionAdd = () => {
         filtrTags();
     }
 
+    const [addRemoveTagSelectTwo, setAddRemoveTagSelectTwo] = useState("fas fa-plus-circle")
+    const [addRemoveTagSelectThree, setAddRemoveTagSelectThree] = useState("fas fa-plus-circle")
 
     const handleAddSecondTag = () => {
         setSecondTag(prev => !prev);
         setTagLabel("Pierwszy tag")
         window.scrollTo(0, document.body.scrollHeight)
+        addRemoveTagSelectTwo==="fas fa-plus-circle"?
+            setAddRemoveTagSelectTwo("fas fa-minus-circle")
+            :setAddRemoveTagSelectTwo("fas fa-plus-circle")
     }
 
     const handleAddThirdTag = () => {
         setThirdTag(prev => !prev);
         window.scrollTo(0, document.body.scrollHeight)
+        addRemoveTagSelectThree==="fas fa-plus-circle"?
+            setAddRemoveTagSelectThree("fas fa-minus-circle")
+            :setAddRemoveTagSelectThree("fas fa-plus-circle")
     }
     const handleSelectedTagOne = e => {
         setFirstTagSelected(e.target.value);
@@ -145,22 +153,31 @@ const NewQuestionAdd = () => {
     }
 
 
+
+
+
     return (
         <form onSubmit={handleSubmit} className="newQuestion_form">
-            <label>Treść pytania<input type="text" value={newQuestionContent}
-                                       onChange={(e) => setNewQuestionContent(e.target.value)}/>
+            <h2 className="header_form">Dodaj nowe pytanie</h2>
+            <label className="textareaLabels">Treść pytania<textarea value={newQuestionContent}
+               placeholder="Pole obowiązkowe. Maksymalnie 4 linie po 60 znaków!" wrap="hard"  cols="57" rows="4" maxLength="240" required
+
+                                          onChange={(e) => setNewQuestionContent(e.target.value)}/>
             </label>
-            <label>Kod pytania<input type="textarea" value={newQuestionCode}
+            <label className="textareaLabels">Kod pytania<textarea value={newQuestionCode}
+               placeholder="Pole nieobowiązkowe. Maksymalnie 6 linii po 60 znaków!" wrap="hard"  cols="57" rows="6" maxLength="360"
                                      onChange={(e) => setNewQuestionCode(e.target.value)}/>
             </label>
-            <label>Treść odpowiedzi<input type="text" value={newAnswerContent}
+            <label className="textareaLabels">Treść odpowiedzi<textarea value={newAnswerContent}
+               placeholder="Pole obowiązkowe. Maksymalnie 4 linie po 60 znaków!" wrap="hard"  cols="57" rows="4" maxLength="240" required
                                           onChange={(e) => setNewAnswerContent(e.target.value)}/>
             </label>
-            <label>Kod odpowiedzi<input type="text" value={newAnswerCode}
+            <label className="textareaLabels">Kod odpowiedzi<textarea value={newAnswerCode}
+               placeholder="Pole nieobowiązkowe. Maksymalnie 6 linii po 60 znaków!" wrap="hard"  cols="57" rows="6" maxLength="360"
                                         onChange={(e) => setNewAnswerCode(e.target.value)}/>
             </label>
 
-            <label>{tagLabel}
+            <label className="selectLabels"><p className="tagLabel">{tagLabel}</p>
                 <select value={firstTagSelected} onChange={handleSelectedTagOne}>
                     <option>(wybierz)</option>
                     {filteredTags.sort().map((tag, i) => (
@@ -172,16 +189,17 @@ const NewQuestionAdd = () => {
                     <input
                         type="text"
                         placeholder="wpisz tag"
+                        maxLength="15"
                         value={newTagOne}
                         onChange={(e) => setNewTagOne(e.target.value)}
                     />
                 )}
-                <button type="button" onClick={handleAddSecondTag}>+</button>
+                <button type="button" onClick={handleAddSecondTag}><i className={addRemoveTagSelectTwo}/></button>
 
             </label>
             {secondTag && (
                 <>
-                    <label>Drugi tag
+                    <label className="selectLabels"><p className="tagLabel">Drugi tag</p>
                         <select value={secondTagSelected} onChange={handleSelectedTagTwo}>
                             <option>(wybierz)</option>
                             {filteredTags.sort().map((tag, i) => (
@@ -193,18 +211,19 @@ const NewQuestionAdd = () => {
                             <input
                                 type="text"
                                 placeholder="wpisz tag"
+                                maxLength="15"
                                 value={newTagTwo}
                                 onChange={(e) => setNewTagTwo(e.target.value)}
                             />
                         )}
-                        <button type="button" onClick={handleAddThirdTag}>+</button>
-                        <button type="button" onClick={handleAddSecondTag}>-</button>
+                        <button type="button" onClick={handleAddThirdTag}><i className={addRemoveTagSelectThree}/></button>
+                        {/*<button type="button" onClick={handleAddSecondTag}>-</button>*/}
                     </label>
                 </>
             )}
             {thirdTag && (
                 <>
-                    <label>Trzeci tag
+                    <label className="selectLabels"><p className="tagLabel">Trzeci tag</p>
                         <select value={thirdTagSelected} onChange={handleSelectedTagThree}>
                             <option>(wybierz)</option>
                             {filteredTags.sort().map((tag, i) => (
@@ -216,15 +235,17 @@ const NewQuestionAdd = () => {
                             <input
                                 type="text"
                                 placeholder="wpisz tag"
+                                maxLength="15"
                                 value={newTagThree}
                                 onChange={(e) => setNewTagThree(e.target.value)}
                             />
                         )}
-                        <button type="button" onClick={handleAddThirdTag}>-</button>
+                        {/*<button type="button" onClick={handleAddThirdTag}><i className="fas fa-minus-circle"/></button>*/}
+                        {/*<button type="button" onClick={handleAddThirdTag}><i className="fas fa-plus-circle"/></button>*/}
                     </label>
                 </>
             )}
-            <div><input type="submit" value="Dodaj"/></div>
+            <div><input className="addButtonStyle" type="submit" value="Dodaj"/></div>
         </form>
 
     )

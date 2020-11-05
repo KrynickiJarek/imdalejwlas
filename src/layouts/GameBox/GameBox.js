@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Flashcard from "./Flashcard/Flashcard";
 import NewQuestionAdd from "./NewQuestionAdd/NewQuestionAdd";
 
@@ -28,19 +28,23 @@ const GameBox = () => {
 
 
     const [hide, setHide] = useState("flex");
+    const [hideImmediately, setHideImmediately] = useState("flex");
     const [show, setShow] = useState("none");
 
 
     const hideStyle = {};
+    const hideImmediatelyStyle = {};
     const showStyle = {};
 
     hideStyle.display = hide;
+    hideImmediatelyStyle.display = hideImmediately;
     showStyle.display = show;
 
 
     const [transitionClass, setTransitionClass] = useState("startBox_green");
     const handleClick = () => {
         setTransitionClass("startBox_white");
+        setHideImmediately("none");
         setTimeout(() => {
             setHide("none");
             setShow("flex");
@@ -50,13 +54,14 @@ const GameBox = () => {
     const handleClickBack = () => {
         setShow("none");
         setHide("flex");
-        // setReloadBase(prev => !prev)
+
         setTimeout(() => {
             setTransitionClass("startBox_green");
         }, 300)
+        setTimeout(() => {
+            setHideImmediately("flex");
+        }, 500)
     }
-
-
 
 
     return (
@@ -73,8 +78,12 @@ const GameBox = () => {
 
                             <div className="gameBox_container">
                                 <div style={hideStyle} className={transitionClass}>
-                                    <NewQuestionAdd/>
-                                    <button onClick={handleClick} className="start_button">START</button>
+                                    <div style={hideImmediatelyStyle} className="startBoxAddQuestion">
+                                        <NewQuestionAdd/>
+                                        <button onClick={handleClick} className="backButton">
+                                            <i className="fas fa-arrow-circle-left"/>
+                                        </button>
+                                    </div>
                                 </div>
                                 <div style={showStyle}>
                                     <Flashcard goBack={handleClickBack}/>
