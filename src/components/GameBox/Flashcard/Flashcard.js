@@ -29,7 +29,7 @@ const Flashcard = ({goBack}) => {
             setCurrQuestion(questions[randomQuestionNumber])
             setPrevQuestionNumber(randomQuestionNumber);
         }
-    }, []);
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const fetchQuestions = () => {
         // fetch("http://localhost:3000/questions")
