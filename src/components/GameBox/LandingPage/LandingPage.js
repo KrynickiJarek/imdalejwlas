@@ -5,6 +5,8 @@ import "./_landingpage.scss"
 const LandingPage = ({start, addQuestion, showInfo}) => {
 
 
+
+
     const handleStart = () => {
         start()
     }
@@ -38,7 +40,7 @@ const LandingPage = ({start, addQuestion, showInfo}) => {
                     </div>
                     <div className="icon_container">
                         <i className="fas fa-times-circle"/>
-                        <h3>Resetuj<br/>poziomy</h3>
+                        <h3>Resetuj poziomy<br/>(wkrótce)</h3>
                     </div>
                 </div>
             </div>

@@ -63,14 +63,15 @@
 
         .backButton{
           align-self: flex-start;
-          height: 40px;
-          width: 40px;
+          background: none;
           border: none;
-          border-radius: 50%;
-          margin: 0 25px 25px;
-          background-color: $question-color-br;
-          text-align: center;
-          font-size: 25px;
+          margin: 0 1.5rem 1.5rem;
+          font-size: 2.5rem;
+          color: $landing-icon-color;
+          transition: all 0.15s linear;
+        }
+        .backButton:hover{
+          color: $arrow-color;
         }
         .startBox_green{
           width: 100%;

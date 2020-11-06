@@ -2,12 +2,77 @@
 @import "../../../styles/fonts";
 
 
-.info_container{
-  width: 100%;
+.info_container {
+  width: 90%;
   height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  color: $font-color;
 
+  .infoHeader {
+    font-family: $main-fonts;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+
+    a {
+      color: $font-color;
+      font-weight: 700;
+    }
+  }
+
+  .cite_container {
+    display: flex;
+    flex-direction: row;
+
+    .fa-quote-left {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+
+    .cite {
+      font-family: $cite-font;
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      margin: 0.6rem;
+
+    }
+  }
+
+  .citeAuthor {
+    font-family: $main-fonts;
+    font-size: 1rem;
+    margin: 1rem 5rem 1rem 0;
+    align-self: flex-end;
+
+    a {
+      color: $font-color;
+      font-weight: 700;
+    }
+  }
+
+  .article_container{
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    margin: 1rem 0;
+  }
+
+  .scale_container {
+    font-family: $main-fonts;
+    font-size: 0.9rem;
+    text-align: left;
+    line-height: 1.5rem;
+    margin-left: 2rem;
+
+    span {
+      font-size: 1.1rem;
+    }
+  }
 }
+
+

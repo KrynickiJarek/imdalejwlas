@@ -215,13 +215,13 @@ const Flashcard = ({goBack}) => {
 
 const startQuestion = [
     {
-        id: 0,
+        id: "/tutorial/",
         difficulty: 1,
-        questionContent: `testowa treść pytania`,
-        questionCode: `testowy kod pytania`,
-        answerContent: `testowa treść odpowiedzi`,
-        answerCode: `testowy kod odpowiedzi`,
-        tags: ["testTag1", "testTag2"],
+        questionContent: `/tu pojawi się treść pytania/`,
+        questionCode: `/tu pojawi się kod pytania (opcjonalnie)/`,
+        answerContent: `/tu pojawi się treść odpowiedzi/`,
+        answerCode: `/tu pojawi się kod odpowiedzi (opcjonalnie)/`,
+        tags: ["/tag1/", "/tag2/"],
     }
 ]
 

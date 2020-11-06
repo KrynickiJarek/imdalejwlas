@@ -2,39 +2,14 @@
   "questions": [
     {
       "difficulty": 1,
-      "questionContent": "testowa treść pytania",
-      "questionCode": "testowy kod pytania",
-      "answerContent": "testowa treść odpowiedzi",
-      "answerCode": "testowy kod odpowiedzi",
+      "questionContent": "Jak zapisujemy atrybut \"id\" w elemencie HTML?",
+      "questionCode": "",
+      "answerContent": "<div id=\"element\"></div>",
+      "answerCode": "<div id=\"element\"></div>",
       "tags": [
-        "testTag1",
-        "testTag2"
+        "HTML"
       ],
       "id": 0
-    },
-    {
-      "difficulty": 1,
-      "questionContent": "testowa treść pytania",
-      "questionCode": "testowy kod pytania",
-      "answerContent": "testowa treść odpowiedzi",
-      "answerCode": "testowy kod odpowiedzi",
-      "tags": [
-        "testTag1",
-        "testTag2"
-      ],
-      "id": 1
-    },
-    {
-      "difficulty": 1,
-      "questionContent": "Za co odpowiadają argumenty modułu react-dom?",
-      "questionCode": "ReactDOM.render(argument1, argument2)",
-      "answerContent": "Argument1 (element) to dowolna przyjmowana przez React rzecz do wyrenderowania, Argument2 (miejsce) to element DOM do którego będziemy renderować element.",
-      "answerCode": "ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById(\"app\"));",
-      "tags": [
-        "JS",
-        "React"
-      ],
-      "id": 2
     },
     {
       "difficulty": 1,
@@ -46,7 +21,40 @@
         "JS",
         "React"
       ],
+      "id": 1
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka właściwość pozwala ustawić inny font dla elementu?",
+      "questionCode": "",
+      "answerContent": "font-family",
+      "answerCode": "font-family: \"Times New Roman\", Times, serif;",
+      "tags": [
+        "CSS"
+      ],
+      "id": 2
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakim przedziale szerokości ekranu, zadziałają poniższe style?",
+      "questionCode": "@media screen and (min-width: 792px) and (max-width:\n1200px){\nbody {\nbackground-color: tomato;\n}\n}",
+      "answerContent": "Od 792px do 1200px dla ekranów (komputery, tablety, smartfony itd.)",
+      "answerCode": "",
+      "tags": [
+        "RWD"
+      ],
       "id": 3
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co to jest Mobile First?",
+      "questionCode": "",
+      "answerContent": "Mobile first to zalecane podejście, w którym definiowanie\nwyglądu rozpoczyna się od najprostszego do coraz bardziej\nzaawansowanego. Wraz ze wzrostem szerokości ekranu style\npowinny być dodawane dopiero, jeśli są potrzeb",
+      "answerCode": "",
+      "tags": [
+        "RWD"
+      ],
+      "id": 4
     },
     {
       "difficulty": 1,
@@ -58,7 +66,7 @@
         "JS",
         "React"
       ],
-      "id": 4
+      "id": 5
     },
     {
       "difficulty": 1,
@@ -70,19 +78,19 @@
         "JS",
         "React"
       ],
-      "id": 5
+      "id": 6
     },
     {
       "difficulty": 1,
-      "questionContent": "Czy w składni JSX dopuszczalne jest nie wpisanie cudzysłowiu dla wartości atrybutu?",
+      "questionContent": "Czy w składni JSX dopuszczalne jest nie wpisanie cudzysłowie dla wartości atrybutu?",
       "questionCode": "<table border=0>",
-      "answerContent": "W składi JSX nie jest dopuszczalne nie wpisanie cudzysłowiu dla wartości atrybutu",
+      "answerContent": "W składni JSX nie jest dopuszczalne nie wpisanie cudzysłowie dla wartości atrybutu",
       "answerCode": "<table border=\"0\">",
       "tags": [
         "JS",
         "React"
       ],
-      "id": 6
+      "id": 7
     },
     {
       "difficulty": 1,
@@ -94,7 +102,7 @@
         "JS",
         "React"
       ],
-      "id": 7
+      "id": 8
     },
     {
       "difficulty": 1,
@@ -106,26 +114,14 @@
         "JS",
         "React"
       ],
-      "id": 8
-    },
-    {
-      "difficulty": 1,
-      "questionContent": "W jaki sposób JSX umożliwia zagnieżdżanie wyrażeń?",
-      "questionCode": "",
-      "answerContent": "Aby umieścić wyrażenie w dowolnym miejscu elementu JSX należy otoczyć je nawiasami klamrowymi",
-      "answerCode": "<span>{2+2}</span><span>Twoje imię ma {count} znaków</span><span>{ person.name}</span><span>{ print(name)}</span>",
-      "tags": [
-        "JS",
-        "React"
-      ],
       "id": 9
     },
     {
       "difficulty": 1,
-      "questionContent": "xxxxxxxxxxx",
-      "questionCode": "const data = {\n  name: \"Polonez\",\n  brand: \"FSO\"\n};",
-      "answerContent": "xxxxxxxxxxxxx",
-      "answerCode": "const data = {\n  name: \"Polonez\",\n  brand: \"FSO\"\n};",
+      "questionContent": "W jakim formacie podajemy wartość czasu dla funkcji?",
+      "questionCode": "",
+      "answerContent": "W milisekundach",
+      "answerCode": "",
       "tags": [
         "JS"
       ],
@@ -133,14 +129,115 @@
     },
     {
       "difficulty": 1,
-      "questionContent": "aaa",
-      "questionCode": "aaa",
-      "answerContent": "aaa",
-      "answerCode": "aaa",
+      "questionContent": "Funkcje czasu w JavaScript przyjmują parametry. Ile, jakie i w jakiej kolejności?",
+      "questionCode": "",
+      "answerContent": "Funkcje czasu w JavaScript przyjmują dwa parametry:\ncallback (function), czas (number)",
+      "answerCode": "const timeout = setTimeout(function () {\n  console.log('Zadziałam za sekundę');\n}, 1000); ",
       "tags": [
         "JS"
       ],
       "id": 11
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie funkcje w JavaScript pozwalają na wyszukanie pojedynczego elementu po jego ID?",
+      "questionCode": "",
+      "answerContent": "Wyszukanie pojedynczego elementu po jego ID w JavaScript możliwe jest dzięki zastosowaniu następujących funkcji:",
+      "answerCode": "document.getElementByID();\ndocument.querySelector();",
+      "tags": [
+        "JS"
+      ],
+      "id": 12
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka metoda pozwala sprawdzić czy element posiada konkretny atrybut?",
+      "questionCode": "const box = document.querySelector(.\"box\");",
+      "answerContent": "Metoda hasAttribute pozwala sprawdzić czy element posiada konkretny atrybut.Metoda zwraca wartość logiczną true/false",
+      "answerCode": "box.hasAttribute(\"data-animation\");",
+      "tags": [
+        "JS"
+      ],
+      "id": 13
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest funkcja wyższego rzędu?",
+      "questionCode": "",
+      "answerContent": "Funkcja wyższego rzędu to funkcja przekazywana jako parametr do innych funkcji.",
+      "answerCode": "",
+      "tags": [
+        "ES6"
+      ],
+      "id": 14
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Która z metod tablicowych jest dedykowana do stworzenia nowej tablicy na podstawie innej tablicy, wyrzucając przy tym elementy które nie spełniają konkretnego warunku?",
+      "questionCode": "",
+      "answerContent": "Do stworzenia nowej tablicy na podstawie innej tablicy przy jednoczesnym wyrzuceniu elementów niespełniających konkretnego warunku dedykowana jest metoda filter();",
+      "answerCode": "",
+      "tags": [
+        "JS",
+        "ES6"
+      ],
+      "id": 15
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy Constructor Function może być stworzony za pomocą funkcji strzałkowej?",
+      "questionCode": "",
+      "answerContent": "Constructor Function nie może być stworzony za pomocą funkcji strzałkowej.",
+      "answerCode": "",
+      "tags": [
+        "JS",
+        "ES6"
+      ],
+      "id": 16
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób zaimportować z posiadanej biblioteki \n\"example-tample\" metodę \"example\"",
+      "questionCode": "",
+      "answerContent": "Aby zaimportować z biblioteki \"example-tample\"\nmetodę \"example\" należy na początku kodu umieścić:",
+      "answerCode": "import { example } from \"example-tample\"",
+      "tags": [
+        "ES6"
+      ],
+      "id": 17
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czego używa React aby zwiększyć wydajność?",
+      "questionCode": "",
+      "answerContent": "Virtual DOM",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 18
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak się nazywa metoda służąca  o wszczepiania komponentu \nw strukturę HTML?",
+      "questionCode": "",
+      "answerContent": "Metoda służąca do wszczepiania komponentu w strukturę HTML\nto:",
+      "answerCode": "ReactDOM.render();",
+      "tags": [
+        "React"
+      ],
+      "id": 19
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Która z metod cyklu życia jest najlepsza do wykorzystania \ntzw. \"side effects\" w komponencie (łączenie z serwerami\ntimery, interwały)?",
+      "questionCode": "",
+      "answerContent": "Do wykorzystania tzw. \"side effects\" w komponencie najlepiej zastosować metodę componentDidMount.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 20
     }
   ]
 }
