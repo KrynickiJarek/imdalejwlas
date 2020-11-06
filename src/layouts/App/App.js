@@ -1,7 +1,7 @@
 import React from "react";
 import './App.scss';
 import MainLayout from "../MainLayout/MainLayout";
-import GameBox from "../GameBox/GameBox";
+import GameBox from "../../components/GameBox/GameBox";
 
 
 function App() {

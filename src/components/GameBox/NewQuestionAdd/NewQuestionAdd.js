@@ -219,7 +219,6 @@ const NewQuestionAdd = () => {
                             />
                         )}
                         <button type="button" onClick={handleAddThirdTag}><i className={addRemoveTagSelectThree}/></button>
-                        {/*<button type="button" onClick={handleAddSecondTag}>-</button>*/}
                     </label>
                 </>
             )}
@@ -242,8 +241,6 @@ const NewQuestionAdd = () => {
                                 onChange={(e) => setNewTagThree(e.target.value)}
                             />
                         )}
-                        {/*<button type="button" onClick={handleAddThirdTag}><i className="fas fa-minus-circle"/></button>*/}
-                        {/*<button type="button" onClick={handleAddThirdTag}><i className="fas fa-plus-circle"/></button>*/}
                     </label>
                 </>
             )}
