@@ -21,7 +21,7 @@ const Flashcard = ({goBack}) => {
 
     useEffect(() => {
         fetchQuestions();
-    }, [setQuestions, setDifficultyArray]);
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         if (questions.length !== 0 || difficultyArray.length !== 0) {
