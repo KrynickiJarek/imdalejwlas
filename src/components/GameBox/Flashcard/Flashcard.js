@@ -21,7 +21,7 @@ const Flashcard = ({goBack}) => {
 
     useEffect(() => {
         fetchQuestions();
-    }, []);
+    }, [goBack]);
 
     useEffect(() => {
         if (questions.length !== 0 || difficultyArray.length !== 0) {
