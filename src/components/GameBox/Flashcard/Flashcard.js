@@ -32,8 +32,8 @@ const Flashcard = ({goBack}) => {
     }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const fetchQuestions = () => {
-        // fetch("http://localhost:3000/questions")
-        fetch("https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions")
+        fetch("http://localhost:3000/questions")
+        // fetch("https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions")
             .then((r) => r.json())
             .then((data) => {
                 setQuestions(data);
@@ -92,8 +92,8 @@ const Flashcard = ({goBack}) => {
     }
 
     const setQuestionDifficulty = (dataCurrQuestion, dataCurrQuestionID) => {
-        // fetch(`http://localhost:3000/questions/${dataCurrQuestionID}`, {
-        fetch(`https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions/${dataCurrQuestionID}`, {
+        fetch(`http://localhost:3000/questions/${dataCurrQuestionID}`, {
+        // fetch(`https://my-json-server.typicode.com/KrynickiJarek/FakeJsonRestAPI/questions/${dataCurrQuestionID}`, {
             method: "PUT",
             body: JSON.stringify(dataCurrQuestion),
             headers: {
