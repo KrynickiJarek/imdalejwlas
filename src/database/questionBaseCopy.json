@@ -1,0 +1,243 @@
+{
+  "questions": [
+    {
+      "difficulty": 1,
+      "questionContent": "Jak zapisujemy atrybut \"id\" w elemencie HTML?",
+      "questionCode": "",
+      "answerContent": "<div id=\"element\"></div>",
+      "answerCode": "<div id=\"element\"></div>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 0
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób możemy skorzystać z funkcji biblioteki React w pliku JavaScript?",
+      "questionCode": "",
+      "answerContent": "Należy zaimportować moduł react jako React:",
+      "answerCode": "import React from \"react\";",
+      "tags": [
+        "JS",
+        "React"
+      ],
+      "id": 1
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka właściwość pozwala ustawić inny font dla elementu?",
+      "questionCode": "",
+      "answerContent": "font-family",
+      "answerCode": "font-family: \"Times New Roman\", Times, serif;",
+      "tags": [
+        "CSS"
+      ],
+      "id": 2
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakim przedziale szerokości ekranu, zadziałają poniższe style?",
+      "questionCode": "@media screen and (min-width: 792px) and (max-width:\n1200px){\nbody {\nbackground-color: tomato;\n}\n}",
+      "answerContent": "Od 792px do 1200px dla ekranów (komputery, tablety, smartfony itd.)",
+      "answerCode": "",
+      "tags": [
+        "RWD"
+      ],
+      "id": 3
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co to jest Mobile First?",
+      "questionCode": "",
+      "answerContent": "Mobile first to zalecane podejście, w którym definiowanie\nwyglądu rozpoczyna się od najprostszego do coraz bardziej\nzaawansowanego. Wraz ze wzrostem szerokości ekranu style\npowinny być dodawane dopiero, jeśli są potrzeb",
+      "answerCode": "",
+      "tags": [
+        "RWD"
+      ],
+      "id": 4
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Gdzie i jak importujemy moduł react-dom?",
+      "questionCode": "",
+      "answerContent": "Moduł react-dom importujemy jednorazowo, tylko w głównym pliku aplikacji, wpisując następujący kod:",
+      "answerCode": "import ReactDOM from \"react-dom\";",
+      "tags": [
+        "JS",
+        "React"
+      ],
+      "id": 5
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest JSX?",
+      "questionCode": "",
+      "answerContent": "JSX jest rozszerzeniem języka JavaScript pozwalającym używać tagów przypominających tagi HTML wewnątrz plików JavaScriptowych.",
+      "answerCode": "",
+      "tags": [
+        "JS",
+        "React"
+      ],
+      "id": 6
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w składni JSX dopuszczalne jest nie wpisanie cudzysłowie dla wartości atrybutu?",
+      "questionCode": "<table border=0>",
+      "answerContent": "W składni JSX nie jest dopuszczalne nie wpisanie cudzysłowie dla wartości atrybutu",
+      "answerCode": "<table border=\"0\">",
+      "tags": [
+        "JS",
+        "React"
+      ],
+      "id": 7
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w składni JSX wszystkie tagi muszą być zamknięte?",
+      "questionCode": "<img src=\"logo.png\">",
+      "answerContent": "W składi JSX wszystkie tagi musza być zamknięte. Dopuszcza się zamknięcie znakiem / na końcu elementu.",
+      "answerCode": "<img src=\"logo.png\"></img><img src=\"logo.png\" />",
+      "tags": [
+        "JS",
+        "React"
+      ],
+      "id": 8
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W co są zmieniane tagi JSX podczas kompilacji?",
+      "questionCode": "<span id=\"test\">Hello, World</span>",
+      "answerContent": "Tagi JSX podczas kompilacji są zamieniane w wywołania React.createElement(). Wywołania te zwracają obiekt reprezentujący element.",
+      "answerCode": "React.createElement(\"span\",{id: \"test\"},\"Hello, World\");",
+      "tags": [
+        "JS",
+        "React"
+      ],
+      "id": 9
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakim formacie podajemy wartość czasu dla funkcji?",
+      "questionCode": "",
+      "answerContent": "W milisekundach",
+      "answerCode": "",
+      "tags": [
+        "JS"
+      ],
+      "id": 10
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Funkcje czasu w JavaScript przyjmują parametry. Ile, jakie i w jakiej kolejności?",
+      "questionCode": "",
+      "answerContent": "Funkcje czasu w JavaScript przyjmują dwa parametry:\ncallback (function), czas (number)",
+      "answerCode": "const timeout = setTimeout(function () {\n  console.log('Zadziałam za sekundę');\n}, 1000); ",
+      "tags": [
+        "JS"
+      ],
+      "id": 11
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie funkcje w JavaScript pozwalają na wyszukanie pojedynczego elementu po jego ID?",
+      "questionCode": "",
+      "answerContent": "Wyszukanie pojedynczego elementu po jego ID w JavaScript możliwe jest dzięki zastosowaniu następujących funkcji:",
+      "answerCode": "document.getElementByID();\ndocument.querySelector();",
+      "tags": [
+        "JS"
+      ],
+      "id": 12
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka metoda pozwala sprawdzić czy element posiada konkretny atrybut?",
+      "questionCode": "const box = document.querySelector(.\"box\");",
+      "answerContent": "Metoda hasAttribute pozwala sprawdzić czy element posiada konkretny atrybut.Metoda zwraca wartość logiczną true/false",
+      "answerCode": "box.hasAttribute(\"data-animation\");",
+      "tags": [
+        "JS"
+      ],
+      "id": 13
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest funkcja wyższego rzędu?",
+      "questionCode": "",
+      "answerContent": "Funkcja wyższego rzędu to funkcja przekazywana jako parametr do innych funkcji.",
+      "answerCode": "",
+      "tags": [
+        "ES6"
+      ],
+      "id": 14
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Która z metod tablicowych jest dedykowana do stworzenia nowej tablicy na podstawie innej tablicy, wyrzucając przy tym elementy które nie spełniają konkretnego warunku?",
+      "questionCode": "",
+      "answerContent": "Do stworzenia nowej tablicy na podstawie innej tablicy przy jednoczesnym wyrzuceniu elementów niespełniających konkretnego warunku dedykowana jest metoda filter();",
+      "answerCode": "",
+      "tags": [
+        "JS",
+        "ES6"
+      ],
+      "id": 15
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy Constructor Function może być stworzony za pomocą funkcji strzałkowej?",
+      "questionCode": "",
+      "answerContent": "Constructor Function nie może być stworzony za pomocą funkcji strzałkowej.",
+      "answerCode": "",
+      "tags": [
+        "JS",
+        "ES6"
+      ],
+      "id": 16
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób zaimportować z posiadanej biblioteki \n\"example-tample\" metodę \"example\"",
+      "questionCode": "",
+      "answerContent": "Aby zaimportować z biblioteki \"example-tample\"\nmetodę \"example\" należy na początku kodu umieścić:",
+      "answerCode": "import { example } from \"example-tample\"",
+      "tags": [
+        "ES6"
+      ],
+      "id": 17
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czego używa React aby zwiększyć wydajność?",
+      "questionCode": "",
+      "answerContent": "Virtual DOM",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 18
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak się nazywa metoda służąca  o wszczepiania komponentu \nw strukturę HTML?",
+      "questionCode": "",
+      "answerContent": "Metoda służąca do wszczepiania komponentu w strukturę HTML\nto:",
+      "answerCode": "ReactDOM.render();",
+      "tags": [
+        "React"
+      ],
+      "id": 19
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Która z metod cyklu życia jest najlepsza do wykorzystania \ntzw. \"side effects\" w komponencie (łączenie z serwerami\ntimery, interwały)?",
+      "questionCode": "",
+      "answerContent": "Do wykorzystania tzw. \"side effects\" w komponencie najlepiej zastosować metodę componentDidMount.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 20
+    }
+  ]
+}

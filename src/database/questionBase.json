@@ -2,10 +2,10 @@
   "questions": [
     {
       "difficulty": 1,
-      "questionContent": "Jak zapisujemy atrybut \"id\" w elemencie HTML?",
+      "questionContent": "Co to jest HTML?",
       "questionCode": "",
-      "answerContent": "<div id=\"element\"></div>",
-      "answerCode": "<div id=\"element\"></div>",
+      "answerContent": "HTML to język składający się ze znaczników służący do opisu treści stron.",
+      "answerCode": "",
       "tags": [
         "HTML"
       ],
@@ -13,231 +13,501 @@
     },
     {
       "difficulty": 1,
-      "questionContent": "W jaki sposób możemy skorzystać z funkcji biblioteki React w pliku JavaScript?",
+      "questionContent": "Co umożliwia element inframe w dokumencie HTML?",
       "questionCode": "",
-      "answerContent": "Należy zaimportować moduł react jako React:",
-      "answerCode": "import React from \"react\";",
+      "answerContent": "Element iframe (inline frame, ramka pływająca) umożliwia zawieranie dokumentu HTML wewnątrz innego dokumentu HTML. W atrybucie src elementu iframe podaje się adres URL strony mającej wyświetlić się w tej pływającej ramce.",
+      "answerCode": "<iframe src=\"https://www.sport.pl\" width=\"100%\" height=\"400\"></iframe>\n\n",
       "tags": [
-        "JS",
-        "React"
+        "HTML"
       ],
       "id": 1
     },
     {
       "difficulty": 1,
-      "questionContent": "Jaka właściwość pozwala ustawić inny font dla elementu?",
+      "questionContent": "Za co odpowiadają HTML, CSS i JavaScript?",
       "questionCode": "",
-      "answerContent": "font-family",
-      "answerCode": "font-family: \"Times New Roman\", Times, serif;",
+      "answerContent": "HTML opisuje dokument, tworzy jego logiczną strukturę, CSS nadaje temu dokumentowi wygląd, a Javascript - dynamikę i interakcję.",
+      "answerCode": "",
       "tags": [
-        "CSS"
+        "HTML",
+        "CSS",
+        "JavaScript"
       ],
       "id": 2
     },
     {
       "difficulty": 1,
-      "questionContent": "W jakim przedziale szerokości ekranu, zadziałają poniższe style?",
-      "questionCode": "@media screen and (min-width: 792px) and (max-width:\n1200px){\nbody {\nbackground-color: tomato;\n}\n}",
-      "answerContent": "Od 792px do 1200px dla ekranów (komputery, tablety, smartfony itd.)",
-      "answerCode": "",
+      "questionContent": "Z czego składa się znacznik (tag) w HTML?",
+      "questionCode": "",
+      "answerContent": "Znacznik (tag) w HTML składa się ze znacznika otwarcia i zamknięcia (nie dotyczy znaczników pustych). Między nimi może znajdować się tekst lub inny tag.",
+      "answerCode": "<p> paragraf </p>",
       "tags": [
-        "RWD"
+        "HTML"
       ],
       "id": 3
     },
     {
       "difficulty": 1,
-      "questionContent": "Co to jest Mobile First?",
+      "questionContent": "Czym są znaczniki puste w HTML?",
       "questionCode": "",
-      "answerContent": "Mobile first to zalecane podejście, w którym definiowanie\nwyglądu rozpoczyna się od najprostszego do coraz bardziej\nzaawansowanego. Wraz ze wzrostem szerokości ekranu style\npowinny być dodawane dopiero, jeśli są potrzeb",
-      "answerCode": "",
+      "answerContent": "Znaczniki puste w HTML to takie, które nie mają \"początku i końca\" co oznacza, że nic nie może się znaleźć w ich środku.",
+      "answerCode": "<br>\n<hr>\n<img>\n<input>\n<base>\n<col>",
       "tags": [
-        "RWD"
+        "HTML"
       ],
       "id": 4
     },
     {
       "difficulty": 1,
-      "questionContent": "Gdzie i jak importujemy moduł react-dom?",
-      "questionCode": "",
-      "answerContent": "Moduł react-dom importujemy jednorazowo, tylko w głównym pliku aplikacji, wpisując następujący kod:",
-      "answerCode": "import ReactDOM from \"react-dom\";",
+      "questionContent": "W HTML4 wszystkie znaczniki musiały być zamknięcie (znacznik zamykający). Czy w HTML5 to się zmieniło?",
+      "questionCode": "<!-- w HTML4 --?\n<br />\n<img />\n<meta />\n<link />",
+      "answerContent": "W HTML5 nie jest wymagane zamykanie pustych znaczników, chociaż przez niektóre osoby czasami stosowane - z przyzwyczajenia.",
+      "answerCode": "<!-- w HTML5 -->\n<br>\n<img>\n<meta>\n<link>",
       "tags": [
-        "JS",
-        "React"
+        "HTML"
       ],
       "id": 5
     },
     {
       "difficulty": 1,
-      "questionContent": "Czym jest JSX?",
+      "questionContent": "Czym są atrybuty w HTML, gdzie i w jaki sposób się je wstawia?",
       "questionCode": "",
-      "answerContent": "JSX jest rozszerzeniem języka JavaScript pozwalającym używać tagów przypominających tagi HTML wewnątrz plików JavaScriptowych.",
-      "answerCode": "",
+      "answerContent": "Atrybuty to pary nazwa-wartość rozdzielone znakiem \"=\", które służą do ustawiania dodatkowych parametrów znacznika (np. gdzie prowadzi łącze). Wartość powinna być być zawarta w cudzysłowy lub apostrofy. ",
+      "answerCode": "<img src=\"kot.jpg\" width=\"200\" height=\"300\" alt=\"kot\" title=\"Kotek\">",
       "tags": [
-        "JS",
-        "React"
+        "HTML"
       ],
       "id": 6
     },
     {
       "difficulty": 1,
-      "questionContent": "Czy w składni JSX dopuszczalne jest nie wpisanie cudzysłowie dla wartości atrybutu?",
-      "questionCode": "<table border=0>",
-      "answerContent": "W składni JSX nie jest dopuszczalne nie wpisanie cudzysłowie dla wartości atrybutu",
-      "answerCode": "<table border=\"0\">",
+      "questionContent": "Do czego służą i w jaki sposób zapisujemy komentarze w języku HTML?",
+      "questionCode": "",
+      "answerContent": "Komentarze służą do wstawiania dodatkowego opisu w dokumencie, który nie jest wyświetlany przez przeglądarkę. Aby użyć komentarza w dokumencie używamy zapisu:",
+      "answerCode": "<!-- To jest przykładowy komentarz -->\n<!-- W kolejnej linii zakomentowano fragment kodu -->\n<!-- <li>Kontakt</li> -->",
       "tags": [
-        "JS",
-        "React"
+        "HTML"
       ],
       "id": 7
     },
     {
       "difficulty": 1,
-      "questionContent": "Czy w składni JSX wszystkie tagi muszą być zamknięte?",
-      "questionCode": "<img src=\"logo.png\">",
-      "answerContent": "W składi JSX wszystkie tagi musza być zamknięte. Dopuszcza się zamknięcie znakiem / na końcu elementu.",
-      "answerCode": "<img src=\"logo.png\"></img><img src=\"logo.png\" />",
+      "questionContent": "Jak szybko stworzyć strukturę dokumentu HTML?",
+      "questionCode": "",
+      "answerContent": "W nowych edytorach HTML można podobną strukturę bardzo szybko uzyskać. Wystarczy stworzyć nowy pusty dokument typu html, wpisać znak ! lub html:5 i wcisnąć klawisz Tab.",
+      "answerCode": "",
       "tags": [
-        "JS",
-        "React"
+        "HTML"
       ],
       "id": 8
     },
     {
       "difficulty": 1,
-      "questionContent": "W co są zmieniane tagi JSX podczas kompilacji?",
-      "questionCode": "<span id=\"test\">Hello, World</span>",
-      "answerContent": "Tagi JSX podczas kompilacji są zamieniane w wywołania React.createElement(). Wywołania te zwracają obiekt reprezentujący element.",
-      "answerCode": "React.createElement(\"span\",{id: \"test\"},\"Hello, World\");",
+      "questionContent": "Co jest pierwszym tagiem, który powinien znaleźć się na początku każdej strony HTML? Za co odpowiada?",
+      "questionCode": "",
+      "answerContent": "Pierwszym tagiem, który powinien znaleźć się na początku każdej strony HTML, jest doctype. Informuje on przeglądarkę o rodzaju dokumentu, który ma wyświetlić.",
+      "answerCode": "<!doctype html>",
       "tags": [
-        "JS",
-        "React"
+        "HTML"
       ],
       "id": 9
     },
     {
       "difficulty": 1,
-      "questionContent": "W jakim formacie podajemy wartość czasu dla funkcji?",
+      "questionContent": "Między jakimi znacznikami powinna znaleźć się cała treść strony HTML? Jaki ten znacznik może mieć atrybut?",
       "questionCode": "",
-      "answerContent": "W milisekundach",
-      "answerCode": "",
+      "answerContent": "Cała treść strony powinna się znaleźć pomiędzy znacznikami <html> </html>. Znacznik ten może mieć dodatkowy atrybut lang, który określa język danej strony.",
+      "answerCode": "<!doctype html>\n<html lang=\"pl-PL\">\n<!-- treść strony -->\n</html>",
       "tags": [
-        "JS"
+        "HTML"
       ],
       "id": 10
     },
     {
       "difficulty": 1,
-      "questionContent": "Funkcje czasu w JavaScript przyjmują parametry. Ile, jakie i w jakiej kolejności?",
-      "questionCode": "",
-      "answerContent": "Funkcje czasu w JavaScript przyjmują dwa parametry:\ncallback (function), czas (number)",
-      "answerCode": "const timeout = setTimeout(function () {\n  console.log('Zadziałam za sekundę');\n}, 1000); ",
+      "questionContent": "Co oznacza wartość atrybutu lang w znaczniku <html>?",
+      "questionCode": "<html lang=\"pl-PL\">",
+      "answerContent": "Pierwsze dwie litery (małe) są deklaracją używanego języka, kolejne dwie litery (wielkie) są deklaracją kraju, w którym tego języka się używa.",
+      "answerCode": "",
       "tags": [
-        "JS"
+        "HTML"
       ],
       "id": 11
     },
     {
       "difficulty": 1,
-      "questionContent": "Jakie funkcje w JavaScript pozwalają na wyszukanie pojedynczego elementu po jego ID?",
-      "questionCode": "",
-      "answerContent": "Wyszukanie pojedynczego elementu po jego ID w JavaScript możliwe jest dzięki zastosowaniu następujących funkcji:",
-      "answerCode": "document.getElementByID();\ndocument.querySelector();",
+      "questionContent": "Za co odpowiada znacznik <head> w dokumencie HTML?",
+      "questionCode": "<head>\n   <!-- zawartość znacznika head -->\n</head>",
+      "answerContent": "Znacznik <head> opisuje ustawienia dokumentu HTML takie jak użyte kodowanie, ikonkę w zakładce, tytuł strony (wyświetlany na belce tytułowej przeglądarki), dołączone style itp. Jego zawartość jest niewidoczna na stronie.",
+      "answerCode": "<head>\n <meta charset=\"UTF-8\">\n <title>Example page</title>\n <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\">\n    </head>",
       "tags": [
-        "JS"
+        "HTML"
       ],
       "id": 12
     },
     {
       "difficulty": 1,
-      "questionContent": "Jaka metoda pozwala sprawdzić czy element posiada konkretny atrybut?",
-      "questionCode": "const box = document.querySelector(.\"box\");",
-      "answerContent": "Metoda hasAttribute pozwala sprawdzić czy element posiada konkretny atrybut.Metoda zwraca wartość logiczną true/false",
-      "answerCode": "box.hasAttribute(\"data-animation\");",
+      "questionContent": "Czym jest znacznik <div>?",
+      "questionCode": "",
+      "answerContent": "<div> - element blokowy, którego celem jest obejmowanie większych partii kodu. Jego przeznaczenie nie jest określone tak jak np. elementu <p> czy <strong> czy podobnych. Stosuje się go głównie do budowania fragmentów layoutu.",
+      "answerCode": "  <div>\n    Inna treść\n  </div>",
       "tags": [
-        "JS"
+        "HTML"
       ],
       "id": 13
     },
     {
       "difficulty": 1,
-      "questionContent": "Czym jest funkcja wyższego rzędu?",
+      "questionContent": "Czym jest znacznik <span>?",
       "questionCode": "",
-      "answerContent": "Funkcja wyższego rzędu to funkcja przekazywana jako parametr do innych funkcji.",
-      "answerCode": "",
+      "answerContent": "<span> to element inline, jego celem jest obejmowanie mniejszych części kodu np. tekstu, wyrazów, obrazków. Stosuje się go głównie do formatowania słów (np. nadawania koloru) czy tworzenia małych elementów takich jak ikonek, czy ozdobników.",
+      "answerCode": "  <div>\n    Inna <span>treść</span>\n  </div>",
       "tags": [
-        "ES6"
+        "HTML"
       ],
       "id": 14
     },
     {
       "difficulty": 1,
-      "questionContent": "Która z metod tablicowych jest dedykowana do stworzenia nowej tablicy na podstawie innej tablicy, wyrzucając przy tym elementy które nie spełniają konkretnego warunku?",
+      "questionContent": "Co może być przyczyną nieprawidłowego wyświetlania polskich znaków na stronie?",
       "questionCode": "",
-      "answerContent": "Do stworzenia nowej tablicy na podstawie innej tablicy przy jednoczesnym wyrzuceniu elementów niespełniających konkretnego warunku dedykowana jest metoda filter();",
-      "answerCode": "",
+      "answerContent": "Brak znacznika meta z utf-8 w sekcji head.",
+      "answerCode": "<meta charset=\"UTF-8\">",
       "tags": [
-        "JS",
-        "ES6"
+        "HTML"
       ],
       "id": 15
     },
     {
       "difficulty": 1,
-      "questionContent": "Czy Constructor Function może być stworzony za pomocą funkcji strzałkowej?",
+      "questionContent": "Jakim tagiem oznacza się nagłówki w HTML?",
       "questionCode": "",
-      "answerContent": "Constructor Function nie może być stworzony za pomocą funkcji strzałkowej.",
-      "answerCode": "",
+      "answerContent": "Nagłówki w HTML oznacza się znacznikami <h1> (to najważniejszy w hierarchii nagłówek wyświetlany największą czcionką), do <h6> ‐ najmniej znaczący.\n\nW praktyce najczęściej używane są <h1>, <h2>, <h3>.",
+      "answerCode": "<body>\n    <h1>Witaj na mojej stronie</h1>\n    <h2>O mnie</h2>\n    <h3>Moje projekty</h3>\n</body>",
       "tags": [
-        "JS",
-        "ES6"
+        "HTML"
       ],
       "id": 16
     },
     {
       "difficulty": 1,
-      "questionContent": "W jaki sposób zaimportować z posiadanej biblioteki \n\"example-tample\" metodę \"example\"",
+      "questionContent": "Jak oznacza się znaki specjalne w HTML? Jakie mogą być przykładowe znaki specjalne? ",
       "questionCode": "",
-      "answerContent": "Aby zaimportować z biblioteki \"example-tample\"\nmetodę \"example\" należy na początku kodu umieścić:",
-      "answerCode": "import { example } from \"example-tample\"",
+      "answerContent": "Znaki specjalne w HTML zaczynają się znakiem ampersand &, a kończą średnikiem ;.",
+      "answerCode": "&nbsp; – niełamliwa spacja (non-breaking space)\n&trade; – znak handlowy (trade mark sign)\n&lt; – znak mniejszy niż (less-than sign)\n&gt; – znak większy niż (greater-than sign)\n&copy; – znak copyright (copyright sign)",
       "tags": [
-        "ES6"
+        "HTML"
       ],
       "id": 17
     },
     {
       "difficulty": 1,
-      "questionContent": "Czego używa React aby zwiększyć wydajność?",
+      "questionContent": "Jaki znacznik pozwala na przejście do nowej linii?",
       "questionCode": "",
-      "answerContent": "Virtual DOM",
-      "answerCode": "",
+      "answerContent": "Znacznik <br> pozwala na przejście do nowej linii. <br> jest znacznikiem pustym.",
+      "answerCode": "<p>\nTen tekst jest długi<br>\ni powinien być napisany<br>\nw 3 liniach\n</p>",
       "tags": [
-        "React"
+        "HTML"
       ],
       "id": 18
     },
     {
       "difficulty": 1,
-      "questionContent": "Jak się nazywa metoda służąca  o wszczepiania komponentu \nw strukturę HTML?",
+      "questionContent": "Jak w HTML napisać tekst w indeksie górnym i dolnym?",
       "questionCode": "",
-      "answerContent": "Metoda służąca do wszczepiania komponentu w strukturę HTML\nto:",
-      "answerCode": "ReactDOM.render();",
+      "answerContent": "Znacznik <sup> umieszcza tekst w indeksie górnym.\nZnacznik <sub> umieszcza tekst w indeksie dolnym.",
+      "answerCode": "<p>\nWoda to H<sub>2</sub>O.\n2<sup>2</sup> = 4.\n</p>",
       "tags": [
-        "React"
+        "HTML"
       ],
       "id": 19
     },
     {
       "difficulty": 1,
-      "questionContent": "Która z metod cyklu życia jest najlepsza do wykorzystania \ntzw. \"side effects\" w komponencie (łączenie z serwerami\ntimery, interwały)?",
+      "questionContent": "Jaka jest różnica między znacznikami <b> a <strong>?",
       "questionCode": "",
-      "answerContent": "Do wykorzystania tzw. \"side effects\" w komponencie najlepiej zastosować metodę componentDidMount.",
+      "answerContent": "<strong> nadaje wagi zaznaczonemu fragmentowi, natomiast <b> służy do wizualnego zaznaczenia fragmentu bez nadawania wagi. Ma to znaczenie dla czytników tekstowych. Znacznik <strong> zostanie przeczytany innym akcentem.",
       "answerCode": "",
       "tags": [
-        "React"
+        "HTML"
       ],
       "id": 20
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy znacznik <code>?",
+      "questionCode": "",
+      "answerContent": "Znacznik stosowany do zaznaczenia fragmentu tekstu będącego kodem. Domyślnie tekst w tym znaczniku wyświetlany jest fontem typu monospace (takim jak w edytorach)",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 21
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy znacznik <del>?",
+      "questionCode": "",
+      "answerContent": "Znacznik <del> oznacza tekst usunięty. Najczęściej używany, jeżeli robimy poprawki w tekście, przekreślając poprzednio napisany tekst.",
+      "answerCode": "Pies był koloru <del>brązowego</del> czarnego.",
+      "tags": [
+        "HTML"
+      ],
+      "id": 22
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy znacznik <kbd>?",
+      "questionCode": "",
+      "answerContent": "Znacznik <kbd> to tekst oznaczający klawisze.",
+      "answerCode": "<p>\nNajlepszy skrót w debuggerze Chrome to <kbd>Ctrl + Shift + P</kbd>\n</p>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 23
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego stosowany jest znacznik <small>?",
+      "questionCode": "",
+      "answerContent": "Znacznik <small> stosowany do przypisów, tekstów licencji, copyright",
+      "answerCode": "<footer>\n  <small>&copy; Copyright OurFirm</small>\n</footer>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 24
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy znacznik <u>?",
+      "questionCode": "",
+      "answerContent": "Znacznik oznaczający adnotację, która nie jest związana z kontekstem (np. nazwa w Chińskim tekście, lub błędne słowa w tekście gdy włączona jest podpowiadanie pisowni). Domyślnie tekst objęty tym znacznikiem wyświetlany jest z podkreśleniem",
+      "answerCode": "<p>Japońskie, Węgierskie i Chińskie imiona pisane są z pierwszymi literami nazwy rodziny: <u>Wu</u> Xiaoqian.</p>\n<p><u>Warszawa</u> jest stolicą Polski.</p>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 25
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są rodzaje list w HTML?",
+      "questionCode": "",
+      "answerContent": "W HTML-u istnieją trzy rodzaje list:\n-uporządkowana ( <ol> ordered list),\n-nieuporządkowana ( <ul> unordered list),\n-definicji ( <dl> definition list).",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 26
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Z czego składa się każda lista w HTML? ",
+      "questionCode": "",
+      "answerContent": "Każda lista składa się ze znacznika określającego jej typ ( <ol>, <ul> lub <dl>) oraz znaczników pełniących funkcję elementów listy (<li>, <dt>, <dd>).",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 27
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Lista definicji składa się z par pojęcie - definicja. Jak je zapisujemy? ",
+      "questionCode": "",
+      "answerContent": "Pojęcia zapisujemy w znacznikach <dt> (definition term), natomiast definicje zapisujemy w znacznikach <dd> (definition description). Jedna definicja może opisywać wiele pojęć, a jedno pojęcie może mieć wiele definicji.",
+      "answerCode": "    <dt>Pojęcie 2</dt>\n    <dt>Pojęcie 3</dt>\n    <dd>Definicja pojęcia 2 i 3</dd>\n    <dt>Pojęcie 4</dt>\n    <dd>Pierwsza definicja pojęcia 4</dd>\n    <dd>Druga definicja pojęcia 4</dd>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 28
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak tworzymy hiperłącze w dokumencie HTML?",
+      "questionCode": "",
+      "answerContent": "Do stworzenia pojedynczego hiperłącza (linku) wykorzystujemy znacznik <a>.",
+      "answerCode": "<a href=\"https://www.google.pl/>Przenieś mnie do strony</a>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 29
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy znacznik <a> w dokumencie HTML? Jaki powinien zawierać atrybut? Co może się znaleźć w znaczniku <a>?",
+      "questionCode": "",
+      "answerContent": "Znacznik <a> powinien mieć atrybut href, który wskazuje miejsce lub stronę, na którą ma przenieść. Wewnątrz tego znacznika może pojawić nie tylko tekst, ale i dowolny inny element np. grafika, div itp.",
+      "answerCode": "<a href=\"https://www.google.com\">\n   <img src=\"google_logo.png\" alt=\"Google\">\n</a>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 30
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak dzielimy linki? ",
+      "questionCode": "",
+      "answerContent": "Linki dzielimy na zewnętrzne (przenoszą na zewnętrzne strony) i wewnętrzne, które dalej dzielimy na: prowadzące do innej podstrony w ramach tej samej strony oraz prowadzące do sekcji na tej samej stronie",
+      "answerCode": "<a href=\"https://google.pl\">Przejdź do strony Google</a>\n\n<a href=\"kontakt.html\">Przeniosę na stronę kontakt.html</a>\n<a href=\"info.html\">Przeniosę na stronę info.html</a>\n<a href=\"piosenka.mp3\">Przeniosę na plik piosenka.mp3</a>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 31
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób zapisujemy odniesienie do danego miejsca na tej samej podstronie w HTML?",
+      "questionCode": "",
+      "answerContent": "Linki przenoszące do danej sekcji na tej samej podstronie (zwane też kotwicami) rozpoczynają się od znaku # (wartość parametru href), po którym pojawia się id elementu, do którego prowadzi dany link",
+      "answerCode": "<a href=\"#second-title\">Przejdź do trzeciego tytułu</a>\n<h1>Pierwszy tytuł</h1>\n<p>Przykładowy bardzo długi tekst</p>\n<h2 id=\"second-title\">Podtytuł</h2>\n<p>Przykładowy bardzo długi tekst</p>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 32
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada atrybut rel znacznika <a>?",
+      "questionCode": "",
+      "answerContent": "Atrybut rel jest stosowany na potrzeby pozycjonowania. Określa on, jak powinien zachować się Googlebot indeksujący daną stronę. Atrybut ten może przyjmować wartości: dofollow (podążaj) – domyślna lub nofollow (nie podążaj).",
+      "answerCode": "<a href=\"http://www.coderslab.pl\" rel=\"nofollow\">\n    Szkoła programowania\n</a>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 33
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest różnica między dofollow i nofollow (wartości atrybutu rel znacznika <a>) ? ",
+      "questionCode": "<a href=\"http://www.coderslab.pl\" rel=\"nofollow\">\n    Szkoła programowania\n</a>",
+      "answerContent": "Jeżeli Googlebot natrafi na link z atrybutem rel ustawionym na wartość nofollow, nie podąży za linkiem, a wartość strony w indeksowaniu się nie zmieni. Dla wartości dofollow wartość zostanie przekazana na stronę na którą prowadzi link.",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 34
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co to jest Googlebot?",
+      "questionCode": "",
+      "answerContent": "Googlebot to robot internetowy, używany przez Google. Przechodzi on z jednej strony na drugą i tym samym tworzy indeks dla wyszukiwarki Google. Dzięki temu później możemy wyszukiwać dane rzeczy w wyszukiwarce Google.",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 35
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada atrybut target znacznika <a>?",
+      "questionCode": "",
+      "answerContent": "Atrybut target określa, czy dany link ma być otwarty w danej karcie czy w nowej.\n_blank – otwarcie strony w nowej karcie,\n_self – otwarcie strony w tej samej karcie.",
+      "answerCode": "<!-- link zostanie otwarty w nowej karcie -->\n<a href=\"http://inna-strona.html\" target=\"_blank\">klik</a>\n\n<!-- link zostanie otwarty w tej samej karcie -->\n<a href=\"http://inna-strona.html\" target=\"_self\">klik</a>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 36
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest atrybut alt elementu <img> w HTML?",
+      "questionCode": "",
+      "answerContent": "Atrybut alt zawiera alternatywny tekst, który wyświetlany jest, gdy grafika się nie wczyta.Ma to szczególne znaczenie dla osób niewidomych lub niedowidzących, które do przeglądania Internetu używają specjalnych czytników.",
+      "answerCode": "<img src=\"...\" alt=\"smaczne jabłka\">",
+      "tags": [
+        "HTML"
+      ],
+      "id": 37
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest atrybut title elementu <img> w HTML? ",
+      "questionCode": "",
+      "answerContent": "Atrybut title zawiera tekst, który pojawi się w dymku, gdy najedziemy na dany element. Można go stosować nie tylko dla grafik, ale i dla innych elementów na stronie.",
+      "answerCode": "<img src=\"dog.png\" alt=\"kwiatki\" title=\"Biały pies\">\n\n<a href=\"http://google.pl\" title=\"Przejdź do strony google.pl\">http://google.pl</a>\n",
+      "tags": [
+        "HTML"
+      ],
+      "id": 38
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy każdy element <img> w HTML musi mieć atrybuty width i height?",
+      "questionCode": "",
+      "answerContent": "Atrybuty width i height elementu <img> są opcjonalne i ustalają początkowy rozmiar grafiki.Dzięki temu podczas wczytywania grafiki pozostaje zarezerwowane dla niej miejsce, co powoduje, że reszta layoutu podczas wczytywania „nie skacze”.",
+      "answerCode": "<!-- 200px szerokości, 100px wysokości -->\n<img src=\"dog.png\" width=\"200\" height=\"100\">",
+      "tags": [
+        "HTML"
+      ],
+      "id": 39
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Z jakich podstawowych znaczników składa się tabela w HTML?",
+      "questionCode": "",
+      "answerContent": "table - znacznik, w którym zagnieżdżona jest cała tabela\ntbody - znacznik który zawiera główne ciało tabeli\ntr - table row - oznacza kolejne rzędy tabeli\ntd - table data - oznacza pojedyncze komórki tabeli",
+      "answerCode": "<table>\n  <tbody>\n    <tr>\n      <td>Zawartość komórki</td>\n    </tr>\n  </tbody>\n</table>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 40
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakim tagiem zapisujemy komórki nagłówków tabel w HTML? O czym trzeba pamiętać tworząc nagłówek?",
+      "questionCode": "",
+      "answerContent": "Komórki nagłówków zapisuje się za pomocą znacznika <th>. Elementy <th> które opisują górny nagłówek tabeli muszą znajdować się dodatkowo w elemencie <thead>.",
+      "answerCode": "<table>\n  <thead>\n    <tr>\n      <th>Komórka nagłówka nr 1</th>\n      <th>Komórka nagłówka nr 2</th>\n    </tr>\n  </thead>\n  <tbody>...",
+      "tags": [
+        "HTML"
+      ],
+      "id": 41
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy elementy th (komórki nagłówków) w tabelach tworzonych w HTML muszą znajdować się na górze tabeli?",
+      "questionCode": "",
+      "answerContent": "Nagłówki tabel nie muszą występować tylko na górze. W przypadku stosowania ich np. po prawej stronie nie jest konieczne stosowanie elementu thead.",
+      "answerCode": "  <tbody>\n    <tr>\n      <th>Nazwa samochodu</th>\n      <td>BMW</td>\n      <td>Audi</td>\n      <td>Fiat</td>\n    </tr>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 42
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie atrybuty komórek tabel w HTML (<td> i <th>) pozwalają scalić je z innymi komórkami?",
+      "questionCode": "",
+      "answerContent": "Każda komórka td i th ma dwa atrybuty, które pozwalają scalać je z innymi komórkami:\ncolspan - określa ile kolumn ma zajmować dana komórka\nrowspan - określa ile wierszy ma zajmować dana komórka",
+      "answerCode": "<table>\n  <tbody>\n    <tr>\n      <th colspan=\"3\">Podsumowanie danych</th>\n    </tr>...",
+      "tags": [
+        "HTML"
+      ],
+      "id": 43
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na jakie trzy sekcje dzielimy tabele w dokumencie HTML?",
+      "questionCode": "",
+      "answerContent": "Tabelę w dokumencie HTML dzielimy na trzy sekcje:\nthead - sekcja z nagłówkiem tabeli\ntbody - główne ciało tabeli\ntfoot - stopka tabeli",
+      "answerCode": "<table>\n  <thead>\n    <tr>\n      <!-- Zawartość nagłówka tabeli: elementy th -->\n    </tr>\n  </thead>...",
+      "tags": [
+        "HTML"
+      ],
+      "id": 44
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzują się elementy o właściwości display: inline? Jakie przykładowe elementy mają w CSS ustawioną taką wartość domyślnie?",
+      "questionCode": "",
+      "answerContent": "Elementy Inline zajmują dokładnie tyle miejsca, ile same potrzebują - tyle, ile realnie zajmuje ich zawartość.Można umieścić wiele takich elementów w jednej linii (tyle, ile się zmieści w jednej linii).\nPrzykłady elementów inline:",
+      "answerCode": "<a>, <b>, <br>, <button>, <canvas>, <cite>, <code>, <del>, <em>, <i>, <iframe>, <img>, <input>, <kbd>, <label>, <map>, <noscript>, <progress>, <script>, <select>, <small>, <span>, <strong>, <sub>, <sup>, <svg>, <textarea>, <u>, <video>",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 45
     }
   ]
 }
