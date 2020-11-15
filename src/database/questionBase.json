@@ -4,7 +4,7 @@
       "difficulty": 1,
       "questionContent": "Co to jest HTML?",
       "questionCode": "",
-      "answerContent": "HTML to język składający się ze znaczników służący do opisu treści stron.",
+      "answerContent": "HTML - HyperText Markup Language - to język składający się ze znaczników służący do opisu treści stron.",
       "answerCode": "",
       "tags": [
         "HTML"
@@ -502,12 +502,123 @@
       "questionContent": "Czym charakteryzują się elementy o właściwości display: inline? Jakie przykładowe elementy mają w CSS ustawioną taką wartość domyślnie?",
       "questionCode": "",
       "answerContent": "Elementy Inline zajmują dokładnie tyle miejsca, ile same potrzebują - tyle, ile realnie zajmuje ich zawartość.Można umieścić wiele takich elementów w jednej linii (tyle, ile się zmieści w jednej linii).\nPrzykłady elementów inline:",
-      "answerCode": "<a>, <b>, <br>, <button>, <canvas>, <cite>, <code>, <del>, <em>, <i>, <iframe>, <img>, <input>, <kbd>, <label>, <map>, <noscript>, <progress>, <script>, <select>, <small>, <span>, <strong>, <sub>, <sup>, <svg>, <textarea>, <u>, <video>",
+      "answerCode": "<a>, <b>, <br>, <button>, <canvas>, <cite>, <code>, <del>, <em>, <i>, <kbd>, <label>, <map>, <noscript>, <progress>, <script>, <small>, <span>, <strong>, <sub>, <sup>, <svg>, <textarea>, <u>, <video>",
       "tags": [
         "HTML",
         "CSS"
       ],
       "id": 45
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzują się elementy o właściwości display: block? Jakie przykładowe elementy mają w CSS ustawioną taką wartość domyślnie?",
+      "questionCode": "",
+      "answerContent": "Elementy blokowe domyślnie zajmują całą dostępną szerokość (bez względu na rozmiar czy zawartość) i są zawsze wyświetlane od nowej linii. Domyślnie w jednej linii można umieścić tylko jeden element blokowy. Przykłady:",
+      "answerCode": "<address>, <article>, <aside>, <blockquote>, <dd>, <div>, <dl>, <dt>, <fieldset>, <figcaption>, <figure>, <footer>, <form>, <h1> do <h6>, <header>, <hr>, <li>, <main>, <nav>, <ol>, <p>, <pre>, <section>, <table>, <ul>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 46
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co to są tzw. replaced elements?",
+      "questionCode": "",
+      "answerContent": "Replaced elements to elementy, które mają ustawioną w css ustawioną właściwość display:inline-block. Wyświetlają się one obok siebie w jednej linii, ale możemy im nadawać wymiary i marginesy. Przykłady",
+      "answerCode": "<img>, <input>, <select>, <iframe>",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 47
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w elementach blokowych możemy zagnieżdżać elementy inline? Czy w elementach inline możemy zagnieżdżać elementy blokowe? ",
+      "questionCode": "",
+      "answerContent": "W elementach blokowych można zagnieżdżać elementy inline, natomiast w elementach inline raczej nie powinno się zawierać elementów blokowych. Wyjątkiem w HTML5 jest element a, który pozwala na takie operacje.",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 48
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Ilu elementom HTML możemy przypisać ten sam identyfikator id?",
+      "questionCode": "",
+      "answerContent": "Identyfikator id jest to unikalny identyfikator elementu, co oznacza, że dany id możemy przypisać tylko jednemu elementowi na stronie.",
+      "answerCode": "<h3 id=\"smallHeader\">Nagłówek z id</h3>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 49
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest główna różnica między identyfikatorami a klasami w HTML?",
+      "questionCode": "",
+      "answerContent": "Klasy od identyfikatorów odróżnia możliwość nadania tej samej klasy wielu różnym elementom.",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 50
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy pojedynczemu elementowi html możemy przypisać więcej niż jedną klasę?",
+      "questionCode": "",
+      "answerContent": "Pojedynczemu elementowi HTML możemy przypisać więcej niż jedną klasę. W tym celu nazwy klas oddzielamy spacją:",
+      "answerCode": "<button class=\"btn btn-secondary btn-big\">Klik</button>",
+      "tags": [
+        "HTML"
+      ],
+      "id": 51
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest CSS?",
+      "questionCode": "",
+      "answerContent": "CSS - Cascading Style Sheets (kaskadowe arkusze stylów)- język służący do opisu formy prezentacji (wyświetlania) stron WWW.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 52
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Z czego składa się CSS?",
+      "questionCode": "",
+      "answerContent": "CSS składa się z reguł, które wskazują na wybrane elementy, a następnie dodają im opisujące wygląd właściwości.",
+      "answerCode": "p {\n    color: red;\n    font-size: 20px;\n    border: 2px solid blue;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 53
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak w CSS wskazujemy element (elementy) do ostylowania? ",
+      "questionCode": "",
+      "answerContent": "W CSS wskazujemy na elementy do ostylowania za pomocą selektorów. Najczęściej używane sposoby odwoływania się do elementów wykorzystują: znaczniki, atrybut id, klasy elementu.",
+      "answerCode": "/* wszystkie p */\np { ...\n/* jeden element o atrybucie id=\"element\" */\n#element { ...\n/* wiele elementów o klasie test */\n.test { ...",
+      "tags": [
+        "CSS"
+      ],
+      "id": 54
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można wstawić komentarz w CSS?",
+      "questionCode": "",
+      "answerContent": "W CSS treść komentarza wstawiamy między \"/*\" a \"*/\":",
+      "answerCode": "/* \ntreść komentarza w CSS\n  */",
+      "tags": [
+        "CSS"
+      ],
+      "id": 55
     }
   ]
 }
