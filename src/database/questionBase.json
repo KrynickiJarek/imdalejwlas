@@ -60,7 +60,7 @@
     {
       "difficulty": 1,
       "questionContent": "W HTML4 wszystkie znaczniki musiały być zamknięcie (znacznik zamykający). Czy w HTML5 to się zmieniło?",
-      "questionCode": "<!-- w HTML4 --?\n<br />\n<img />\n<meta />\n<link />",
+      "questionCode": "<!-- w HTML4 -->\n<br />\n<img />\n<meta />\n<link />",
       "answerContent": "W HTML5 nie jest wymagane zamykanie pustych znaczników, chociaż przez niektóre osoby czasami stosowane - z przyzwyczajenia.",
       "answerCode": "<!-- w HTML5 -->\n<br>\n<img>\n<meta>\n<link>",
       "tags": [
@@ -348,7 +348,7 @@
       "questionContent": "Jak dzielimy linki? ",
       "questionCode": "",
       "answerContent": "Linki dzielimy na zewnętrzne (przenoszą na zewnętrzne strony) i wewnętrzne, które dalej dzielimy na: prowadzące do innej podstrony w ramach tej samej strony oraz prowadzące do sekcji na tej samej stronie",
-      "answerCode": "<a href=\"https://google.pl\">Przejdź do strony Google</a>\n\n<a href=\"kontakt.html\">Przeniosę na stronę kontakt.html</a>\n<a href=\"info.html\">Przeniosę na stronę info.html</a>\n<a href=\"piosenka.mp3\">Przeniosę na plik piosenka.mp3</a>",
+      "answerCode": "<a href=\"https://google.pl\">Przejdź do strony Google</a>\n\n<a href=\"kontakt.html\">Przeniosę na stronę kontakt.html</a>\n<a href=\"info.html\">Przeniosę na stronę info.html</a>\n<a href=\"piosenka.mp3\">Przeniosę ndo pliku piosenka.mp3</a>",
       "tags": [
         "HTML"
       ],
@@ -359,7 +359,7 @@
       "questionContent": "W jaki sposób zapisujemy odniesienie do danego miejsca na tej samej podstronie w HTML?",
       "questionCode": "",
       "answerContent": "Linki przenoszące do danej sekcji na tej samej podstronie (zwane też kotwicami) rozpoczynają się od znaku # (wartość parametru href), po którym pojawia się id elementu, do którego prowadzi dany link",
-      "answerCode": "<a href=\"#second-title\">Przejdź do trzeciego tytułu</a>\n<h1>Pierwszy tytuł</h1>\n<p>Przykładowy bardzo długi tekst</p>\n<h2 id=\"second-title\">Podtytuł</h2>\n<p>Przykładowy bardzo długi tekst</p>",
+      "answerCode": "<a href=\"#second-title\">Przejdź do drugiego tytułu</a>\n<h1>Pierwszy tytuł</h1>\n<p>Przykładowy bardzo długi tekst</p>\n<h2 id=\"second-title\">Podtytuł</h2>\n<p>Przykładowy bardzo długi tekst</p>",
       "tags": [
         "HTML"
       ],
@@ -413,7 +413,7 @@
       "difficulty": 1,
       "questionContent": "Czym jest atrybut alt elementu <img> w HTML?",
       "questionCode": "",
-      "answerContent": "Atrybut alt zawiera alternatywny tekst, który wyświetlany jest, gdy grafika się nie wczyta.Ma to szczególne znaczenie dla osób niewidomych lub niedowidzących, które do przeglądania Internetu używają specjalnych czytników.",
+      "answerContent": "Atrybut alt zawiera alternatywny tekst, który wyświetlany jest, gdy grafika się nie wczyta. Ma to szczególne znaczenie dla osób niewidomych lub niedowidzących, które do przeglądania Internetu używają specjalnych czytników.",
       "answerCode": "<img src=\"...\" alt=\"smaczne jabłka\">",
       "tags": [
         "HTML"
@@ -446,7 +446,7 @@
       "difficulty": 1,
       "questionContent": "Z jakich podstawowych znaczników składa się tabela w HTML?",
       "questionCode": "",
-      "answerContent": "table - znacznik, w którym zagnieżdżona jest cała tabela\ntbody - znacznik który zawiera główne ciało tabeli\ntr - table row - oznacza kolejne rzędy tabeli\ntd - table data - oznacza pojedyncze komórki tabeli",
+      "answerContent": "table - znacznik, w którym zagnieżdżona jest cała tabela: tbody - znacznik który zawiera główne ciało tabeli, tr - table row - oznacza kolejne rzędy tabeli, td - table data - oznacza pojedyncze komórki tabeli",
       "answerCode": "<table>\n  <tbody>\n    <tr>\n      <td>Zawartość komórki</td>\n    </tr>\n  </tbody>\n</table>",
       "tags": [
         "HTML"
@@ -490,7 +490,7 @@
       "difficulty": 1,
       "questionContent": "Na jakie trzy sekcje dzielimy tabele w dokumencie HTML?",
       "questionCode": "",
-      "answerContent": "Tabelę w dokumencie HTML dzielimy na trzy sekcje:\nthead - sekcja z nagłówkiem tabeli\ntbody - główne ciało tabeli\ntfoot - stopka tabeli",
+      "answerContent": "Tabelę w dokumencie HTML dzielimy na trzy sekcje:thead - sekcja z nagłówkiem tabeli, tbody - główne ciało tabeli, tfoot - stopka tabeli",
       "answerCode": "<table>\n  <thead>\n    <tr>\n      <!-- Zawartość nagłówka tabeli: elementy th -->\n    </tr>\n  </thead>...",
       "tags": [
         "HTML"
@@ -501,7 +501,7 @@
       "difficulty": 1,
       "questionContent": "Czym charakteryzują się elementy o właściwości display: inline? Jakie przykładowe elementy mają w CSS ustawioną taką wartość domyślnie?",
       "questionCode": "",
-      "answerContent": "Elementy Inline zajmują dokładnie tyle miejsca, ile same potrzebują - tyle, ile realnie zajmuje ich zawartość.Można umieścić wiele takich elementów w jednej linii (tyle, ile się zmieści w jednej linii).\nPrzykłady elementów inline:",
+      "answerContent": "Elementy Inline zajmują dokładnie tyle miejsca, ile same potrzebują - tyle, ile realnie zajmuje ich zawartość. Można umieścić wiele takich elementów w jednej linii (tyle, ile się zmieści). Przykłady elementów inline:",
       "answerCode": "<a>, <b>, <br>, <button>, <canvas>, <cite>, <code>, <del>, <em>, <i>, <kbd>, <label>, <map>, <noscript>, <progress>, <script>, <small>, <span>, <strong>, <sub>, <sup>, <svg>, <textarea>, <u>, <video>",
       "tags": [
         "HTML",
@@ -524,7 +524,7 @@
       "difficulty": 1,
       "questionContent": "Co to są tzw. replaced elements?",
       "questionCode": "",
-      "answerContent": "Replaced elements to elementy, które mają ustawioną w css ustawioną właściwość display:inline-block. Wyświetlają się one obok siebie w jednej linii, ale możemy im nadawać wymiary i marginesy. Przykłady",
+      "answerContent": "Replaced elements to elementy, które mają ustawioną w css ustawioną właściwość display: inline-block. Wyświetlają się one obok siebie w jednej linii, ale możemy im nadawać wymiary i marginesy. Przykłady",
       "answerCode": "<img>, <input>, <select>, <iframe>",
       "tags": [
         "HTML",
@@ -619,6 +619,347 @@
         "CSS"
       ],
       "id": 55
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na jakiej zasadzie działa CSS i z czego ona wynika?",
+      "questionCode": "",
+      "answerContent": "CSS działa na zasadzie kaskadowości. Wynika ona z parsowania arkuszy CSS (od góry do dołu). Dzięki kaskadowości jesteśmy w stanie nadpisywać wartości selektorów znajdujące się niżej w hierarchii selektorami znajdującymi się powyżej.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 56
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Który selektor CSS ostyluje element, jeżeli oba mają tą taką samą specyficzność? ",
+      "questionCode": "p {\n  color: red;\n}\np {\n  color: blue;\n}",
+      "answerContent": "Jeżeli dwa selektory mają podobną specyficzność i stylują ten sam element, powtarzające się właściwości brane są z selektora znajdującego się poniże.",
+      "answerCode": "p {\n  color: red;\n}\np {\n  color: blue; /* nadpisze powyższy kolor */\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 57
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Każdy rodzaj selektora ma swoją moc (CSS specificity). Jaka jest ich kolejność? ",
+      "questionCode": "",
+      "answerContent": "Selektory od najmniejszej do największej mocy:\n1. Selektor uniwersalny - *\n2. Elementy i pseudoelementy\n3. Klasy, atrybuty i pseudoklasy\n4. id\n5. stylowanie inline\n6. słowo kluczowe !important",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 58
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaką slepcyficzność ma poniższy selektor?",
+      "questionCode": "ul#drinks li",
+      "answerContent": "0102:\ninline - 0\nID - 1\nKlasy, atrubuty i pseudoklasy - 0 \nElementy i pseudoelementy - 2 \n",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 59
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaką slepcyficzność ma poniższy selektor?",
+      "questionCode": "div.element .favourite",
+      "answerContent": "0021:\ninline - 0\nID - 0\nKlasy, atrubuty i pseudoklasy - 2 \nElementy i pseudoelementy - 1 \n",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 60
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co w Chrome Developer Tools oznaczają przekreślone wartości w zakładce Style? Co oznacza przy nich żółty wykrzyknik?",
+      "questionCode": "",
+      "answerContent": "Przekreślone wartości oznaczają właściwości, które zostały nadpisane przez \"mocniejszy selektor\".\nPrzekreślone wartości przy których znajduje się żółty wykrzyknik oznaczają właściwości, które są błędnie zapisane.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 61
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak dzielimy jednostki w CSS?",
+      "questionCode": "",
+      "answerContent": "Jednostki w CSS dzielimy na dwa główne działy: absolutne i realtywne.",
+      "answerCode": "h1 {\n  font-size: 3em; /*jednostka absolutna*/\n  height: 100px; /*jednostka relatywna*/\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 62
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym w CSS jest jednostka em? Jaki rozmiar czcionki będzie miał nagłówek h1?",
+      "questionCode": "<section>\n  <h1>Nagłówek</h1>\n</section>\n---\nsection {\n  font-size: 20px;\n}\nh1 {\n  font-size: 2em;\n}",
+      "answerContent": "Em w CSS jest jednostką relatywną obliczaną na podstawie wielkości fonta czyli właściwości font-size. Jeżeli element nie ma własnego font-size, dziedziczy go z rodzica. Tekst nagłówka będzie miał 40px.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 63
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym w CSS jest jednostka rem? Jaki rozmiar czcionki będzie miał nagłówek h1?",
+      "questionCode": "<section><h1>Nagłówek</h1></section>\n---\nhtml {\n  font-size: 10px;\n}\nsection {\n  font-size: 20px;\n}\nh1 {\n  font-size: 2.5rem;\n}",
+      "answerContent": "Rem w CSS jest jednostką relatywną obliczaną bezpośrednio od roota naszego dokumentu (od elementu html). Tekst nagłówka będzie miał 25px.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 64
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy jednostki vw i vh w CSS są zależne od rodzica elementu?",
+      "questionCode": "",
+      "answerContent": "Jednostki vw i vh odnoszą się do viewportu czyli obszaru roboczego użytkownika. Jednostki te, nie biorą pod uwagę szerokości czy wysokości swojego rodzica. Zawsze odwołują się do dostępnego obszaru naszej przeglądarki.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 65
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwia nam metoda calc w CSS?",
+      "questionCode": "",
+      "answerContent": "Metoda ta, pozwala nam na przeprowadzanie obliczeń bezpośrednio w wartości naszego parametru CSS'owego.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 66
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy odstępy między wartościami i operatorami w metodzie calc w CSS mają znaczenie?",
+      "questionCode": "",
+      "answerContent": "Funkcja calc w CSS jest bardzo wrażliwa na odstępy pomiędzy wartościami i operatorami. Po każdej wartości i operatorze musi być wstawiony znak spacji:",
+      "answerCode": "calc(150px * 5);",
+      "tags": [
+        "CSS"
+      ],
+      "id": 67
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy metoda calc w CSS pozwala na miesznie ze sobą różnych jednostek? ",
+      "questionCode": "",
+      "answerContent": "Metoda calc pozwala nam na mieszanie ze sobą różnych jednostek, np. px z vh czy rem.",
+      "answerCode": ".box {\n  width: calc(50% - 30px);\n  height: calc(10px + 10vh);\n  border: 4px solid tomato;\n  margin: 0 auto;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 68
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak łączymy selektory jeżeli chcemy do nich zastosować jeden kod CSS?",
+      "questionCode": "<h1>Nagłówek 1</h1>\n<p>Paragraf</p>\n<h4>Nagłówek 4</h4>",
+      "answerContent": "Jeżeli chcemy zastosować jeden kod CSS do wielu selektorów – możemy wypisać je wszystkie, używając przecinka do ich rozdzielenia.",
+      "answerCode": "p, h1, h4 {\n  color: #ba2f00;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 69
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak zaznaczmy selektor dziecka w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy znakiem >, wtedy szukamy wszystkich selektorów2, które są bezpośrednimi dziećmi selektora1.",
+      "answerCode": "<div>\n  <h2 class=\"red\">Nagłówek 2</h2>\n  <article><p class=\"red\">Paragraf</p></article>\n</div>\n---\ndiv > .red {\n  color: red;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 70
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak oznaczamy selektor potomka w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy tylko spacją – szukamy wszystkich selektów2, które są potomkami selektor1.",
+      "answerCode": "article p {\n  color: red;\n  font-size: 16px;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 71
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak oznaczamy selektor bezpośredniego rodzeństwa w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy znakiem +, wtedy szukamy pierwszego selektora2, który występuje bezpośrednio po selektorze1.",
+      "answerCode": "h2 + p {\n  color: red;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 72
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak oznaczamy selektor rodzeńśtwa w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy znakiem ~, wtedy szukamy wszystkich selektorów2, które mają tego samego rodzica co selektor1 oraz występują za elementem wskazanym selektorem1.",
+      "answerCode": "h3 ~ p {\n  color: red;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 73
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak w CSS wyszukujemy elementy które:\nmają atrybut, atrybut ma konkretną wartość, zawiera konkretny ciąg znaków, zaczyna się od konkretnego ciągu znaków, kończy się na konkretnym ciągu znaków?",
+      "questionCode": "",
+      "answerContent": "Każde wyszukiwanie po konkretnym atrybucie odbywa się za pomocą nawiasów kwadratowych []:",
+      "answerCode": "a[href] {... /*ma atrybut \"href\"*/\na[href=\"ex.html\"] {... /*href=\"ex.html\"*/\na[href*=\"ht\"] {... /*href zawiera \"ht\"*/\na[href^=\"ex\"] {... /*href zaczyna się od \"ex\"*/\na[href$=\"html\"] {... /*href kończy się \"html\"*/",
+      "tags": [
+        "CSS"
+      ],
+      "id": 74
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie dwie wartości przyjmuje atrybut box-sizing i która jest domyślna?",
+      "questionCode": "",
+      "answerContent": "Atrybut box-sizing przyjmuje dwie wartości: content-box (domyślna) oraz border-box.",
+      "answerCode": "box-sizing: content-box;\n box-sizing: border-box}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 75
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak liczona jest wielkość elementu dla wartości content-box atrybutu box-sizing w CSS?",
+      "questionCode": "box-sizing: content-box",
+      "answerContent": "Szerokość i wysokość dla wartości content-box atrybutu box-sizing wynosi:\nwidth = width + padding + border + margin\nheight = height + padding + border + margin",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 76
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak liczona jest wielkość elementu dla wartości border-box atrybutu box-sizing w CSS?",
+      "questionCode": "box-sizing: border-box",
+      "answerContent": "Szerokość i wysokość dla wartości content-box atrybutu box-sizing wynosi:\nwidth = width + margin\nheight = height + margin",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 77
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy i jakie wartości przyjmuje parametr box-shadow w CSS? ",
+      "questionCode": "",
+      "answerContent": "Atrybut box-shadow służy do tworzenia cieni znajdujących się za elementem. Dodatkowo istnieje opcjonalny parametr inset, który jeżeli zostanie użyty, cień będzie wewnętrzny.",
+      "answerCode": ".box {\n  /* x, y, rozmycie, rozszerzenie, kolor */\n  box-shadow: 2px 3px 6px 10px black;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 78
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działają przeudoklasy :hover i :active w CSS?",
+      "questionCode": ".element:hover {\n  background: red;\n}",
+      "answerContent": "Pseudoklasa :hover nadaje stylowanie elemntu po najechaniu na niego kursorem, a :active po kliknięciu na element i działa w trakcie naciśnięcia. ",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 79
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest prawidłowa kolejność użycia pseudoklas dla linków?",
+      "questionCode": "",
+      "answerContent": "LoVe and HAte",
+      "answerCode": "a:link { }\na:visited { }\na:hover { }\na:active { }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 80
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są pseudoklasy dla formularzy w CSS?",
+      "questionCode": "",
+      "answerContent": ":enabled - element, włączony; :disabled - element wyłączony; \n:checked - checkboksy, które są wybrane.",
+      "answerCode": "input[type=\"text\"]:enabled { }\ninput[type=\"text\"]:disabled { }\ninput[type=\"checkbox\"]:checked { }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 81
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakiej formie należy wskazać element w pseudoklasie :nth-child() w CSS?",
+      "questionCode": "li:nth-child(???) {\n  background: orangered;\n  color: #fff;\n}",
+      "answerContent": "W nawiasy wpisujemy formułę an + b, gdzie:\na – liczba całkowita\nn – określenie wielokrotności (jak w pętli)\nb – liczba całkowita",
+      "answerCode": "li:nth-child(2n+5) {\n  background: orangered;\n  color: #fff;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 82
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego używane są pseudoelementy w CSS?",
+      "questionCode": "p::before {\n}\n \nul::after {\n}",
+      "answerContent": "Pdeudoelementy w CSS są używane do stylowania części danego elementu albo treści wokół elementu. Możemy też stworzyć element HTML przy pomocy CSS. Pseudoelementy są nieklikalne.",
+      "answerCode": "p::before {\n/*używany do dodania danej treści jako pierwsze dziecko danego elementu*/ }\nul::after {\n/* używany do dodania danej treści jako ostatnie dziecko danego elementu*/ }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 83
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaki atrybut jest wymagany podczas używania pseudoelementów?",
+      "questionCode": "ul::before {\n  color: blue;\n}\nul::after {\n  color: red;\n}",
+      "answerContent": "Podczas używania pseudoelementów wymagany jest atrybut content. Atrybut ten działa tylko dla pseudoelementów.",
+      "answerCode": "ul::before {\n  content: \"List start\";\n  color: blue; }\nul::after {\n  content: \"List end\";\n  color: red; }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 84
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób ostylować w CSS pierwsza linię lub pierwszą literę tekstu?",
+      "questionCode": "",
+      "answerContent": "Dzięki pseudoelementowi ::first-letter wystylujemy pierwszą literę tekstu, a dzięki pseudoelementowi ::first-line wystylizujemy pierwszą linię tesktu.",
+      "answerCode": ".element::first-letter {\n  color: #fff;\n  background: #2EC4B6;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 85
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w stylowaniu w CSS użyć zaprzeczenia?",
+      "questionCode": "",
+      "answerContent": "CSS pozwala nam na używanie zaprzeczeń dzięki selektorowi :not. Poniżej wszystkie elementy div oprócz elementów o klasie content oraz wszystkie elementy o klasie content, ale nie elementy div",
+      "answerCode": "div:not(.content) {\n  color: #F00;\n}\n.content:not(div) {\n  color: #F00;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 86
     }
   ]
 }

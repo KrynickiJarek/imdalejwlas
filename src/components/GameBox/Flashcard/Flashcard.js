@@ -60,7 +60,7 @@ const Flashcard = ({goBack}) => {
         handleTurnYBack();
         setTimeout(() => {
             printQuestion(questions);
-        }, 100)
+        }, 50)  //było 100
     }
 
     const handleSettings = () => {
@@ -71,16 +71,34 @@ const Flashcard = ({goBack}) => {
         }, 500)
     }
 
+// PONIŻEJ LOSOWANIE PYTAŃ
 
+    // const printQuestion = (arr) => {
+    //     setDifficultyArray([]);
+    //     fetchQuestions();
+    //     // handleTurnYBack();  //potrzebne tylko przy następnym pytaniu od strony odpowiedzi, a jest przy handleTurnPrint
+    //     setFlashStyle("flash")
+    //     let randomQuestionNumber = difficultyArray[Math.floor(Math.random() * (difficultyArray.length))];
+    //     do {
+    //         randomQuestionNumber = difficultyArray[Math.floor(Math.random() * (difficultyArray.length))];
+    //     } while (randomQuestionNumber === prevQuestionNumber);
+    //     setTimeout(() => {
+    //         setCurrQuestion(arr[randomQuestionNumber]);
+    //         setPrevQuestionNumber(randomQuestionNumber);
+    //         setFlashStyle("no_flash")
+    //         window.scrollTo(0, document.body.scrollHeight);
+    //         console.log(difficultyArray);
+    //         console.log(randomQuestionNumber);
+    //     }, 400)
+    // }
+
+// PONIŻEJ WSZYSTKIE PYTANIA PO KOLEI
     const printQuestion = (arr) => {
         setDifficultyArray([]);
         fetchQuestions();
-        handleTurnYBack();
+        handleTurnYBack();  //potrzebne tylko przy następnym pytaniu od strony odpowiedzi, a jest przy handleTurnPrint
         setFlashStyle("flash")
-        let randomQuestionNumber = difficultyArray[Math.floor(Math.random() * (difficultyArray.length))];
-        do {
-            randomQuestionNumber = difficultyArray[Math.floor(Math.random() * (difficultyArray.length))];
-        } while (randomQuestionNumber === prevQuestionNumber);
+        let randomQuestionNumber = difficultyArray[prevQuestionNumber + 1];
         setTimeout(() => {
             setCurrQuestion(arr[randomQuestionNumber]);
             setPrevQuestionNumber(randomQuestionNumber);
