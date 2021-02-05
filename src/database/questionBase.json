@@ -960,6 +960,17 @@
         "CSS"
       ],
       "id": 86
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co oznacza poniższy zapis w CSS?",
+      "questionCode": ".element {\n  flex: 1;\n}",
+      "answerContent": "Trzy właściwości elementu: flex-grow, flex-shrink, flex-basis można zapisać pod pojedynczą skróconą właściwością: flex",
+      "answerCode": ".element {\n  flex-grow: 1;\n  flex-shrink: 1;\n  flex-basis: 0;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 87
     }
   ]
 }
