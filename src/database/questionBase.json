@@ -971,6 +971,28 @@
         "CSS"
       ],
       "id": 87
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka właściwość CSS odpowiada za wyłączenie niebiekiej obwódki pola input pojawiającą się po kliknięciu na niego? ",
+      "questionCode": "",
+      "answerContent": "Po wybraniu danego pola input, domyślnie ma ono niebieską obwódkę. Możemy ją wyłączyć poprzez dodanie dla pola właściwości outline: none.",
+      "answerCode": "input {\n  outline: none;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 88
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym są placeholdery pola input i jak je ostylkować w CSS?\n",
+      "questionCode": "<input type=\"text\" placeholder=\"zawartość placeholdera\">",
+      "answerContent": "Placeholder to tekst, który widzisz w polu formularza, zanim zaczniesz uzupełniać to pole. Można go ostylować za pomocą pseudoklas.",
+      "answerCode": "input::placeholder {\n  color: #fbba1f;\n  font-style: italic;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 89
     }
   ]
 }
