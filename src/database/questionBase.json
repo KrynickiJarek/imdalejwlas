@@ -993,6 +993,281 @@
         "CSS"
       ],
       "id": 89
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Node.js",
+      "questionCode": "",
+      "answerContent": "git restore --",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 90
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest npm?",
+      "questionCode": "",
+      "answerContent": "npm (Node Package Manager) jest menadżerem pakietów stworzonym dla środowiska Node.js. Składa się z CLI (Command Line Interface - narzędzia konsolowego) oraz repozytorium paczek npm.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 91
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest JSON",
+      "questionCode": "",
+      "answerContent": "JSON – JavaScript Object Notation - to format tekstowy, dzięki któremu aplikacje mogą wymieniać się danymi. JSON jest niezależny od języka programowania, tzn. możemy go wykorzystywać nie tylko w JavaScripcie.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 92
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można zainstalować paczkę npm lokalnie, a w jaki globalnie? Czym się różnią?",
+      "questionCode": "",
+      "answerContent": "Instalacja lokalna polega na zinastalowaniu paczki w folderze, z którego została uruchomiona komenda instalacji i będzie ona dostępna tylko w tam. Instalacja globalna polega na instalacji danej paczki w ścieżce systemowej. ",
+      "answerCode": "npm i nazwa_paczki //instalacja lokalna\nnpm i nazwa_paczki -g //instalacja globalna",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 93
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób wskazać podczas instalacji wersję paczki npm? Czy wsakazanie wersji jest wymagane?",
+      "questionCode": "",
+      "answerContent": "Aby wskazać wersję paczki npm do zainstalowania należy po nazwie paczki dodać \"@x.x\" gdzie \"x.x\" to numer wersji. Jeżeli nie wpiszemy wersji paczki, to zawsze zostanie ściągnięta najnowsza wersja dostępna w repozytorium.",
+      "answerCode": "npm i nazwa_paczki@x.x // x.x - wersja paczki",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 94
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak wyświetlić zainstalowane paczki npm?",
+      "questionCode": "",
+      "answerContent": "Aby wyświetlić zainstalowane paczki, musimy użyć komendy:",
+      "answerCode": "npm list // paczki zainstalowane lokalnie\nnpm list -g // paczki zainstalowane globalnie",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 95
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak usunąć paczkę npm?",
+      "questionCode": "",
+      "answerContent": "Aby usunąć zainstalowaną paczkę, musimy użyć komendy:",
+      "answerCode": "npm uninstall nazwa_paczki // paczka lokalna\nnpm uninstall nazwa_paczki -g // paczka globalna",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 96
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Gupl?",
+      "questionCode": "",
+      "answerContent": "Gulp to narzędzie służące do automatyzacji zadań. Możemy go konfigurowac w dowolny sposób aby na przykład kompilowac pliki Sass, łączyć pliki, odświeżać okna przeglądarki itp. \n",
+      "answerCode": "",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 97
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakiej metody należy użyć w pliku gulpfile.js by gulp uruchomił zadania równocześnie, a jakiej by uruchomił je jedno po drugim?",
+      "questionCode": "",
+      "answerContent": "Metoda parallel służy do odpalania zadań równocześnie, a metoda series służy do odpalania zadań jedno po drugim.",
+      "answerCode": "gulp.parallel(zadanie1, zadanie2, zadanie3) // równolegle\ngulp.series(zadanie1, zadanie2, zadanie3) // kolejno",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 98
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy poniższa funkcja?",
+      "questionCode": "gulp.src()",
+      "answerContent": "Funkcja gulp.src() służy do pobrania plików, na których w pamięci będziemy przeprowadzać różne operacje - np. minimalizację kodu, translację itd. W ścieżce do plików możemy spotkać 2 zapisy:",
+      "answerCode": "./scss/*/*.scss // wszystkie pliki w danym katalogu\n./scss/**/*.scss // wszystkie pliki w danym katalogu i podkatalogach",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 99
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy poniższa funkcja pipe() w gupl?",
+      "questionCode": "",
+      "answerContent": "Za pomocą funkcji pipe() wykonujemy kolejne czynności na plikach - np. kompilację scss do css:",
+      "answerCode": "  gulp.src('./scss/**/*.scss')\n    .pipe(sass())",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 100
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy metoda gulp.dest()?",
+      "questionCode": "",
+      "answerContent": "Po wykonaniu wszystkich operacji wynik końcowy musimy zapisać na dysku. Wykonujemy to za pomocą gulp.dest():",
+      "answerCode": "  gulp.src('./scss/**/*.scss') //pobiera pliki do pamięci\n    .pipe(sass()) //kompiluje scss do css\n    .pipe(gulp.dest('./css')); //zapisujemy do katalogu css",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 101
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są style, w jakich może być wygenerowany kod CSS po kompilacji gulpem z SCSS? ",
+      "questionCode": "",
+      "answerContent": "Kod CSS może być wygenerowany w jednym z czterech stylów:\n-nested\n-expanded\n-compact\n-compressed",
+      "answerCode": "",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 102
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się nasted - styl kodu CSS po kompilacji za pomocą Gulpa? ",
+      "questionCode": "",
+      "answerContent": "Nasted to domyślny styl kodu CSS po kompilacji za pomocą Gulpa. Kolejne stylowania są odpowiednio wcięte. Charakteryzuje się też tym, że komentarze css /* */ nie są usuwane.",
+      "answerCode": "#main {\n   color: #fff;\n   background-color: #000; }\n   #main p {\n      width: 10em; }",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 103
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się expanded - styl kodu CSS po kompilacji za pomocą Gulpa?",
+      "questionCode": "",
+      "answerContent": "Expanded jest najbardziej czytelnym stylem CSS. Wcięcia są stosowane tylko dla właściwości. Każda z nich wstawiana jest do osobnej linii.",
+      "answerCode": "#main {\n   color: #fff;\n   background-color: #000;\n}\n#main p {\n   width: 10em;",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 104
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się compact - styl kodu CSS po kompilacji za pomocą Gulpa?",
+      "questionCode": "",
+      "answerContent": "Compact zajmuje mniej miejsca na ekranie i pozwala skupić większą uwagę na selektorach niż na ich właściwościach. Każda deklaracja zajmuje tylko jedną linię",
+      "answerCode": "#main { color: #fff; background-color: #000; }\n#main p { width: 10em; }\n.huge { font-size: 10em; font-weight: bold;\n        text-decoration: underline; }",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 105
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się compressed - styl kodu CSS po kompilacji za pomocą Gulpa?",
+      "questionCode": "",
+      "answerContent": "Compressed zajmuje najmniej miejsca, likwiduje możliwe smacje. W tej wersji rozmiar pliku CSS jest najmniejszy.",
+      "answerCode": "#main{color:#fff;background-color:#000}#main p{width:10em}\n.huge{font-size:10em;font-weight:bold;text-decoration:underline}",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 106
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwia paczka Sourcemap dla Gulpa?",
+      "questionCode": "",
+      "answerContent": "Sourcemaps czyli mapy kodu źródłowego informują przeglądarkę o tym, w której linii pliku Sass znajduje się źródło wygenerowanej deklaracji CSS. Znacznie ułatwia to debugowanie i edycję plików.",
+      "answerCode": "",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 107
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Sass?",
+      "questionCode": "",
+      "answerContent": "Sass (Syntactically Awsome Style Sheets) to nakładka na CSS, która pozwala korzystać z dodatkowych funkcjonalności: podział na oddzielne pliki, funkcje, pętle, zmienne, mixiny itp. Sass wymaga narzędzia do zmiany kodu SCSS na CSS (np. Gulp)",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 108
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakich rozszerzeniach może być zapisany plika Sass?",
+      "questionCode": "",
+      "answerContent": "Plik Sass może być zapisany w rozszerzeniach .sass oraz .scss",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 109
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy kod CSS może być wstawiony do pliku .scss Sassa?",
+      "questionCode": "",
+      "answerContent": "Tak.",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 110
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Dlaczego w plikach HTML odwołujemy się do wygenerowanych plików CSS, a nie do plików Sassa?",
+      "questionCode": "",
+      "answerContent": "Przy kompilowaniu plików Sassa wszystkie zmiany wprowadzone bezpośrednio w plikach CSS zostaną nadpisane wynikiem kompilacji z plików Sassa. Zmiany z plików CSS nie są przenoszone do plików Sassa.",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 111
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są rodzaje komentarzy, które można użyć w plikach Sass? Czym się charakteryzują?",
+      "questionCode": "",
+      "answerContent": "W plikach Sass możliwe jest użycie dwóch rodzajów komentarzy: ",
+      "answerCode": "/* komentarz zostanie umieszczony w wynikowym pliku CSS */ \n// komentarz nie zostanie umieszczony* w wynikowym pliku CSS (dla programisty pracującego w plikach Sass)\n(uwaga: w kompresji z opcją compressed żadne komentarze nie zostaną umieszczone w wynikowym CSS!)",
+      "tags": [
+        "Sass"
+      ],
+      "id": 112
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób definiujemy zmienne w Sassie?",
+      "questionCode": "",
+      "answerContent": "Do definiowania zmiennych używamy symbolu $:",
+      "answerCode": "$textColor: rgb(255, 189, 2);\n$rounded: false;\n$border: 1px;\n$fontFamily: \"Helvetica\";\n$padding: 10px 2px 20px 0;\n$users: john, alan, luke;\n",
+      "tags": [
+        "Sass"
+      ],
+      "id": 113
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za pomocą jakiego operatora w pliku .scss można odwołać się do rodzica danego selektora (np. w przypadku użycia pseudoklasy i pseudoelementów)?",
+      "questionCode": "",
+      "answerContent": "W przypadku pseudoklas i pseudoelementów w pliku .scss można zastosować operator &:",
+      "answerCode": "a {\n  &:hover {\n    color: red;\n  }\n{",
+      "tags": [
+        "Sass"
+      ],
+      "id": 114
     }
   ]
 }
