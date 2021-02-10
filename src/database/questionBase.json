@@ -1268,6 +1268,94 @@
         "Sass"
       ],
       "id": 114
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co należy zrobić, aby uniknąć tworzenia niepotrzebnego pliku (wynikowego) CSS przy tworzeniu styli w Sassie?",
+      "questionCode": "",
+      "answerContent": "Aby uniknąć tworzenia niepotrzebnego pliku css wystarczy na początku nazwy pliku .scss wpisać znak podkreślnika. Jego zawartość zostanie wstawiona bezpośrednio do jednego wynikowego pliku css razem z innymi plikami cząstkowymi.",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 115
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwiają mixiny w Sassie?",
+      "questionCode": "",
+      "answerContent": "Mixin pozwala na zapisanie deklaracji CSS (właściwość i jej wartość) w postaci pewnego rodzaju zmiennej oraz może róznież przekazywać argumenty.",
+      "answerCode": "@mixin webFont($fontSize) {\n  font-family: \"Open Sans\", sans-serif;\n  font-size: $fontSize;\n}\nheader {\n  @include webFont(2rem);\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 116
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak ustawić wartośc domyślną argumentu mixina w Sassie?",
+      "questionCode": "",
+      "answerContent": "Aby ustawić wartośc domyślną argumentu mixina należy wpisać ją po dwukropku:",
+      "answerCode": "@mixin shadow($blur : 10px) {\n  box-shadow: 0 0 $blur 5px rgba(0,0,0, .2);\n} \n.box2 {\n  @include shadow(); //10px\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 117
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co powoduje dodanie trzech kropek do artumentu mixina w Sassie?",
+      "questionCode": "",
+      "answerContent": "Dodanie trzech kropek do argumentu tworzy Variable Arguments, dzięki temu możemy rozdzielać własności CSS przecinkiem. Jest to przydatne np. przy tworzeniu m.in. animation czy gradient.",
+      "answerCode": "@mixin radial-gradient($direction, $colors...) {\n  background-color: white;\n  background: radial-gradient($direction, $colors);\n}\n.box {\n  @include radial-gradient(ellipse at top, orange, purple);\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 118
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można skorzystać z list w Sassie?",
+      "questionCode": "",
+      "answerContent": "Aby skorzystać z funkcji dla list, w pliku w którym chcemy ich użyć musimy użyć reguły @use która załaduje odpowiedni moduł z biblioteki Sass. Dla list jest to moduł sass:list:",
+      "answerCode": "@use \"sass:list\";",
+      "tags": [
+        "Sass"
+      ],
+      "id": 119
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Od jakiego indeksu zaczynają się elementy listy w Sassie?",
+      "questionCode": "",
+      "answerContent": "Elementy listy w Sassie zaczynają się od indeksu 1\n",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 120
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób rozdziela się elementy listy w Sassie?",
+      "questionCode": "",
+      "answerContent": "W Sassie nie ma restrykcyjnych zasad podczas tworzenia list - elementy mogą być rozdzielone przecinkami ale nie muszą. Elementy również nie muszą mieć apostrofów / cudzysłowu.",
+      "answerCode": "$myString1: \"Sass is awesome\";\nlist.length($myString1); /* = 1 */\n\n$myString2: Sass is awesome;\nlist.length($myString2); /* = 3 */",
+      "tags": [
+        "Sass"
+      ],
+      "id": 121
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy listy i mapy utworzone w Sassie są przetwarzane na CSS? ",
+      "questionCode": "",
+      "answerContent": "Listy i mapy nie są przetwarzane na CSS, gdyż nie mają bezpośredniego przełożenia na ten język.",
+      "answerCode": "@use \"sass:map\";\n$colors: ( header: #b06,);\n.header {  background-color: map.get($colors, header);}\n/* rezultat w CSS: */\n.header {  background-color: #b06;}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 122
     }
   ]
 }
