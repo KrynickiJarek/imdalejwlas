@@ -1356,6 +1356,50 @@
         "Sass"
       ],
       "id": 122
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w Sassie możliwe jest stosowanie pętli?",
+      "questionCode": "",
+      "answerContent": "Tak, metoda @for pozwala na powtórzenie stylów określoną liczbę razy.",
+      "answerCode": "@for $i from 1 through 3 {\n  .item-#{$i} { width: 2em * $i; }\n}\n@for $var from <start> through <end> //wartość <end> jest wliczana\n@for $var from <start> to <end> //wartość <end> jest pomijana",
+      "tags": [
+        "Sass"
+      ],
+      "id": 123
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest różnica między metodą @for, a metodą @each w Sassie?",
+      "questionCode": "",
+      "answerContent": "Metoda @each jest podobna do metody @for. Różnicą jest zbiór, na którym jest wykonywana. W przypadku @each jest to lista.",
+      "answerCode": "@each $animal in puma, sea-slug, egret, salamander {\n  .#{$animal}-icon {\n    background-image: url('/images/#{$animal}.png');\n  }\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 124
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w Sassie można skorzystać w warunków (metoda jeżeli)?",
+      "questionCode": "",
+      "answerContent": "Sass pozwala na wstawianie definicji stylów na podstawie spełnionego warunku. Służy do tego metoda @if. Może być również połączona z @else if.",
+      "answerCode": "@mixin border($color, $side) {\n  @if $side == all {\n    border: 3px solid $color;\n  } @else if $side == none {\n    border: none;\n  } @else {\n    border-#{$side}: 3px solid $color;\n  }   }",
+      "tags": [
+        "Sass"
+      ],
+      "id": 125
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w nazwie właściwości docelowego CSS deklarowanej w Sassie możemy wkorzystać zmienne?",
+      "questionCode": "",
+      "answerContent": "W Sassie mamy wpływ na nazwy właściwości CSS przez wstawienie zmiennej w klamry i poprzedzenie jej znakiem #.",
+      "answerCode": "@mixin border($color, $side) {\n  border-#{$side}: 3px solid $color;\n}\n \n.box {\n  @include border(red, bottom);\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 126
     }
   ]
 }
