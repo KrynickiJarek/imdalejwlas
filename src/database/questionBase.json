@@ -1400,6 +1400,51 @@
         "Sass"
       ],
       "id": 126
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polaga RWD?",
+      "questionCode": "",
+      "answerContent": "RWD (Responsive We Design) to technika projektowania stron WWW tak, aby ich wygląd i układ dostosowywał się automatycznie do rozmiaru okna urządzenia, na którym jest wyświetlany.",
+      "answerCode": "",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 127
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Względem jakiej wartości jest obliczana wartość jednostki rem?",
+      "questionCode": "",
+      "answerContent": "Jednostka rem jest obliczana na podstawie wielkości czcionki użytej w elemencie root, którym zazwyczaj jest element html/",
+      "answerCode": "html {  font-size: 20px;  }\n.parent {  font-size: 10px; }\n.child {  font-size: 2rem; }// 2 * 20px = 40px",
+      "tags": [
+        "CSS"
+      ],
+      "id": 128
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Względem jakiej wielkości ustawiana jest wartość jednostki %?",
+      "questionCode": "",
+      "answerContent": "Jednostka % ustawia wielkośc na podstawie tej samej wartości najbliższego przodka.",
+      "answerCode": ".parent {\n  font-size: 10px;\n}\n.child {\n  font-size: 200%; // 20px bo font-size rodzica wynosi 10px\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 129
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Względem jakiej wartości ustalane są jednostki vmin i vmax",
+      "questionCode": "",
+      "answerContent": "1vmin = mniejsza z wartości 1vw lub 1vh;\n1vmax = większa z wartości 1vw lub 1vh;",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 130
     }
   ]
 }
