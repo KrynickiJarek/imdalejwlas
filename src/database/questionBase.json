@@ -1445,6 +1445,106 @@
         "CSS"
       ],
       "id": 130
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak rozwiązać problem zachowania proporcji zagnieżdżonego wideo (np. w tagu iframe)?",
+      "questionCode": "",
+      "answerContent": "Należy nadać rodzicowi elementu odpowiednie proporcje poprzez padding-bottom jak poniżej. Tag iframe powinien miec szerokość i wysokośc ustawioną na 100% i pozycję absolutną. ",
+      "answerCode": "parent {\n  height: 0;\n  padding-bottom: 56.25%; /* proporcje video 16:9 */\n  position: relative;\n  width: 100%;\n}",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 131
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Ile znaków / wyrazów powinno znajdować się w jednej linii tekstu dla uzyskania najlepszej czytelności?",
+      "questionCode": "",
+      "answerContent": "W jednej linii powinno znajdować sie 70-80 znaków (około 8-10 wyrazów)",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 132
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Operator typeof w JavaScript pozwala sprawdzić typ danych. W jakiej formie zwraca informację? Czy taki zapis może być prawdą? ",
+      "questionCode": "if (typeof myObject === object) {\n  /* tutaj inny kod */\n}",
+      "answerContent": "Operator typeof zwraca informację o typie, ale w formie string. Poniższy zapis może być prawdziwy",
+      "answerCode": "if (typeof null === \"object\") {\n  /* tutaj inny kod */\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 133
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak w JavaScript zamienić stringa na liczbę?",
+      "questionCode": "",
+      "answerContent": "JavaScript umożliwoa zamianę stringa na kilka sposobów, w zależności od teog czy chcemy uzyskać liczbę zmiennoprzecinkową, całkowitą i czy string zawiera tylko liczby, czy należy je wyciągnąć z niego:",
+      "answerCode": "Number(string); // liczba zmiennoprzecinkowa (float)\n+string; // liczba zmiennoprzecinkowa (float)\n// poniższe: wyciąganie danych liczbowych ze stringa\nparseInt(intString); // liczba całkowita (integer)\nparseFloat(floatString);// liczba zmiennoprzecinkowa (float)",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 134
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższy zapis jest poprawny?",
+      "questionCode": "12.34.toString();",
+      "answerContent": "Nie. Metodę tę, możemy uruchomić na elemencie typu Number. Jednak nie możemy zrobić tego bezpośrednio na jakiejś wartości. Musi być ona wcześniej przypisana do zmiennej, lub możemy się posłużyć obiektem Number.",
+      "answerCode": "let price = 140.34;\n\nprice.toString(); // String - \"140.34\"\nNumber(99.99).toString(); // String - \"99.99\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 135
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy metoda trim() w JavaScrpit?",
+      "questionCode": "",
+      "answerContent": "Metoda trim() pozwala na usunięcie wszystkich białych znaków z początku i końca ciągu znaków.",
+      "answerCode": "const text = \"   Lorem ipsum.   \";\ntext.trim(); //\"Lorem ipsum.\"\n",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 136
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym różnią się metody substr() i substring() w JavaScript?",
+      "questionCode": "const text = \"Ala ma kota a kot ma Alę\";\ntext.substr(7, 11);\ntext.substring(7, 11);",
+      "answerContent": "Obie metody pozwalają na wyciągnięcie kawałka danego ciągu, a różnią się parametrami:\nsubstr(indeksPoczątkowy, długość) \nsubstring(indeksPoczątkowy, indeksKońcowy)",
+      "answerCode": "const text = \"Ala ma kota a kot ma Alę\";\ntext.substr(7, 11); // \"kota a kot \"\ntext.substring(7, 11); //\"kota\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 137
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co zwraca metoda indexof(), jeżeli nie może niczego znaleźć?",
+      "questionCode": "",
+      "answerContent": "Metoda indexOf(value) zwracająca miejsce występowania konkretnej wartości (value) w tablicy. Jeżeli niczego nie może znaleźć, zwraca -1.",
+      "answerCode": "const prices = [2134, 1059, 2237];\nprices.indexOf(1059); // 1\nprices.indexOf(8893); // -1",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 138
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega zjawisko Hostingu w JavaScript?",
+      "questionCode": "",
+      "answerContent": "JavaScriptu wykonuje instrukcje krok po kroku (linia po linii). W niektórych wypadkach - w fazie początkowej, dochodzi do umieszczenia deklaracji funkcji w pamięci, aby móc z nich korzystać przed fizyczną dek",
+      "answerCode": "sayHello(); /*zadziała, bo sayHello nie jest wyrażeniem funkcyjnym*/\n \nfunction sayHello() {\n  console.log(\"Hello!\");\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 139
     }
   ]
 }
