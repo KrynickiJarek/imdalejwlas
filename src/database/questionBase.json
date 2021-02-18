@@ -1545,6 +1545,61 @@
         "JavaScript"
       ],
       "id": 139
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób możemy pobrać wartośc obiektu?",
+      "questionCode": "const cat =  {\n  name: \"Filemon\",\n  age: 2,\n  friends: [\"Mruczek\", \"Reksio\"]\n};",
+      "answerContent": "Aby pobrać wartość obiektu musimy użyć znaku kropki lub użyć nawiasu kwadratowego. ",
+      "answerCode": "const cat =  {\n  name: \"Filemon\",\n  age: 2,\n  friends: [\"Mruczek\", \"Reksio\"]\n};\ncat.name; //\"Filemon\"\ncat[\"name\"]; //\"Filemon\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 140
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak nazywają się funkcje znajdujące się w obiekcie i jak je definiujemy?",
+      "questionCode": "",
+      "answerContent": "Metody sa to funkcje, które znajdują się w obiekcie. Definiujemy je w następujący sposób:",
+      "answerCode": "const cat = {\n  sayMiau: function() { // nazwa: function()\t\t\n     console.log(\"Miau!\"); \n  },  // przecinek, jeżeli występuje kolejny element\n  run: function() {\n     console.log(\"I’m running!\"); \n  } \n};",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 141
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy do obiektu można dodawać własciwości i metody poza jego ciałem?",
+      "questionCode": "",
+      "answerContent": "Tak, do obiektu możemy dodawać właściwości i metody po tym jak go już stworzymy, czyli poza ciałem obiektu.",
+      "answerCode": "const teacher = {\n  name: \"Janusz Kowalski\",\n  subject: \"Programowanie JS\"\n};\nteacher.students = [\"Ala\", \"Kasia\", \"Adam\"];\nconsole.log(teacher.students); /* Array […] */",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 142
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższe stwierdzenia sa prawdziwe czy fałszywe?",
+      "questionCode": "const foo = { };\nconst bar = foo;\nfoo == bar; // true or false ?\nfoo === bar; // true or false ?",
+      "answerContent": "Oba poniższe stwierdzenia są prawdziwe.",
+      "answerCode": "const foo = { };\nconst bar = foo;\nfoo == bar; // true\nfoo === bar; // true",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 143
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższe stwierdzenia sa prawdziwe czy fałszywe?",
+      "questionCode": "const foo = { };\nconst bar = { };\n          \nfoo == bar; // true czy false?\nfoo === bar; // true czy false?",
+      "answerContent": "Oba poniższe stwierdzenia są nieprawdziwe. Dwa niezależne obiekty nie są równe. ",
+      "answerCode": "const foo = { };\nconst bar = { };\n          \nfoo == bar; // false\nfoo === bar; // false",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 144
     }
   ]
 }
