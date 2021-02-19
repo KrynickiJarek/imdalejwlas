@@ -1600,6 +1600,72 @@
         "JavaScript"
       ],
       "id": 144
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można znaleźć w pliku JavaScript element od id  \"glink\"",
+      "questionCode": "",
+      "answerContent": "Za pomocą metody querySelector lub getElementById:",
+      "answerCode": "document.querySelectorAll(\"#glink\");\ndocument.getElementsByTagName(\"tag\");(\"glink\");",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 145
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co przyjmują jako argument metody wyszukiwania elementów w DOM-ie zaczynające się od get:",
+      "questionCode": "document.getElementsByTagName(\"tag\");",
+      "answerContent": "Metody zaczynające się od get jako argument przyjmują jako argument string będący np. nazwą klasy, id lub tagu HTML.",
+      "answerCode": "document.getElementsByTagName(\"tag\");\ndocument.getElementsByClassName(\"bar\");",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 146
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak  w JavaScript przypisać nową wartość dla obiektu dataset poniższego tagu?",
+      "questionCode": "<div id=\"user\" data-id=\"424\">John Doe</div>",
+      "answerContent": "Należy wyszukać element i zmienić jego wartoć za pomocą metody dataset:",
+      "answerCode": "const myUser = document.querySelector(\"#user\");//wyszukanie \nmyUser.dataset.id = \"345\"; //zmiana wartości data-id\n\n",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 147
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada własciwość classList elementu wyszukanego w drzewie DOM? Jakie są dostępne metody dla classList?",
+      "questionCode": "",
+      "answerContent": "Właściwość classList elementu zwraca listę wszystkich klas elementu. Można na niej pracować za pomocą nstępujących metod:",
+      "answerCode": "el.classList.add(className) // dodaje podaną klasę,\nel.classList.remove(className) // usuwa podaną klasę,\nel.classList.toggle(className) // przełącza podaną klasę (czyli usuwa ją jeżeli jest, jeżeli jej nie ma, to dodaje).",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 148
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakimi metodami z poziomu JavaScript można edytować atrybuty danego elementu? ",
+      "questionCode": "//HTML\n<a href=\"www.google.com\" id=\"glink\">Hello Google!</a>\n//JavaScript\nconst link = document.querySelector(\"#glink\");\n",
+      "answerContent": "Z poziomu JavaScript możemy za pomocą poniższych metod sprzwdzić czy element ma atrybut, pobrać jego wartość, usunąć go i zmienić jego wartość.",
+      "answerCode": "link.hasAttribute(\"href\"); // true\nlink.getAttribute(\"href\"); //\"www.google.com\"\nlink.removeAttribute(\"href\"); // usuwa atrybut\nlink.setAttribute(\"href\", \"www.something.com\"); // ustawia nową wartość atrybutu",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 149
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób zapisuje się w JavaScript w obiekcie style danego elementu właściwości CSS? W jakiej formie obiekt ten przechowuje wartości i czy zawiera style ustawione w CSS?",
+      "questionCode": "element.style.?",
+      "answerContent": "Obiekt style przechowuje wszystkie wartości jako ciągi znaków, tak są zwracane i nastawiane. W obiekcie tym dostepne są style tylko ustawione za pomocą JavaScript. Ustawiając właściwości CSS należy stosować zapis CamelCase.",
+      "answerCode": "element.style.backgroundColor; / wczytanie wartości\nelement.style.backgroundColor = \"blue\"; //nastawienie nowej wartości ",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 150
     }
   ]
 }
