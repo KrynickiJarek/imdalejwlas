@@ -1666,6 +1666,127 @@
         "JavaScript"
       ],
       "id": 150
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy da się za pomocą metody removeEventListener usunąć nasłuchiwanie, których obsługa odbywa się za pomocą funkcji anonimowych?",
+      "questionCode": "removeEventListener(event, callback)",
+      "answerContent": "Nie da się usunąć nasłuchiwań, których obsługa odbywa się za pomocą funkcji anonimowych.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 151
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest DOMContentLoaded?",
+      "questionCode": "",
+      "answerContent": "DOMContentLoaded jest specjalnym zdarzeniem, uruchamiającym się w momencie załadowania drzewa DOM. Nasz cały kod JavaScript operujący na DOM powinien znajdować się wewnątrz obsługi tego zdarzenia.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 152
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego odwołuje się zmienna this zastosowana w evencie? ",
+      "questionCode": "const buttons = document.querySelectorAll(\".btn\");\nfor(let i = 0; i < buttons.length; i++) {\n   buttons[i].addEventListener(\"click\", function(event) {\n      this.style.backgroundColor = \"red\";\n   });\n}",
+      "answerContent": "Zmienna this reprezentuje element, na którym zostało wywołane zdazenie. Jest ona szczególnie przydatna, jeżeli taki same event nastawiamy na wiele elementów.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 153
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Obiekt event w zdarzeniach DOM zwraca informacje na temat zdarzenia które nastąpiło. Jakie informacje zwraca dla:",
+      "questionCode": "event.currentTarget;\nevent.target;\nevent.timeStamp;\nevent.type;",
+      "answerContent": "Obiek event dla podanych przykładów zwraca następujące informacje:",
+      "answerCode": "event.currentTarget;//element, na którym zostało wywołane zdarzenie\nevent.target;//element, który spowodował wywołanie eventu\nevent.timeStamp;//czas, w którym został wywołany event\nevent.type;//typ eventu jako ciąg znaków",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 154
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada metoda event.preventDefault()?",
+      "questionCode": "",
+      "answerContent": "Metoda event.preventDefault() anuluje standardową akcję elementu.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 155
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega propagacja zdarzeń?",
+      "questionCode": "",
+      "answerContent": "Propagacja zdarzeń polega na przekazywaniu informacji o zdarzeniu w drzewie DOM. Event bubbling to przekazywanie danych w górę drzewa DOM (domyślne dla większości zdarzeń), a event capturing w dół drzewa DOM (domyślne np. dla focus)",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 156
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie relacje wyróżniamy w drzewie DOM?",
+      "questionCode": "",
+      "answerContent": "W drzewie DOM wyróżniamy następujące relacje: rodzic (parent), rodzeństwo (siblings), dzieci (children)",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 157
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwia metoda colneNode(deep)? Jakie wartości przyjmuje parametr deep?",
+      "questionCode": "",
+      "answerContent": "Metoda cloneNode(deep) umozliwia sklonowanie elementu DOM w JavaScrpit. Parametr deep oznacza, czy klonowanie ma być głębokie czy też nie.Głębokie klonowanie kopiuje i zwraca węzeł wraz z całym poddrzewem.",
+      "answerCode": "const toClone = document.querySelector('#foo');\nconst newDiv = toClone.cloneNode(true); // true lub false",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 158
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy stworzenie elementu w JavaScript za pomocą metody createElement() dodaje go do drzewa DOM?",
+      "questionCode": "const newDiv = document.createElement(\"div\");",
+      "answerContent": "Stworzenie elementu nie oznacza, że zostanie on dodany do drzewa DOM. Możemy go przypisać do zmiennej, pracować na nim, ale nie będzie on dostępny dla użytkownika naszej strony. Aby był widoczny na stronie należy go podpiąć. ",
+      "answerCode": "el.appendChild(nowyElement)// dodaj element jako ostatnie dziecko danego węzła,\nel.insertBefore(nowyElement, dziecko)// dodaj element przed jednym z podanych dzieci,\nel.replaceChild(nowyElement, dziecko)// zamień podane dziecko.",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 159
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiadają poniższe własciwości formularzy w JavaScript:",
+      "questionCode": "form.action;\nform.method;\nform.elements;",
+      "answerContent": "Właściwości formularzy: ",
+      "answerCode": "form.action // adres URL, do którego prowadzi formularz,\nform.method // metoda, którą wysyłany jest formularz,\nform.elements// kolekcja elementów należących do tego formularza (w kolejności wpisanej w kodzie HTML).",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 160
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada metoda input.value?",
+      "questionCode": "",
+      "answerContent": "Metoda input.value – zwraca wartość, na jaką ustawiony jest input. Może służyć też do ustawienia wartości.",
+      "answerCode": "const input = document.querySelector('#name');\nconst fullName = input.value; /* zwraca nam aktualną wartość inputa */\ninput.value = \"Adam\"; /* ustawia nową wartość inputa */",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 161
     }
   ]
 }
