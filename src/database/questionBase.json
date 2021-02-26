@@ -1787,6 +1787,259 @@
         "JavaScript"
       ],
       "id": 161
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Webpack?",
+      "questionCode": "",
+      "answerContent": "Webpack jest builderem, którego celem jest połączenie wszystkich assetów (plików tworzących projekt np. plików JS, plików CSS) w jedną paczkę (nazywana Bundlem), którą można wysłać do przeglądarki. ",
+      "answerCode": "",
+      "tags": [
+        "Webpack"
+      ],
+      "id": 162
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada loader Babel w Webpacku?",
+      "questionCode": "",
+      "answerContent": "Babel to kompilator do języka JavaScript, który tłumaczy kod napisany np. w ES6+ do ES5. Pozwala używać najnowszych opcji dostępnych w ES6+, a po przetłumaczeniu do ES5 będą dostępne we wszystkich przeglądarkach.",
+      "answerCode": "",
+      "tags": [
+        "Webpack"
+      ],
+      "id": 163
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest webpack-dev-server?",
+      "questionCode": "",
+      "answerContent": "Webpack posiada serwer webowy o nazwie webpack-dev-server. Serwer wysyła informacje o stanie kompilacji do przeglądarki, dzięki czemu może sie automatycznie odświeżać po każdej zmianie w projekcie (tzw. hot-loading)",
+      "answerCode": "",
+      "tags": [
+        "Webpack"
+      ],
+      "id": 164
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest funkcja wyższego rzędu?",
+      "questionCode": "",
+      "answerContent": "Funkcja wyższego rzędu to funkcja, która zwraca lub przyjmuje jako argument inne funkcje.",
+      "answerCode": "function multipleBy2(fn) {\n    return 2 * fn();\n} /*wynik zwrócony przez funkcję przekazaną do parametru fn zostanie pomnożony raz dwa i zwrócony z metody multipleBy*/",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 165
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym się różni programowanie funkcyjne od imperatywnego (proceduralnego)?",
+      "questionCode": "",
+      "answerContent": "Programowanie funkcyjne to opisywanie problemu dzięki funkcjom i ich zagnieżdżaniu w sobie a nie jego ścisłe rozwiązywani. Programowanie imperatywne to podejśce, w którym jawnie, krok po kroku, definiuje się jak wykonać zadanie. ",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 166
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działa metoda forEach()?",
+      "questionCode": "",
+      "answerContent": "Metoda forEach() wykonuje przekazaną w parametrze funkcję dla każdego elementu tablicy. Funkcja ta może mieć opcjonalnie trzy parametry: element, na którym wykonywana jest funkcja, jego indeks i tablice na której wywoływana jest funkcja.",
+      "answerCode": "const arr = [1, 2, 3];\nfunction fn(element, index, array) {\n  console.log(\"[\"+index+\"] = \"+element);\n}\narr.forEach(fn);",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 167
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działa metoda map()?",
+      "questionCode": "",
+      "answerContent": "Metoda map() wykonuje przekazaną w parametrze funkcję dla każdego elementu tablicy, a zwróconą przez nią wartość przypisuje do nowej tablicy o danym indeksie. Przekazywana funkcja może mieć trzy parametry: element, indeks, tablicę.",
+      "answerCode": "const arr = [1, 2, 3];\nfunction fn(element, index, array) {\n  return element * index;\n} \nconst result = arr.map(fn);\nconsole.log(result); // [0, 2, 6]",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 168
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działa metoda filter()?",
+      "questionCode": "",
+      "answerContent": "Metoda filter() zwraca nową tablicę z wartościami, które w wyniku działania warunku są prawdą. W przypadku tej metody, nie możemy poddawać modyfikacji tych elementów. Przekazywana funkcja może mieć trzy parametry: element, indeks, tablicę.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 169
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w funkcji strzłkowej bez parametrów konieczne jest użycie nawiasów?",
+      "questionCode": "",
+      "answerContent": "Jeżeli funkcja strzłkowa nie ma parametrów konieczne jest zastosowanie okrągłych nawiasów. ",
+      "answerCode": "const foo = () => 1;",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 170
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w przypadku gdy funkcja strzłkowa ma jedną instrukcje jest konieczne zastosowanie nawiasów klamrowych i słowa kluczowego return?",
+      "questionCode": "",
+      "answerContent": "Jeżeli funkcja strzłkowa ma jedną instrukcję nie jest wymagane zastosowanie ani nawiasów klamrowych ani return. ",
+      "answerCode": "const foo = a => a * 2;// jedna instrukcja\nconst foo = a => { return a * 2; } // wciąż jedna instrukcja, nawiasy klamrowe są opcjonalne ale przy ich użyciu należy pamiętać o słowie kluczowym return",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 171
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Kiedy stosowanie nawiasów jest obowiązkowe w fukcji strzłkowej? ",
+      "questionCode": "",
+      "answerContent": "Nawiasy w funkcji strzłkowej sa obowiązkowe gdy ma ona wiele parametrów (nawiasy okrągłe) i gdy ma wiele instrukcji (nawiasy klamrowe).",
+      "answerCode": "const foo = (a, b) => {\n  if(a > b) {\n    return a;\n  }\n  return b;\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 172
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na co wskazuje this wewnątrz funkcji strzłkowej (Arrow Functions)?",
+      "questionCode": "",
+      "answerContent": "This wewnątrz Arrow Functions wskazuje na ten sam obiekt this, który istnieje poza ciałem tej funkcji. Obiekt this nie jest tworzony bezpośrednio w Arrow functions.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 173
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaką nazwę nosi operator \"...\"? Co będzie efektem poniższego kodu? ",
+      "questionCode": "const arr = [1, 2, 3];\nconsole.log(...arr);",
+      "answerContent": "Operator \"...\" nosi nazwę reszty lub rozproszenia (Spread Opeartor). W przypadku gdy znajduje się on przed dowolnym obiektem iterowanym (np. tablicą), to powoduje rozdzielenie każdego elementu tablicy na osobny byt.",
+      "answerCode": "const arr = [1, 2, 3];\nconsole.log(...arr);// 1 2 3, równoważne z:\nconsole.log(arr[0], arr[1], arr[2])// 1 2 3",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 174
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób działa Spread Operator (oprator rozproszenia) w przypadku stringa? Jaki będzie wynik poniższego kodu?",
+      "questionCode": "const str = \"text\";\nconst chars = [ ...str ];\nconsole.log(chars);\nconsole.log(typeof str);\nconsole.log(typeof chars);",
+      "answerContent": "Spread Operator może służyć do podzielenia stringa na poszczególne znaki i zapisanie wyniku tej operacji do tablicy:",
+      "answerCode": "const str = \"text\";\nconst chars = [ ...str ];\nconsole.log(chars); // [\"t\", \"e\", \"x\", \"t\"]\nconsole.log(typeof str); // string\nconsole.log(typeof chars);// object",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 175
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy zmiana tablicy users ma wpływ na tablicę users2?",
+      "questionCode": "const users = [\"Ben\", \"Anna\", \"John\"];\nconst users2 = [...users];",
+      "answerContent": "Porównanie ze sobą tych dwóch tablic da nam wynik false. Są to dwie różne instancje tablic jednak z tymi samymi danymi. Zmiana wartości w jednej nie ma wypływu na drugą.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 176
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy za pomocą Spread Operator (operatora rozproszenia) można skopiowac obiekt?",
+      "questionCode": "const state = {\n  isActive: false,\n  inputValue: \"Your name\"\n};\nconst stateCopy = {...state};",
+      "answerContent": "Tak, za pomocą Spread Operator można utworzyć kopię obiektu. ",
+      "answerCode": "const state = {\n  isActive: false,\n  inputValue: \"Your name\"\n};\nconst stateCopy = {...state};",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 177
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Ile argumentów przyjmuje funkcja fn? Jak nazywa się zastosowany operator (...)?",
+      "questionCode": "function fn(a, b, ...args) {\n//ciało funkcji\n}",
+      "answerContent": "Funkcja fn przyjmuje dowolną liczbę parametrów, gdzie dwa pierwsze to a i b a reszta parametrów jest przechowywana w arg dzięki Rest Oparator (operator reszty).",
+      "answerCode": "function fn(a, b, ...args) {\n  return (a + b) * args.length;\n}\nconsole.log(fn(2, 4, \"IT\", true, 9))\n// 18",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 178
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy Rest Operator (operato reszty) może być użyty w poniższy sposób? ",
+      "questionCode": "function foo(...arr, par) {\n  console.log(arr, par);\n}\n",
+      "answerContent": "Nie, operator reszty musi zawsze być zastosowany z ostatnim parametrem funkcji:",
+      "answerCode": "function foo(...arr, par) { // bład\n  console.log(arr, par);\n}\nfunction bar(...x, y, ...z) { // bład\n  console.log(x, y, z);\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 179
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższy zapis jest poprawny?",
+      "questionCode": "function fn(a = 10, ...args=[1, 2, 3]) {\n  console.log(a * args.length );\n}",
+      "answerContent": "Nie, operator reszty nei przyjmuje domyślnych wartości.",
+      "answerCode": "function fn(a = 10, ...args=[1, 2, 3]) {\n  console.log(a * args.length );\n  // Błąd!\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 180
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak w Tamplate strings (łańcuchach szablonowych) użyć interpolacji (wstawić kod JavaScript)?",
+      "questionCode": "",
+      "answerContent": "Aby w Tamplate strings (łańcuchu szablonowym) wstawić kod JavaScript należy użyć zapisu ${} :",
+      "answerCode": "let user = \"Agata\";\nconsole.log(`Witaj ${user}`);\nlet a = 23;\nconsole.log(`Suma ${a + 2}`);",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 181
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega destrukturyzacja tablic w ES6?",
+      "questionCode": "",
+      "answerContent": "Destrukturyzacja w ES6 polega na przypisaniu własności tablicy lub obiektu do zmiennych.",
+      "answerCode": "let fruits = [\"Banana\", \"Apple\"];\nlet [value1, value2] = fruits;\nconsole.log(value1)//\"Banana\"\nconsole.log(value2)//\"Apple\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 182
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy destrukturyzacja tablic działa na funkcjach zwracających tablicę?",
+      "questionCode": "const foo = () => [1, 2, 3];\nconst [a, b] = foo();\nconsole.log(a, b); ",
+      "answerContent": "Tak, destrukturyzacja tablic działa na funkcjach zwracających tablicę:",
+      "answerCode": "const foo = () => [1, 2, 3];\nconst [a, b] = foo();\nconsole.log(a, b); //1 2\n/*trzecia wartość nie zostanie uwzględniona.*/",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 183
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można za pomocą destrukturyzacji przypisać do zmiennej pierwszą i trzecią wartość tablicy (z pominięciem drugiej)?",
+      "questionCode": "",
+      "answerContent": "Aby pominąć daną wartość przy destrukturyzacji należy zastosować zapis analogiczny do poniższego:",
+      "answerCode": "const [a, , b] = [1, 2, 3];\nconsole.log(a, b); //1 3",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 184
     }
   ]
 }
