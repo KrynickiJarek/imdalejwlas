@@ -2040,6 +2040,138 @@
         "JavaScript"
       ],
       "id": 184
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest React",
+      "questionCode": "",
+      "answerContent": "React jest JavaScriptową biblioteką stworzoną przez Facebooka. Służy do tworzenia frontendowych interfejsów użytkownika.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 185
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co oznacza skrót DOM ?",
+      "questionCode": "",
+      "answerContent": "DOM - Obiektowy model dokumentu HTML (Document Object Model). Język HTML jest tekstem, który piszemy edytorach, a DOM jest jego reprezentacją w pamięci przeglądarki. Poszczególne elementy HTML stają się węzłami w DOM",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 186
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest wirtualny DOM?",
+      "questionCode": "",
+      "answerContent": "Wirtualny DOM to kopia HTML DOM, z której korzysta React. Tworzy on prostą kopię HTML DOM, na której dokonuje różnych operacji, a następnie porównuje nową i starą wersje, a w rzeczywistym DOMie odświeża tylko to, co trzeba.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 187
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest JSX?",
+      "questionCode": "",
+      "answerContent": "JSX to wprowadzone przez React rozszerzenie jązyka JavaScript o tagi podobne do tych, które stosujemy w HTML/XML. JSX ułatwia pisanie kodu, w którym znajduje się dużo informacji o strukturze HTML.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 188
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega jednostronne powiązanie (One-way binding / One-way flow) występujące w Reacie?",
+      "questionCode": "",
+      "answerContent": "React i kod w nim napisany jest jedynym źródłem prawdy (single source of truth). Zmiany wprowadzane w strukturze programu mają wpływ na DOM, ale nie na odwrót.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 189
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób JSX umożliwia zagnieżdżanie wyrażeń? Jak można zdefiniować wyrażenie?",
+      "questionCode": "",
+      "answerContent": "Wyrażeniem jest dowolny kod JavaScript, który coś zwraca. Aby umieścić wyrażenie w dowolnym miejscu elementu należy otoczyć je nawiasami klamrowymi – {wyrażenie}.",
+      "answerCode": "<span>{ 2 + 2 }</span> // kod wypisze w elemencie span liczbę 4",
+      "tags": [
+        "React"
+      ],
+      "id": 190
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w JSX możemy umieścić wartość zmiennej?",
+      "questionCode": "const name = 'Mieszko';\nconst count = name.length;",
+      "answerContent": "W celu umieszczenia w JSX wartości zmiennej należy zastosowac zapis klamrowy:",
+      "answerCode": "const name = 'Mieszko';\nconst count = name.length;\n---JSX---\n<span>\n  Twoje imię ma { count } znaków\n</span>",
+      "tags": [
+        "React"
+      ],
+      "id": 191
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w Reacie należy przekazywać do tagu lub komponentu stałe wartości, ale inne niż stringi?",
+      "questionCode": "",
+      "answerContent": "W Reacie przekazwanie do tagu lub komponentu stałych wartości, ale innych niż stringi musi odbywać się za pomocą wyrażń z wykorzystaniem nawiasów klamrowych.",
+      "answerCode": "<div contentEditable={ true }>Sample<∕div>//wartośc typu boolean\n<input minLength={ 10 } /> // wartość typu number",
+      "tags": [
+        "React"
+      ],
+      "id": 192
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak zmienia się kod stylowanie inline w HTML w JSX?",
+      "questionCode": "<div style=\"color: blue; background-color: green;\"></div>",
+      "answerContent": "W JSC można korzystać z atrybtu style w tagach, ale w większości przypadków nazwy styli zapisywane są camelCasem. Tworzą one klucze obiektu, którego wartości pozostają jak CSS.",
+      "answerCode": "const style = {\n  color: \"blue\",\n  backgroundColor: \"green\"\n};\n<div style = {style}></div> // ze zmienną pomocniczą\n<div style={{color: \"blue\", backgroundColor: \"green\"}}><∕div> //bez zmiennej pomocniczej",
+      "tags": [
+        "React"
+      ],
+      "id": 193
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Ile tagów można zwrócić w JSX?",
+      "questionCode": "",
+      "answerContent": "W JSX zawsze należy zwrócic jeden główny tag, w środku którego może być zagnieżdżona ich dowolna liczba. ",
+      "answerCode": "<div>\n  <span>Witaj, { name }</span>\n  <div className=\"user-info\">\n    <span className=\"age\">Wiek: {age}</span>\n  </div>\n</div>",
+      "tags": [
+        "React"
+      ],
+      "id": 194
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak zastosować obiekt Fragment, który w Reacie może zastąpić diva lub inny element będącym głównym tagiem?",
+      "questionCode": "",
+      "answerContent": "Poprzez zaimportowanie komponentu Fragment z biblioteki React lub poprzez użycie zapisu skrótowego:",
+      "answerCode": "import React, {Fragment} from \"react\"; //opcja 1\n<Fragment>\n  <span>Anna Kowalska</span>\n</Fragment>\n<> // zapis skrócony, bez konieczności importowania\n  <span>Anna Kowalska</span>\n</>",
+      "tags": [
+        "React"
+      ],
+      "id": 195
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakich przypadkach i w jakim celu należy stosować w Reacie atrybut key?",
+      "questionCode": "",
+      "answerContent": "W renderowaniu elementów list w Reacie należy stosować atrybut key - unikalny w ramach jednej listy klucz (ID, unikalny element, ewentualnie indeks). Klucze ograniczają konieczność wykonywanych porównań zmian. ",
+      "answerCode": "const tab = [1, 2, 5, 2, 4, 1];\nconst list = tab.map((element, index) => <li key={index}>{element}</li>); // z zastosowaniem metody map\n<ul> //bezpośrednio\n  <li key=\"Jan\">Jan</li>\n  <li key=\"Anna\">Anna</li>\n</ul>\n",
+      "tags": [
+        "React"
+      ],
+      "id": 196
     }
   ]
 }
