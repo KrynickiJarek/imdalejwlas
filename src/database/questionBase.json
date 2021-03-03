@@ -2172,6 +2172,160 @@
         "React"
       ],
       "id": 196
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest komponent w Reacie?",
+      "questionCode": "",
+      "answerContent": "Komponent to pojedynczy element interfejsu użytkownika odpowiedzialny za konkretną część aplikacji. Składa się z elementów i/lub innych komponentów.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 197
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są dwa podstawowe sposoby zapisywania komponentów w React?",
+      "questionCode": "",
+      "answerContent": "Komponenty można zapisywać w React na dwa podstawowe sposoby: funkcyjnie - każdy komponent to osobna funkcja zwracająca określoną strukturę JSX, lub klasowo - analogicznie jak klasy wprowadzone w ES6",
+      "answerCode": "function FunkcionComponent() {\n  return <h1>Komponent funkcyjny</h1>;\n}\nclass ClassComponent extends Component {\n  render() {\n    return <h1>Komponent klasowy</h1>;\n  }\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 198
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak powinna zostać zadeklarowana funkcja przy tworzeniu komponentu funkcyjnego - zapis standardowy, wyrażenie anonimowe czy funkcja strzłkowa?",
+      "questionCode": "",
+      "answerContent": "Przy tworzeniu komponentu funkcyjnego nie ma znaczneia w jaki sposób zadeklarowana jest funkcja. Wszystie sposoby są dopuszczalne.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 199
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co należy zaimportować by stworzyć komponent klasowy w React?",
+      "questionCode": "",
+      "answerContent": "Aby stworzyć komponent klasowy w React należy zaimportować całą bibliotekę React, jak i osobno jej części, czyli klasy Component. ",
+      "answerCode": "import React, {Component} from \"react\";\n \nclass HelloWorld extends Component {\n  render() {\n    return <h1>Hello, World!</h1>;\n  }\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 200
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy komponent w React może nie zwracać niczego?",
+      "questionCode": "",
+      "answerContent": "Komponent w React musi zawsze zwrócić jakąś wartość, w przeciwnym razie zostanie zwrócony błąd. Komponent może zwrócić wartość null. ",
+      "answerCode": "const HelloWorld = () => null;",
+      "tags": [
+        "React"
+      ],
+      "id": 201
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy zwracany tag w komponencie w React może znajdować się w innej linii niż return?",
+      "questionCode": "",
+      "answerContent": "Zwracany tag w komponencie React musi znajdować się w tej samej linii co return. Zwracane elementy można opleść okrągłymi nawiasami. ",
+      "answerCode": "const HelloWorld = () => {\n  return <h1>Hello World!</h1>;\n}\nconst HelloWorld = () => {\n  return ( //nawias rozpoczyna się w linii z return\n    <div> ... ",
+      "tags": [
+        "React"
+      ],
+      "id": 202
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak należy nazywać komponenty w React?",
+      "questionCode": "",
+      "answerContent": "Komponenty w React, zarówno klasowe jak i funkcyjne, należy zawsze nazywać z wielkiej litery. ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 203
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób wykonać destrukturyzacje obiektu props w komponencie funkcyjnym w React?",
+      "questionCode": "",
+      "answerContent": "W komponencie funkcyjnym destrukturyzacje props można wykonać na dwa sposoby: wewnątrz funkcji lub w momencie deklaracji",
+      "answerCode": "const Calc = (props) => {\n  const {numberA, numberB} = props; //wewnątrz funkcji\n  return <h1>{numberA + numberB}</h1>\n}\nconst Calc = ({numberA, numberB}) => { //przy delkaracji\n  return <h1>{numberA + numberB}</h1> \n}",
+      "tags": [
+        "React"
+      ],
+      "id": 204
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "\"W jaki sposób wykonać destrukturyzacje obiektu props w komponencie klasowym w React?\"",
+      "questionCode": "",
+      "answerContent": "W komponencie klasowym w react destrukturyzacje props należy przeprowadzić w metodzie render:",
+      "answerCode": "class Calculator extends Component {\n  render() { // Odwołujemy się do this.props\n    const {numberA, numberB} = this.props;\n    return <h1>{numberA + numberB}</h1>\n  }\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 205
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega kompozycja w React?",
+      "questionCode": "",
+      "answerContent": "Kompozycja polega na tym, że bardziej specyficzne komponenty zwracają w swoim wyjściu te bardziej generyczne. Komponent zagnieżdżony w innym komponencie jest wyświetlany pod kluczem props.children",
+      "answerCode": "const Wrapper = (props) => {\n  return (\n    <div className=\"wrapper\">\n      <h1>{props.title}</h1>\n      {props.children}  //komponent zagnieżdżony\n    </div>\n  );\n};",
+      "tags": [
+        "React"
+      ],
+      "id": 206
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzują się Pure functions?",
+      "questionCode": "",
+      "answerContent": "Pure function (czysta funkcja) to taka funkcja, która zawsze zwraca te same dane gdy przyjmuje te same parametry oraz nie posiada skutków ubocznych. Czysta funkcja zależna jest tylko od wartości przekazywanej do niej bezpośrednio.",
+      "answerCode": "const add1 = (a, b) => a + b; //add1  to czysta funkcja\nadd(2, 5) // return 7\nconst add2 = (a,b) => {\n  result = a + b;\n  return result; //add2 nie można nazwać czystą funckją\n};",
+      "tags": [
+        "React"
+      ],
+      "id": 207
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co oznacza stwierdzenie, że komponenty w React w sosunku do props mają zachowywać się jak czyste funkcje ?",
+      "questionCode": "",
+      "answerContent": "komponenty w React w sosunku do props mają zachowywać się jak czyste funkcje tzn. komponent nie może w żadnej chwili zmienić niczego, co otrzymał w swoich props. Dozwolone jest jedynie wykonywanie na nich obliczeń czy metod iteracyjnych.",
+      "answerCode": "this.props.numberA = 123; // niedozwolona modyfikacja bezpośrednia",
+      "tags": [
+        "React"
+      ],
+      "id": 208
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy atrybut key przekazywany do dowlonego komponentu jest widoczny w props tego komponentu? ",
+      "questionCode": "",
+      "answerContent": "Atrybut key przekazywany do dowolnego komponentu nie jest widoczny w props tego komponentu. Jest on jedynie wykorzystywany wewnętrznie przez React. ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 209
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy atrybut key powinien być przekazywany do komponentu? ",
+      "questionCode": "",
+      "answerContent": "Atrybut key powinien być przekazywany bezpośrednio do każdego powtarzającego się elementu lub komponentu.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 210
     }
   ]
 }
