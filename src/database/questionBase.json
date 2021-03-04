@@ -2326,6 +2326,17 @@
         "React"
       ],
       "id": 210
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Gdzie powinny być przechowywane funkcje wywoływane prze zdarzeniach w React?",
+      "questionCode": "",
+      "answerContent": "W praktyce, z powodu tego, że komponenty w React powinny być zamkniętą, samowystarczalną jednostką, zdarzenia powinny być metodami w komponencie (powinny znajdować się wewnątrz komponentu).",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 211
     }
   ]
 }
