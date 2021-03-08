@@ -619,6 +619,1856 @@
         "CSS"
       ],
       "id": 55
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na jakiej zasadzie działa CSS i z czego ona wynika?",
+      "questionCode": "",
+      "answerContent": "CSS działa na zasadzie kaskadowości. Wynika ona z parsowania arkuszy CSS (od góry do dołu). Dzięki kaskadowości jesteśmy w stanie nadpisywać wartości selektorów znajdujące się niżej w hierarchii selektorami znajdującymi się powyżej.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 56
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Który selektor CSS ostyluje element, jeżeli oba mają tą taką samą specyficzność? ",
+      "questionCode": "p {\n  color: red;\n}\np {\n  color: blue;\n}",
+      "answerContent": "Jeżeli dwa selektory mają podobną specyficzność i stylują ten sam element, powtarzające się właściwości brane są z selektora znajdującego się poniże.",
+      "answerCode": "p {\n  color: red;\n}\np {\n  color: blue; /* nadpisze powyższy kolor */\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 57
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Każdy rodzaj selektora ma swoją moc (CSS specificity). Jaka jest ich kolejność? ",
+      "questionCode": "",
+      "answerContent": "Selektory od najmniejszej do największej mocy:\n1. Selektor uniwersalny - *\n2. Elementy i pseudoelementy\n3. Klasy, atrybuty i pseudoklasy\n4. id\n5. stylowanie inline\n6. słowo kluczowe !important",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 58
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaką slepcyficzność ma poniższy selektor?",
+      "questionCode": "ul#drinks li",
+      "answerContent": "0102:\ninline - 0\nID - 1\nKlasy, atrubuty i pseudoklasy - 0 \nElementy i pseudoelementy - 2 \n",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 59
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaką slepcyficzność ma poniższy selektor?",
+      "questionCode": "div.element .favourite",
+      "answerContent": "0021:\ninline - 0\nID - 0\nKlasy, atrubuty i pseudoklasy - 2 \nElementy i pseudoelementy - 1 \n",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 60
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co w Chrome Developer Tools oznaczają przekreślone wartości w zakładce Style? Co oznacza przy nich żółty wykrzyknik?",
+      "questionCode": "",
+      "answerContent": "Przekreślone wartości oznaczają właściwości, które zostały nadpisane przez \"mocniejszy selektor\".\nPrzekreślone wartości przy których znajduje się żółty wykrzyknik oznaczają właściwości, które są błędnie zapisane.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 61
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak dzielimy jednostki w CSS?",
+      "questionCode": "",
+      "answerContent": "Jednostki w CSS dzielimy na dwa główne działy: absolutne i realtywne.",
+      "answerCode": "h1 {\n  font-size: 3em; /*jednostka absolutna*/\n  height: 100px; /*jednostka relatywna*/\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 62
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym w CSS jest jednostka em? Jaki rozmiar czcionki będzie miał nagłówek h1?",
+      "questionCode": "<section>\n  <h1>Nagłówek</h1>\n</section>\n---\nsection {\n  font-size: 20px;\n}\nh1 {\n  font-size: 2em;\n}",
+      "answerContent": "Em w CSS jest jednostką relatywną obliczaną na podstawie wielkości fonta czyli właściwości font-size. Jeżeli element nie ma własnego font-size, dziedziczy go z rodzica. Tekst nagłówka będzie miał 40px.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 63
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym w CSS jest jednostka rem? Jaki rozmiar czcionki będzie miał nagłówek h1?",
+      "questionCode": "<section><h1>Nagłówek</h1></section>\n---\nhtml {\n  font-size: 10px;\n}\nsection {\n  font-size: 20px;\n}\nh1 {\n  font-size: 2.5rem;\n}",
+      "answerContent": "Rem w CSS jest jednostką relatywną obliczaną bezpośrednio od roota naszego dokumentu (od elementu html). Tekst nagłówka będzie miał 25px.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 64
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy jednostki vw i vh w CSS są zależne od rodzica elementu?",
+      "questionCode": "",
+      "answerContent": "Jednostki vw i vh odnoszą się do viewportu czyli obszaru roboczego użytkownika. Jednostki te, nie biorą pod uwagę szerokości czy wysokości swojego rodzica. Zawsze odwołują się do dostępnego obszaru naszej przeglądarki.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 65
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwia nam metoda calc w CSS?",
+      "questionCode": "",
+      "answerContent": "Metoda ta, pozwala nam na przeprowadzanie obliczeń bezpośrednio w wartości naszego parametru CSS'owego.",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 66
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy odstępy między wartościami i operatorami w metodzie calc w CSS mają znaczenie?",
+      "questionCode": "",
+      "answerContent": "Funkcja calc w CSS jest bardzo wrażliwa na odstępy pomiędzy wartościami i operatorami. Po każdej wartości i operatorze musi być wstawiony znak spacji:",
+      "answerCode": "calc(150px * 5);",
+      "tags": [
+        "CSS"
+      ],
+      "id": 67
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy metoda calc w CSS pozwala na miesznie ze sobą różnych jednostek? ",
+      "questionCode": "",
+      "answerContent": "Metoda calc pozwala nam na mieszanie ze sobą różnych jednostek, np. px z vh czy rem.",
+      "answerCode": ".box {\n  width: calc(50% - 30px);\n  height: calc(10px + 10vh);\n  border: 4px solid tomato;\n  margin: 0 auto;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 68
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak łączymy selektory jeżeli chcemy do nich zastosować jeden kod CSS?",
+      "questionCode": "<h1>Nagłówek 1</h1>\n<p>Paragraf</p>\n<h4>Nagłówek 4</h4>",
+      "answerContent": "Jeżeli chcemy zastosować jeden kod CSS do wielu selektorów – możemy wypisać je wszystkie, używając przecinka do ich rozdzielenia.",
+      "answerCode": "p, h1, h4 {\n  color: #ba2f00;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 69
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak zaznaczmy selektor dziecka w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy znakiem >, wtedy szukamy wszystkich selektorów2, które są bezpośrednimi dziećmi selektora1.",
+      "answerCode": "<div>\n  <h2 class=\"red\">Nagłówek 2</h2>\n  <article><p class=\"red\">Paragraf</p></article>\n</div>\n---\ndiv > .red {\n  color: red;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 70
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak oznaczamy selektor potomka w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy tylko spacją – szukamy wszystkich selektów2, które są potomkami selektor1.",
+      "answerCode": "article p {\n  color: red;\n  font-size: 16px;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 71
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak oznaczamy selektor bezpośredniego rodzeństwa w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy znakiem +, wtedy szukamy pierwszego selektora2, który występuje bezpośrednio po selektorze1.",
+      "answerCode": "h2 + p {\n  color: red;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 72
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak oznaczamy selektor rodzeńśtwa w CSS?",
+      "questionCode": "",
+      "answerContent": "Jeżeli dwa dowolne selektory rozdzielimy znakiem ~, wtedy szukamy wszystkich selektorów2, które mają tego samego rodzica co selektor1 oraz występują za elementem wskazanym selektorem1.",
+      "answerCode": "h3 ~ p {\n  color: red;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 73
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak w CSS wyszukujemy elementy które:\nmają atrybut, atrybut ma konkretną wartość, zawiera konkretny ciąg znaków, zaczyna się od konkretnego ciągu znaków, kończy się na konkretnym ciągu znaków?",
+      "questionCode": "",
+      "answerContent": "Każde wyszukiwanie po konkretnym atrybucie odbywa się za pomocą nawiasów kwadratowych []:",
+      "answerCode": "a[href] {... /*ma atrybut \"href\"*/\na[href=\"ex.html\"] {... /*href=\"ex.html\"*/\na[href*=\"ht\"] {... /*href zawiera \"ht\"*/\na[href^=\"ex\"] {... /*href zaczyna się od \"ex\"*/\na[href$=\"html\"] {... /*href kończy się \"html\"*/",
+      "tags": [
+        "CSS"
+      ],
+      "id": 74
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie dwie wartości przyjmuje atrybut box-sizing i która jest domyślna?",
+      "questionCode": "",
+      "answerContent": "Atrybut box-sizing przyjmuje dwie wartości: content-box (domyślna) oraz border-box.",
+      "answerCode": "box-sizing: content-box;\n box-sizing: border-box}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 75
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak liczona jest wielkość elementu dla wartości content-box atrybutu box-sizing w CSS?",
+      "questionCode": "box-sizing: content-box",
+      "answerContent": "Szerokość i wysokość dla wartości content-box atrybutu box-sizing wynosi:\nwidth = width + padding + border + margin\nheight = height + padding + border + margin",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 76
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak liczona jest wielkość elementu dla wartości border-box atrybutu box-sizing w CSS?",
+      "questionCode": "box-sizing: border-box",
+      "answerContent": "Szerokość i wysokość dla wartości content-box atrybutu box-sizing wynosi:\nwidth = width + margin\nheight = height + margin",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 77
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy i jakie wartości przyjmuje parametr box-shadow w CSS? ",
+      "questionCode": "",
+      "answerContent": "Atrybut box-shadow służy do tworzenia cieni znajdujących się za elementem. Dodatkowo istnieje opcjonalny parametr inset, który jeżeli zostanie użyty, cień będzie wewnętrzny.",
+      "answerCode": ".box {\n  /* x, y, rozmycie, rozszerzenie, kolor */\n  box-shadow: 2px 3px 6px 10px black;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 78
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działają przeudoklasy :hover i :active w CSS?",
+      "questionCode": ".element:hover {\n  background: red;\n}",
+      "answerContent": "Pseudoklasa :hover nadaje stylowanie elemntu po najechaniu na niego kursorem, a :active po kliknięciu na element i działa w trakcie naciśnięcia. ",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 79
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest prawidłowa kolejność użycia pseudoklas dla linków?",
+      "questionCode": "",
+      "answerContent": "LoVe and HAte",
+      "answerCode": "a:link { }\na:visited { }\na:hover { }\na:active { }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 80
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są pseudoklasy dla formularzy w CSS?",
+      "questionCode": "",
+      "answerContent": ":enabled - element, włączony; :disabled - element wyłączony; \n:checked - checkboksy, które są wybrane.",
+      "answerCode": "input[type=\"text\"]:enabled { }\ninput[type=\"text\"]:disabled { }\ninput[type=\"checkbox\"]:checked { }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 81
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakiej formie należy wskazać element w pseudoklasie :nth-child() w CSS?",
+      "questionCode": "li:nth-child(???) {\n  background: orangered;\n  color: #fff;\n}",
+      "answerContent": "W nawiasy wpisujemy formułę an + b, gdzie:\na – liczba całkowita\nn – określenie wielokrotności (jak w pętli)\nb – liczba całkowita",
+      "answerCode": "li:nth-child(2n+5) {\n  background: orangered;\n  color: #fff;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 82
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego używane są pseudoelementy w CSS?",
+      "questionCode": "p::before {\n}\n \nul::after {\n}",
+      "answerContent": "Pdeudoelementy w CSS są używane do stylowania części danego elementu albo treści wokół elementu. Możemy też stworzyć element HTML przy pomocy CSS. Pseudoelementy są nieklikalne.",
+      "answerCode": "p::before {\n/*używany do dodania danej treści jako pierwsze dziecko danego elementu*/ }\nul::after {\n/* używany do dodania danej treści jako ostatnie dziecko danego elementu*/ }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 83
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaki atrybut jest wymagany podczas używania pseudoelementów?",
+      "questionCode": "ul::before {\n  color: blue;\n}\nul::after {\n  color: red;\n}",
+      "answerContent": "Podczas używania pseudoelementów wymagany jest atrybut content. Atrybut ten działa tylko dla pseudoelementów.",
+      "answerCode": "ul::before {\n  content: \"List start\";\n  color: blue; }\nul::after {\n  content: \"List end\";\n  color: red; }",
+      "tags": [
+        "CSS"
+      ],
+      "id": 84
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób ostylować w CSS pierwsza linię lub pierwszą literę tekstu?",
+      "questionCode": "",
+      "answerContent": "Dzięki pseudoelementowi ::first-letter wystylujemy pierwszą literę tekstu, a dzięki pseudoelementowi ::first-line wystylizujemy pierwszą linię tesktu.",
+      "answerCode": ".element::first-letter {\n  color: #fff;\n  background: #2EC4B6;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 85
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w stylowaniu w CSS użyć zaprzeczenia?",
+      "questionCode": "",
+      "answerContent": "CSS pozwala nam na używanie zaprzeczeń dzięki selektorowi :not. Poniżej wszystkie elementy div oprócz elementów o klasie content oraz wszystkie elementy o klasie content, ale nie elementy div",
+      "answerCode": "div:not(.content) {\n  color: #F00;\n}\n.content:not(div) {\n  color: #F00;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 86
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co oznacza poniższy zapis w CSS?",
+      "questionCode": ".element {\n  flex: 1;\n}",
+      "answerContent": "Trzy właściwości elementu: flex-grow, flex-shrink, flex-basis można zapisać pod pojedynczą skróconą właściwością: flex",
+      "answerCode": ".element {\n  flex-grow: 1;\n  flex-shrink: 1;\n  flex-basis: 0;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 87
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka właściwość CSS odpowiada za wyłączenie niebiekiej obwódki pola input pojawiającą się po kliknięciu na niego? ",
+      "questionCode": "",
+      "answerContent": "Po wybraniu danego pola input, domyślnie ma ono niebieską obwódkę. Możemy ją wyłączyć poprzez dodanie dla pola właściwości outline: none.",
+      "answerCode": "input {\n  outline: none;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 88
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym są placeholdery pola input i jak je ostylkować w CSS?\n",
+      "questionCode": "<input type=\"text\" placeholder=\"zawartość placeholdera\">",
+      "answerContent": "Placeholder to tekst, który widzisz w polu formularza, zanim zaczniesz uzupełniać to pole. Można go ostylować za pomocą pseudoklas.",
+      "answerCode": "input::placeholder {\n  color: #fbba1f;\n  font-style: italic;\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 89
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Node.js",
+      "questionCode": "",
+      "answerContent": "git restore --",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 90
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest npm?",
+      "questionCode": "",
+      "answerContent": "npm (Node Package Manager) jest menadżerem pakietów stworzonym dla środowiska Node.js. Składa się z CLI (Command Line Interface - narzędzia konsolowego) oraz repozytorium paczek npm.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 91
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest JSON",
+      "questionCode": "",
+      "answerContent": "JSON – JavaScript Object Notation - to format tekstowy, dzięki któremu aplikacje mogą wymieniać się danymi. JSON jest niezależny od języka programowania, tzn. możemy go wykorzystywać nie tylko w JavaScripcie.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 92
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można zainstalować paczkę npm lokalnie, a w jaki globalnie? Czym się różnią?",
+      "questionCode": "",
+      "answerContent": "Instalacja lokalna polega na zinastalowaniu paczki w folderze, z którego została uruchomiona komenda instalacji i będzie ona dostępna tylko w tam. Instalacja globalna polega na instalacji danej paczki w ścieżce systemowej. ",
+      "answerCode": "npm i nazwa_paczki //instalacja lokalna\nnpm i nazwa_paczki -g //instalacja globalna",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 93
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób wskazać podczas instalacji wersję paczki npm? Czy wsakazanie wersji jest wymagane?",
+      "questionCode": "",
+      "answerContent": "Aby wskazać wersję paczki npm do zainstalowania należy po nazwie paczki dodać \"@x.x\" gdzie \"x.x\" to numer wersji. Jeżeli nie wpiszemy wersji paczki, to zawsze zostanie ściągnięta najnowsza wersja dostępna w repozytorium.",
+      "answerCode": "npm i nazwa_paczki@x.x // x.x - wersja paczki",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 94
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak wyświetlić zainstalowane paczki npm?",
+      "questionCode": "",
+      "answerContent": "Aby wyświetlić zainstalowane paczki, musimy użyć komendy:",
+      "answerCode": "npm list // paczki zainstalowane lokalnie\nnpm list -g // paczki zainstalowane globalnie",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 95
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak usunąć paczkę npm?",
+      "questionCode": "",
+      "answerContent": "Aby usunąć zainstalowaną paczkę, musimy użyć komendy:",
+      "answerCode": "npm uninstall nazwa_paczki // paczka lokalna\nnpm uninstall nazwa_paczki -g // paczka globalna",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 96
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Gupl?",
+      "questionCode": "",
+      "answerContent": "Gulp to narzędzie służące do automatyzacji zadań. Możemy go konfigurowac w dowolny sposób aby na przykład kompilowac pliki Sass, łączyć pliki, odświeżać okna przeglądarki itp. \n",
+      "answerCode": "",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 97
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakiej metody należy użyć w pliku gulpfile.js by gulp uruchomił zadania równocześnie, a jakiej by uruchomił je jedno po drugim?",
+      "questionCode": "",
+      "answerContent": "Metoda parallel służy do odpalania zadań równocześnie, a metoda series służy do odpalania zadań jedno po drugim.",
+      "answerCode": "gulp.parallel(zadanie1, zadanie2, zadanie3) // równolegle\ngulp.series(zadanie1, zadanie2, zadanie3) // kolejno",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 98
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy poniższa funkcja?",
+      "questionCode": "gulp.src()",
+      "answerContent": "Funkcja gulp.src() służy do pobrania plików, na których w pamięci będziemy przeprowadzać różne operacje - np. minimalizację kodu, translację itd. W ścieżce do plików możemy spotkać 2 zapisy:",
+      "answerCode": "./scss/*/*.scss // wszystkie pliki w danym katalogu\n./scss/**/*.scss // wszystkie pliki w danym katalogu i podkatalogach",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 99
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy poniższa funkcja pipe() w gupl?",
+      "questionCode": "",
+      "answerContent": "Za pomocą funkcji pipe() wykonujemy kolejne czynności na plikach - np. kompilację scss do css:",
+      "answerCode": "  gulp.src('./scss/**/*.scss')\n    .pipe(sass())",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 100
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy metoda gulp.dest()?",
+      "questionCode": "",
+      "answerContent": "Po wykonaniu wszystkich operacji wynik końcowy musimy zapisać na dysku. Wykonujemy to za pomocą gulp.dest():",
+      "answerCode": "  gulp.src('./scss/**/*.scss') //pobiera pliki do pamięci\n    .pipe(sass()) //kompiluje scss do css\n    .pipe(gulp.dest('./css')); //zapisujemy do katalogu css",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 101
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są style, w jakich może być wygenerowany kod CSS po kompilacji gulpem z SCSS? ",
+      "questionCode": "",
+      "answerContent": "Kod CSS może być wygenerowany w jednym z czterech stylów:\n-nested\n-expanded\n-compact\n-compressed",
+      "answerCode": "",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 102
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się nasted - styl kodu CSS po kompilacji za pomocą Gulpa? ",
+      "questionCode": "",
+      "answerContent": "Nasted to domyślny styl kodu CSS po kompilacji za pomocą Gulpa. Kolejne stylowania są odpowiednio wcięte. Charakteryzuje się też tym, że komentarze css /* */ nie są usuwane.",
+      "answerCode": "#main {\n   color: #fff;\n   background-color: #000; }\n   #main p {\n      width: 10em; }",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 103
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się expanded - styl kodu CSS po kompilacji za pomocą Gulpa?",
+      "questionCode": "",
+      "answerContent": "Expanded jest najbardziej czytelnym stylem CSS. Wcięcia są stosowane tylko dla właściwości. Każda z nich wstawiana jest do osobnej linii.",
+      "answerCode": "#main {\n   color: #fff;\n   background-color: #000;\n}\n#main p {\n   width: 10em;",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 104
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się compact - styl kodu CSS po kompilacji za pomocą Gulpa?",
+      "questionCode": "",
+      "answerContent": "Compact zajmuje mniej miejsca na ekranie i pozwala skupić większą uwagę na selektorach niż na ich właściwościach. Każda deklaracja zajmuje tylko jedną linię",
+      "answerCode": "#main { color: #fff; background-color: #000; }\n#main p { width: 10em; }\n.huge { font-size: 10em; font-weight: bold;\n        text-decoration: underline; }",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 105
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzuje się compressed - styl kodu CSS po kompilacji za pomocą Gulpa?",
+      "questionCode": "",
+      "answerContent": "Compressed zajmuje najmniej miejsca, likwiduje możliwe smacje. W tej wersji rozmiar pliku CSS jest najmniejszy.",
+      "answerCode": "#main{color:#fff;background-color:#000}#main p{width:10em}\n.huge{font-size:10em;font-weight:bold;text-decoration:underline}",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 106
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwia paczka Sourcemap dla Gulpa?",
+      "questionCode": "",
+      "answerContent": "Sourcemaps czyli mapy kodu źródłowego informują przeglądarkę o tym, w której linii pliku Sass znajduje się źródło wygenerowanej deklaracji CSS. Znacznie ułatwia to debugowanie i edycję plików.",
+      "answerCode": "",
+      "tags": [
+        "Gulp"
+      ],
+      "id": 107
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Sass?",
+      "questionCode": "",
+      "answerContent": "Sass (Syntactically Awsome Style Sheets) to nakładka na CSS, która pozwala korzystać z dodatkowych funkcjonalności: podział na oddzielne pliki, funkcje, pętle, zmienne, mixiny itp. Sass wymaga narzędzia do zmiany kodu SCSS na CSS (np. Gulp)",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 108
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakich rozszerzeniach może być zapisany plika Sass?",
+      "questionCode": "",
+      "answerContent": "Plik Sass może być zapisany w rozszerzeniach .sass oraz .scss",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 109
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy kod CSS może być wstawiony do pliku .scss Sassa?",
+      "questionCode": "",
+      "answerContent": "Tak.",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 110
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Dlaczego w plikach HTML odwołujemy się do wygenerowanych plików CSS, a nie do plików Sassa?",
+      "questionCode": "",
+      "answerContent": "Przy kompilowaniu plików Sassa wszystkie zmiany wprowadzone bezpośrednio w plikach CSS zostaną nadpisane wynikiem kompilacji z plików Sassa. Zmiany z plików CSS nie są przenoszone do plików Sassa.",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 111
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są rodzaje komentarzy, które można użyć w plikach Sass? Czym się charakteryzują?",
+      "questionCode": "",
+      "answerContent": "W plikach Sass możliwe jest użycie dwóch rodzajów komentarzy: ",
+      "answerCode": "/* komentarz zostanie umieszczony w wynikowym pliku CSS */ \n// komentarz nie zostanie umieszczony* w wynikowym pliku CSS (dla programisty pracującego w plikach Sass)\n(uwaga: w kompresji z opcją compressed żadne komentarze nie zostaną umieszczone w wynikowym CSS!)",
+      "tags": [
+        "Sass"
+      ],
+      "id": 112
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób definiujemy zmienne w Sassie?",
+      "questionCode": "",
+      "answerContent": "Do definiowania zmiennych używamy symbolu $:",
+      "answerCode": "$textColor: rgb(255, 189, 2);\n$rounded: false;\n$border: 1px;\n$fontFamily: \"Helvetica\";\n$padding: 10px 2px 20px 0;\n$users: john, alan, luke;\n",
+      "tags": [
+        "Sass"
+      ],
+      "id": 113
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za pomocą jakiego operatora w pliku .scss można odwołać się do rodzica danego selektora (np. w przypadku użycia pseudoklasy i pseudoelementów)?",
+      "questionCode": "",
+      "answerContent": "W przypadku pseudoklas i pseudoelementów w pliku .scss można zastosować operator &:",
+      "answerCode": "a {\n  &:hover {\n    color: red;\n  }\n{",
+      "tags": [
+        "Sass"
+      ],
+      "id": 114
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co należy zrobić, aby uniknąć tworzenia niepotrzebnego pliku (wynikowego) CSS przy tworzeniu styli w Sassie?",
+      "questionCode": "",
+      "answerContent": "Aby uniknąć tworzenia niepotrzebnego pliku css wystarczy na początku nazwy pliku .scss wpisać znak podkreślnika. Jego zawartość zostanie wstawiona bezpośrednio do jednego wynikowego pliku css razem z innymi plikami cząstkowymi.",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 115
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwiają mixiny w Sassie?",
+      "questionCode": "",
+      "answerContent": "Mixin pozwala na zapisanie deklaracji CSS (właściwość i jej wartość) w postaci pewnego rodzaju zmiennej oraz może róznież przekazywać argumenty.",
+      "answerCode": "@mixin webFont($fontSize) {\n  font-family: \"Open Sans\", sans-serif;\n  font-size: $fontSize;\n}\nheader {\n  @include webFont(2rem);\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 116
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak ustawić wartośc domyślną argumentu mixina w Sassie?",
+      "questionCode": "",
+      "answerContent": "Aby ustawić wartośc domyślną argumentu mixina należy wpisać ją po dwukropku:",
+      "answerCode": "@mixin shadow($blur : 10px) {\n  box-shadow: 0 0 $blur 5px rgba(0,0,0, .2);\n} \n.box2 {\n  @include shadow(); //10px\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 117
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co powoduje dodanie trzech kropek do artumentu mixina w Sassie?",
+      "questionCode": "",
+      "answerContent": "Dodanie trzech kropek do argumentu tworzy Variable Arguments, dzięki temu możemy rozdzielać własności CSS przecinkiem. Jest to przydatne np. przy tworzeniu m.in. animation czy gradient.",
+      "answerCode": "@mixin radial-gradient($direction, $colors...) {\n  background-color: white;\n  background: radial-gradient($direction, $colors);\n}\n.box {\n  @include radial-gradient(ellipse at top, orange, purple);\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 118
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można skorzystać z list w Sassie?",
+      "questionCode": "",
+      "answerContent": "Aby skorzystać z funkcji dla list, w pliku w którym chcemy ich użyć musimy użyć reguły @use która załaduje odpowiedni moduł z biblioteki Sass. Dla list jest to moduł sass:list:",
+      "answerCode": "@use \"sass:list\";",
+      "tags": [
+        "Sass"
+      ],
+      "id": 119
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Od jakiego indeksu zaczynają się elementy listy w Sassie?",
+      "questionCode": "",
+      "answerContent": "Elementy listy w Sassie zaczynają się od indeksu 1\n",
+      "answerCode": "",
+      "tags": [
+        "Sass"
+      ],
+      "id": 120
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób rozdziela się elementy listy w Sassie?",
+      "questionCode": "",
+      "answerContent": "W Sassie nie ma restrykcyjnych zasad podczas tworzenia list - elementy mogą być rozdzielone przecinkami ale nie muszą. Elementy również nie muszą mieć apostrofów / cudzysłowu.",
+      "answerCode": "$myString1: \"Sass is awesome\";\nlist.length($myString1); /* = 1 */\n\n$myString2: Sass is awesome;\nlist.length($myString2); /* = 3 */",
+      "tags": [
+        "Sass"
+      ],
+      "id": 121
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy listy i mapy utworzone w Sassie są przetwarzane na CSS? ",
+      "questionCode": "",
+      "answerContent": "Listy i mapy nie są przetwarzane na CSS, gdyż nie mają bezpośredniego przełożenia na ten język.",
+      "answerCode": "@use \"sass:map\";\n$colors: ( header: #b06,);\n.header {  background-color: map.get($colors, header);}\n/* rezultat w CSS: */\n.header {  background-color: #b06;}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 122
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w Sassie możliwe jest stosowanie pętli?",
+      "questionCode": "",
+      "answerContent": "Tak, metoda @for pozwala na powtórzenie stylów określoną liczbę razy.",
+      "answerCode": "@for $i from 1 through 3 {\n  .item-#{$i} { width: 2em * $i; }\n}\n@for $var from <start> through <end> //wartość <end> jest wliczana\n@for $var from <start> to <end> //wartość <end> jest pomijana",
+      "tags": [
+        "Sass"
+      ],
+      "id": 123
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest różnica między metodą @for, a metodą @each w Sassie?",
+      "questionCode": "",
+      "answerContent": "Metoda @each jest podobna do metody @for. Różnicą jest zbiór, na którym jest wykonywana. W przypadku @each jest to lista.",
+      "answerCode": "@each $animal in puma, sea-slug, egret, salamander {\n  .#{$animal}-icon {\n    background-image: url('/images/#{$animal}.png');\n  }\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 124
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w Sassie można skorzystać w warunków (metoda jeżeli)?",
+      "questionCode": "",
+      "answerContent": "Sass pozwala na wstawianie definicji stylów na podstawie spełnionego warunku. Służy do tego metoda @if. Może być również połączona z @else if.",
+      "answerCode": "@mixin border($color, $side) {\n  @if $side == all {\n    border: 3px solid $color;\n  } @else if $side == none {\n    border: none;\n  } @else {\n    border-#{$side}: 3px solid $color;\n  }   }",
+      "tags": [
+        "Sass"
+      ],
+      "id": 125
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w nazwie właściwości docelowego CSS deklarowanej w Sassie możemy wkorzystać zmienne?",
+      "questionCode": "",
+      "answerContent": "W Sassie mamy wpływ na nazwy właściwości CSS przez wstawienie zmiennej w klamry i poprzedzenie jej znakiem #.",
+      "answerCode": "@mixin border($color, $side) {\n  border-#{$side}: 3px solid $color;\n}\n \n.box {\n  @include border(red, bottom);\n}",
+      "tags": [
+        "Sass"
+      ],
+      "id": 126
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polaga RWD?",
+      "questionCode": "",
+      "answerContent": "RWD (Responsive We Design) to technika projektowania stron WWW tak, aby ich wygląd i układ dostosowywał się automatycznie do rozmiaru okna urządzenia, na którym jest wyświetlany.",
+      "answerCode": "",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 127
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Względem jakiej wartości jest obliczana wartość jednostki rem?",
+      "questionCode": "",
+      "answerContent": "Jednostka rem jest obliczana na podstawie wielkości czcionki użytej w elemencie root, którym zazwyczaj jest element html/",
+      "answerCode": "html {  font-size: 20px;  }\n.parent {  font-size: 10px; }\n.child {  font-size: 2rem; }// 2 * 20px = 40px",
+      "tags": [
+        "CSS"
+      ],
+      "id": 128
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Względem jakiej wielkości ustawiana jest wartość jednostki %?",
+      "questionCode": "",
+      "answerContent": "Jednostka % ustawia wielkośc na podstawie tej samej wartości najbliższego przodka.",
+      "answerCode": ".parent {\n  font-size: 10px;\n}\n.child {\n  font-size: 200%; // 20px bo font-size rodzica wynosi 10px\n}",
+      "tags": [
+        "CSS"
+      ],
+      "id": 129
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Względem jakiej wartości ustalane są jednostki vmin i vmax",
+      "questionCode": "",
+      "answerContent": "1vmin = mniejsza z wartości 1vw lub 1vh;\n1vmax = większa z wartości 1vw lub 1vh;",
+      "answerCode": "",
+      "tags": [
+        "CSS"
+      ],
+      "id": 130
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak rozwiązać problem zachowania proporcji zagnieżdżonego wideo (np. w tagu iframe)?",
+      "questionCode": "",
+      "answerContent": "Należy nadać rodzicowi elementu odpowiednie proporcje poprzez padding-bottom jak poniżej. Tag iframe powinien miec szerokość i wysokośc ustawioną na 100% i pozycję absolutną. ",
+      "answerCode": "parent {\n  height: 0;\n  padding-bottom: 56.25%; /* proporcje video 16:9 */\n  position: relative;\n  width: 100%;\n}",
+      "tags": [
+        "HTML",
+        "CSS"
+      ],
+      "id": 131
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Ile znaków / wyrazów powinno znajdować się w jednej linii tekstu dla uzyskania najlepszej czytelności?",
+      "questionCode": "",
+      "answerContent": "W jednej linii powinno znajdować sie 70-80 znaków (około 8-10 wyrazów)",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 132
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Operator typeof w JavaScript pozwala sprawdzić typ danych. W jakiej formie zwraca informację? Czy taki zapis może być prawdą? ",
+      "questionCode": "if (typeof myObject === object) {\n  /* tutaj inny kod */\n}",
+      "answerContent": "Operator typeof zwraca informację o typie, ale w formie string. Poniższy zapis może być prawdziwy",
+      "answerCode": "if (typeof null === \"object\") {\n  /* tutaj inny kod */\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 133
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak w JavaScript zamienić stringa na liczbę?",
+      "questionCode": "",
+      "answerContent": "JavaScript umożliwoa zamianę stringa na kilka sposobów, w zależności od teog czy chcemy uzyskać liczbę zmiennoprzecinkową, całkowitą i czy string zawiera tylko liczby, czy należy je wyciągnąć z niego:",
+      "answerCode": "Number(string); // liczba zmiennoprzecinkowa (float)\n+string; // liczba zmiennoprzecinkowa (float)\n// poniższe: wyciąganie danych liczbowych ze stringa\nparseInt(intString); // liczba całkowita (integer)\nparseFloat(floatString);// liczba zmiennoprzecinkowa (float)",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 134
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższy zapis jest poprawny?",
+      "questionCode": "12.34.toString();",
+      "answerContent": "Nie. Metodę tę, możemy uruchomić na elemencie typu Number. Jednak nie możemy zrobić tego bezpośrednio na jakiejś wartości. Musi być ona wcześniej przypisana do zmiennej, lub możemy się posłużyć obiektem Number.",
+      "answerCode": "let price = 140.34;\n\nprice.toString(); // String - \"140.34\"\nNumber(99.99).toString(); // String - \"99.99\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 135
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego służy metoda trim() w JavaScrpit?",
+      "questionCode": "",
+      "answerContent": "Metoda trim() pozwala na usunięcie wszystkich białych znaków z początku i końca ciągu znaków.",
+      "answerCode": "const text = \"   Lorem ipsum.   \";\ntext.trim(); //\"Lorem ipsum.\"\n",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 136
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym różnią się metody substr() i substring() w JavaScript?",
+      "questionCode": "const text = \"Ala ma kota a kot ma Alę\";\ntext.substr(7, 11);\ntext.substring(7, 11);",
+      "answerContent": "Obie metody pozwalają na wyciągnięcie kawałka danego ciągu, a różnią się parametrami:\nsubstr(indeksPoczątkowy, długość) \nsubstring(indeksPoczątkowy, indeksKońcowy)",
+      "answerCode": "const text = \"Ala ma kota a kot ma Alę\";\ntext.substr(7, 11); // \"kota a kot \"\ntext.substring(7, 11); //\"kota\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 137
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co zwraca metoda indexof(), jeżeli nie może niczego znaleźć?",
+      "questionCode": "",
+      "answerContent": "Metoda indexOf(value) zwracająca miejsce występowania konkretnej wartości (value) w tablicy. Jeżeli niczego nie może znaleźć, zwraca -1.",
+      "answerCode": "const prices = [2134, 1059, 2237];\nprices.indexOf(1059); // 1\nprices.indexOf(8893); // -1",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 138
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega zjawisko Hostingu w JavaScript?",
+      "questionCode": "",
+      "answerContent": "JavaScriptu wykonuje instrukcje krok po kroku (linia po linii). W niektórych wypadkach - w fazie początkowej, dochodzi do umieszczenia deklaracji funkcji w pamięci, aby móc z nich korzystać przed fizyczną dek",
+      "answerCode": "sayHello(); /*zadziała, bo sayHello nie jest wyrażeniem funkcyjnym*/\n \nfunction sayHello() {\n  console.log(\"Hello!\");\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 139
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób możemy pobrać wartośc obiektu?",
+      "questionCode": "const cat =  {\n  name: \"Filemon\",\n  age: 2,\n  friends: [\"Mruczek\", \"Reksio\"]\n};",
+      "answerContent": "Aby pobrać wartość obiektu musimy użyć znaku kropki lub użyć nawiasu kwadratowego. ",
+      "answerCode": "const cat =  {\n  name: \"Filemon\",\n  age: 2,\n  friends: [\"Mruczek\", \"Reksio\"]\n};\ncat.name; //\"Filemon\"\ncat[\"name\"]; //\"Filemon\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 140
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak nazywają się funkcje znajdujące się w obiekcie i jak je definiujemy?",
+      "questionCode": "",
+      "answerContent": "Metody sa to funkcje, które znajdują się w obiekcie. Definiujemy je w następujący sposób:",
+      "answerCode": "const cat = {\n  sayMiau: function() { // nazwa: function()\t\t\n     console.log(\"Miau!\"); \n  },  // przecinek, jeżeli występuje kolejny element\n  run: function() {\n     console.log(\"I’m running!\"); \n  } \n};",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 141
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy do obiektu można dodawać własciwości i metody poza jego ciałem?",
+      "questionCode": "",
+      "answerContent": "Tak, do obiektu możemy dodawać właściwości i metody po tym jak go już stworzymy, czyli poza ciałem obiektu.",
+      "answerCode": "const teacher = {\n  name: \"Janusz Kowalski\",\n  subject: \"Programowanie JS\"\n};\nteacher.students = [\"Ala\", \"Kasia\", \"Adam\"];\nconsole.log(teacher.students); /* Array […] */",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 142
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższe stwierdzenia sa prawdziwe czy fałszywe?",
+      "questionCode": "const foo = { };\nconst bar = foo;\nfoo == bar; // true or false ?\nfoo === bar; // true or false ?",
+      "answerContent": "Oba poniższe stwierdzenia są prawdziwe.",
+      "answerCode": "const foo = { };\nconst bar = foo;\nfoo == bar; // true\nfoo === bar; // true",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 143
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższe stwierdzenia sa prawdziwe czy fałszywe?",
+      "questionCode": "const foo = { };\nconst bar = { };\n          \nfoo == bar; // true czy false?\nfoo === bar; // true czy false?",
+      "answerContent": "Oba poniższe stwierdzenia są nieprawdziwe. Dwa niezależne obiekty nie są równe. ",
+      "answerCode": "const foo = { };\nconst bar = { };\n          \nfoo == bar; // false\nfoo === bar; // false",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 144
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można znaleźć w pliku JavaScript element od id  \"glink\"",
+      "questionCode": "",
+      "answerContent": "Za pomocą metody querySelector lub getElementById:",
+      "answerCode": "document.querySelectorAll(\"#glink\");\ndocument.getElementsByTagName(\"tag\");(\"glink\");",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 145
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co przyjmują jako argument metody wyszukiwania elementów w DOM-ie zaczynające się od get:",
+      "questionCode": "document.getElementsByTagName(\"tag\");",
+      "answerContent": "Metody zaczynające się od get jako argument przyjmują jako argument string będący np. nazwą klasy, id lub tagu HTML.",
+      "answerCode": "document.getElementsByTagName(\"tag\");\ndocument.getElementsByClassName(\"bar\");",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 146
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak  w JavaScript przypisać nową wartość dla obiektu dataset poniższego tagu?",
+      "questionCode": "<div id=\"user\" data-id=\"424\">John Doe</div>",
+      "answerContent": "Należy wyszukać element i zmienić jego wartoć za pomocą metody dataset:",
+      "answerCode": "const myUser = document.querySelector(\"#user\");//wyszukanie \nmyUser.dataset.id = \"345\"; //zmiana wartości data-id\n\n",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 147
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada własciwość classList elementu wyszukanego w drzewie DOM? Jakie są dostępne metody dla classList?",
+      "questionCode": "",
+      "answerContent": "Właściwość classList elementu zwraca listę wszystkich klas elementu. Można na niej pracować za pomocą nstępujących metod:",
+      "answerCode": "el.classList.add(className) // dodaje podaną klasę,\nel.classList.remove(className) // usuwa podaną klasę,\nel.classList.toggle(className) // przełącza podaną klasę (czyli usuwa ją jeżeli jest, jeżeli jej nie ma, to dodaje).",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 148
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakimi metodami z poziomu JavaScript można edytować atrybuty danego elementu? ",
+      "questionCode": "//HTML\n<a href=\"www.google.com\" id=\"glink\">Hello Google!</a>\n//JavaScript\nconst link = document.querySelector(\"#glink\");\n",
+      "answerContent": "Z poziomu JavaScript możemy za pomocą poniższych metod sprzwdzić czy element ma atrybut, pobrać jego wartość, usunąć go i zmienić jego wartość.",
+      "answerCode": "link.hasAttribute(\"href\"); // true\nlink.getAttribute(\"href\"); //\"www.google.com\"\nlink.removeAttribute(\"href\"); // usuwa atrybut\nlink.setAttribute(\"href\", \"www.something.com\"); // ustawia nową wartość atrybutu",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 149
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób zapisuje się w JavaScript w obiekcie style danego elementu właściwości CSS? W jakiej formie obiekt ten przechowuje wartości i czy zawiera style ustawione w CSS?",
+      "questionCode": "element.style.?",
+      "answerContent": "Obiekt style przechowuje wszystkie wartości jako ciągi znaków, tak są zwracane i nastawiane. W obiekcie tym dostepne są style tylko ustawione za pomocą JavaScript. Ustawiając właściwości CSS należy stosować zapis CamelCase.",
+      "answerCode": "element.style.backgroundColor; / wczytanie wartości\nelement.style.backgroundColor = \"blue\"; //nastawienie nowej wartości ",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 150
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy da się za pomocą metody removeEventListener usunąć nasłuchiwanie, których obsługa odbywa się za pomocą funkcji anonimowych?",
+      "questionCode": "removeEventListener(event, callback)",
+      "answerContent": "Nie da się usunąć nasłuchiwań, których obsługa odbywa się za pomocą funkcji anonimowych.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 151
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest DOMContentLoaded?",
+      "questionCode": "",
+      "answerContent": "DOMContentLoaded jest specjalnym zdarzeniem, uruchamiającym się w momencie załadowania drzewa DOM. Nasz cały kod JavaScript operujący na DOM powinien znajdować się wewnątrz obsługi tego zdarzenia.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 152
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Do czego odwołuje się zmienna this zastosowana w evencie? ",
+      "questionCode": "const buttons = document.querySelectorAll(\".btn\");\nfor(let i = 0; i < buttons.length; i++) {\n   buttons[i].addEventListener(\"click\", function(event) {\n      this.style.backgroundColor = \"red\";\n   });\n}",
+      "answerContent": "Zmienna this reprezentuje element, na którym zostało wywołane zdazenie. Jest ona szczególnie przydatna, jeżeli taki same event nastawiamy na wiele elementów.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 153
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Obiekt event w zdarzeniach DOM zwraca informacje na temat zdarzenia które nastąpiło. Jakie informacje zwraca dla:",
+      "questionCode": "event.currentTarget;\nevent.target;\nevent.timeStamp;\nevent.type;",
+      "answerContent": "Obiek event dla podanych przykładów zwraca następujące informacje:",
+      "answerCode": "event.currentTarget;//element, na którym zostało wywołane zdarzenie\nevent.target;//element, który spowodował wywołanie eventu\nevent.timeStamp;//czas, w którym został wywołany event\nevent.type;//typ eventu jako ciąg znaków",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 154
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada metoda event.preventDefault()?",
+      "questionCode": "",
+      "answerContent": "Metoda event.preventDefault() anuluje standardową akcję elementu.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 155
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega propagacja zdarzeń?",
+      "questionCode": "",
+      "answerContent": "Propagacja zdarzeń polega na przekazywaniu informacji o zdarzeniu w drzewie DOM. Event bubbling to przekazywanie danych w górę drzewa DOM (domyślne dla większości zdarzeń), a event capturing w dół drzewa DOM (domyślne np. dla focus)",
+      "answerCode": "",
+      "tags": [
+        "HTML"
+      ],
+      "id": 156
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie relacje wyróżniamy w drzewie DOM?",
+      "questionCode": "",
+      "answerContent": "W drzewie DOM wyróżniamy następujące relacje: rodzic (parent), rodzeństwo (siblings), dzieci (children)",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 157
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co umożliwia metoda colneNode(deep)? Jakie wartości przyjmuje parametr deep?",
+      "questionCode": "",
+      "answerContent": "Metoda cloneNode(deep) umozliwia sklonowanie elementu DOM w JavaScrpit. Parametr deep oznacza, czy klonowanie ma być głębokie czy też nie.Głębokie klonowanie kopiuje i zwraca węzeł wraz z całym poddrzewem.",
+      "answerCode": "const toClone = document.querySelector('#foo');\nconst newDiv = toClone.cloneNode(true); // true lub false",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 158
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy stworzenie elementu w JavaScript za pomocą metody createElement() dodaje go do drzewa DOM?",
+      "questionCode": "const newDiv = document.createElement(\"div\");",
+      "answerContent": "Stworzenie elementu nie oznacza, że zostanie on dodany do drzewa DOM. Możemy go przypisać do zmiennej, pracować na nim, ale nie będzie on dostępny dla użytkownika naszej strony. Aby był widoczny na stronie należy go podpiąć. ",
+      "answerCode": "el.appendChild(nowyElement)// dodaj element jako ostatnie dziecko danego węzła,\nel.insertBefore(nowyElement, dziecko)// dodaj element przed jednym z podanych dzieci,\nel.replaceChild(nowyElement, dziecko)// zamień podane dziecko.",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 159
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiadają poniższe własciwości formularzy w JavaScript:",
+      "questionCode": "form.action;\nform.method;\nform.elements;",
+      "answerContent": "Właściwości formularzy: ",
+      "answerCode": "form.action // adres URL, do którego prowadzi formularz,\nform.method // metoda, którą wysyłany jest formularz,\nform.elements// kolekcja elementów należących do tego formularza (w kolejności wpisanej w kodzie HTML).",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 160
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada metoda input.value?",
+      "questionCode": "",
+      "answerContent": "Metoda input.value – zwraca wartość, na jaką ustawiony jest input. Może służyć też do ustawienia wartości.",
+      "answerCode": "const input = document.querySelector('#name');\nconst fullName = input.value; /* zwraca nam aktualną wartość inputa */\ninput.value = \"Adam\"; /* ustawia nową wartość inputa */",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 161
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest Webpack?",
+      "questionCode": "",
+      "answerContent": "Webpack jest builderem, którego celem jest połączenie wszystkich assetów (plików tworzących projekt np. plików JS, plików CSS) w jedną paczkę (nazywana Bundlem), którą można wysłać do przeglądarki. ",
+      "answerCode": "",
+      "tags": [
+        "Webpack"
+      ],
+      "id": 162
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Za co odpowiada loader Babel w Webpacku?",
+      "questionCode": "",
+      "answerContent": "Babel to kompilator do języka JavaScript, który tłumaczy kod napisany np. w ES6+ do ES5. Pozwala używać najnowszych opcji dostępnych w ES6+, a po przetłumaczeniu do ES5 będą dostępne we wszystkich przeglądarkach.",
+      "answerCode": "",
+      "tags": [
+        "Webpack"
+      ],
+      "id": 163
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest webpack-dev-server?",
+      "questionCode": "",
+      "answerContent": "Webpack posiada serwer webowy o nazwie webpack-dev-server. Serwer wysyła informacje o stanie kompilacji do przeglądarki, dzięki czemu może sie automatycznie odświeżać po każdej zmianie w projekcie (tzw. hot-loading)",
+      "answerCode": "",
+      "tags": [
+        "Webpack"
+      ],
+      "id": 164
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest funkcja wyższego rzędu?",
+      "questionCode": "",
+      "answerContent": "Funkcja wyższego rzędu to funkcja, która zwraca lub przyjmuje jako argument inne funkcje.",
+      "answerCode": "function multipleBy2(fn) {\n    return 2 * fn();\n} /*wynik zwrócony przez funkcję przekazaną do parametru fn zostanie pomnożony raz dwa i zwrócony z metody multipleBy*/",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 165
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym się różni programowanie funkcyjne od imperatywnego (proceduralnego)?",
+      "questionCode": "",
+      "answerContent": "Programowanie funkcyjne to opisywanie problemu dzięki funkcjom i ich zagnieżdżaniu w sobie a nie jego ścisłe rozwiązywani. Programowanie imperatywne to podejśce, w którym jawnie, krok po kroku, definiuje się jak wykonać zadanie. ",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 166
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działa metoda forEach()?",
+      "questionCode": "",
+      "answerContent": "Metoda forEach() wykonuje przekazaną w parametrze funkcję dla każdego elementu tablicy. Funkcja ta może mieć opcjonalnie trzy parametry: element, na którym wykonywana jest funkcja, jego indeks i tablice na której wywoływana jest funkcja.",
+      "answerCode": "const arr = [1, 2, 3];\nfunction fn(element, index, array) {\n  console.log(\"[\"+index+\"] = \"+element);\n}\narr.forEach(fn);",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 167
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działa metoda map()?",
+      "questionCode": "",
+      "answerContent": "Metoda map() wykonuje przekazaną w parametrze funkcję dla każdego elementu tablicy, a zwróconą przez nią wartość przypisuje do nowej tablicy o danym indeksie. Przekazywana funkcja może mieć trzy parametry: element, indeks, tablicę.",
+      "answerCode": "const arr = [1, 2, 3];\nfunction fn(element, index, array) {\n  return element * index;\n} \nconst result = arr.map(fn);\nconsole.log(result); // [0, 2, 6]",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 168
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działa metoda filter()?",
+      "questionCode": "",
+      "answerContent": "Metoda filter() zwraca nową tablicę z wartościami, które w wyniku działania warunku są prawdą. W przypadku tej metody, nie możemy poddawać modyfikacji tych elementów. Przekazywana funkcja może mieć trzy parametry: element, indeks, tablicę.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 169
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w funkcji strzłkowej bez parametrów konieczne jest użycie nawiasów?",
+      "questionCode": "",
+      "answerContent": "Jeżeli funkcja strzłkowa nie ma parametrów konieczne jest zastosowanie okrągłych nawiasów. ",
+      "answerCode": "const foo = () => 1;",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 170
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy w przypadku gdy funkcja strzłkowa ma jedną instrukcje jest konieczne zastosowanie nawiasów klamrowych i słowa kluczowego return?",
+      "questionCode": "",
+      "answerContent": "Jeżeli funkcja strzłkowa ma jedną instrukcję nie jest wymagane zastosowanie ani nawiasów klamrowych ani return. ",
+      "answerCode": "const foo = a => a * 2;// jedna instrukcja\nconst foo = a => { return a * 2; } // wciąż jedna instrukcja, nawiasy klamrowe są opcjonalne ale przy ich użyciu należy pamiętać o słowie kluczowym return",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 171
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Kiedy stosowanie nawiasów jest obowiązkowe w fukcji strzłkowej? ",
+      "questionCode": "",
+      "answerContent": "Nawiasy w funkcji strzłkowej sa obowiązkowe gdy ma ona wiele parametrów (nawiasy okrągłe) i gdy ma wiele instrukcji (nawiasy klamrowe).",
+      "answerCode": "const foo = (a, b) => {\n  if(a > b) {\n    return a;\n  }\n  return b;\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 172
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na co wskazuje this wewnątrz funkcji strzłkowej (Arrow Functions)?",
+      "questionCode": "",
+      "answerContent": "This wewnątrz Arrow Functions wskazuje na ten sam obiekt this, który istnieje poza ciałem tej funkcji. Obiekt this nie jest tworzony bezpośrednio w Arrow functions.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 173
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaką nazwę nosi operator \"...\"? Co będzie efektem poniższego kodu? ",
+      "questionCode": "const arr = [1, 2, 3];\nconsole.log(...arr);",
+      "answerContent": "Operator \"...\" nosi nazwę reszty lub rozproszenia (Spread Opeartor). W przypadku gdy znajduje się on przed dowolnym obiektem iterowanym (np. tablicą), to powoduje rozdzielenie każdego elementu tablicy na osobny byt.",
+      "answerCode": "const arr = [1, 2, 3];\nconsole.log(...arr);// 1 2 3, równoważne z:\nconsole.log(arr[0], arr[1], arr[2])// 1 2 3",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 174
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób działa Spread Operator (oprator rozproszenia) w przypadku stringa? Jaki będzie wynik poniższego kodu?",
+      "questionCode": "const str = \"text\";\nconst chars = [ ...str ];\nconsole.log(chars);\nconsole.log(typeof str);\nconsole.log(typeof chars);",
+      "answerContent": "Spread Operator może służyć do podzielenia stringa na poszczególne znaki i zapisanie wyniku tej operacji do tablicy:",
+      "answerCode": "const str = \"text\";\nconst chars = [ ...str ];\nconsole.log(chars); // [\"t\", \"e\", \"x\", \"t\"]\nconsole.log(typeof str); // string\nconsole.log(typeof chars);// object",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 175
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy zmiana tablicy users ma wpływ na tablicę users2?",
+      "questionCode": "const users = [\"Ben\", \"Anna\", \"John\"];\nconst users2 = [...users];",
+      "answerContent": "Porównanie ze sobą tych dwóch tablic da nam wynik false. Są to dwie różne instancje tablic jednak z tymi samymi danymi. Zmiana wartości w jednej nie ma wypływu na drugą.",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 176
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy za pomocą Spread Operator (operatora rozproszenia) można skopiowac obiekt?",
+      "questionCode": "const state = {\n  isActive: false,\n  inputValue: \"Your name\"\n};\nconst stateCopy = {...state};",
+      "answerContent": "Tak, za pomocą Spread Operator można utworzyć kopię obiektu. ",
+      "answerCode": "const state = {\n  isActive: false,\n  inputValue: \"Your name\"\n};\nconst stateCopy = {...state};",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 177
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Ile argumentów przyjmuje funkcja fn? Jak nazywa się zastosowany operator (...)?",
+      "questionCode": "function fn(a, b, ...args) {\n//ciało funkcji\n}",
+      "answerContent": "Funkcja fn przyjmuje dowolną liczbę parametrów, gdzie dwa pierwsze to a i b a reszta parametrów jest przechowywana w arg dzięki Rest Oparator (operator reszty).",
+      "answerCode": "function fn(a, b, ...args) {\n  return (a + b) * args.length;\n}\nconsole.log(fn(2, 4, \"IT\", true, 9))\n// 18",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 178
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy Rest Operator (operato reszty) może być użyty w poniższy sposób? ",
+      "questionCode": "function foo(...arr, par) {\n  console.log(arr, par);\n}\n",
+      "answerContent": "Nie, operator reszty musi zawsze być zastosowany z ostatnim parametrem funkcji:",
+      "answerCode": "function foo(...arr, par) { // bład\n  console.log(arr, par);\n}\nfunction bar(...x, y, ...z) { // bład\n  console.log(x, y, z);\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 179
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy poniższy zapis jest poprawny?",
+      "questionCode": "function fn(a = 10, ...args=[1, 2, 3]) {\n  console.log(a * args.length );\n}",
+      "answerContent": "Nie, operator reszty nei przyjmuje domyślnych wartości.",
+      "answerCode": "function fn(a = 10, ...args=[1, 2, 3]) {\n  console.log(a * args.length );\n  // Błąd!\n}",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 180
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak w Tamplate strings (łańcuchach szablonowych) użyć interpolacji (wstawić kod JavaScript)?",
+      "questionCode": "",
+      "answerContent": "Aby w Tamplate strings (łańcuchu szablonowym) wstawić kod JavaScript należy użyć zapisu ${} :",
+      "answerCode": "let user = \"Agata\";\nconsole.log(`Witaj ${user}`);\nlet a = 23;\nconsole.log(`Suma ${a + 2}`);",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 181
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega destrukturyzacja tablic w ES6?",
+      "questionCode": "",
+      "answerContent": "Destrukturyzacja w ES6 polega na przypisaniu własności tablicy lub obiektu do zmiennych.",
+      "answerCode": "let fruits = [\"Banana\", \"Apple\"];\nlet [value1, value2] = fruits;\nconsole.log(value1)//\"Banana\"\nconsole.log(value2)//\"Apple\"",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 182
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy destrukturyzacja tablic działa na funkcjach zwracających tablicę?",
+      "questionCode": "const foo = () => [1, 2, 3];\nconst [a, b] = foo();\nconsole.log(a, b); ",
+      "answerContent": "Tak, destrukturyzacja tablic działa na funkcjach zwracających tablicę:",
+      "answerCode": "const foo = () => [1, 2, 3];\nconst [a, b] = foo();\nconsole.log(a, b); //1 2\n/*trzecia wartość nie zostanie uwzględniona.*/",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 183
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób można za pomocą destrukturyzacji przypisać do zmiennej pierwszą i trzecią wartość tablicy (z pominięciem drugiej)?",
+      "questionCode": "",
+      "answerContent": "Aby pominąć daną wartość przy destrukturyzacji należy zastosować zapis analogiczny do poniższego:",
+      "answerCode": "const [a, , b] = [1, 2, 3];\nconsole.log(a, b); //1 3",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 184
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest React",
+      "questionCode": "",
+      "answerContent": "React jest JavaScriptową biblioteką stworzoną przez Facebooka. Służy do tworzenia frontendowych interfejsów użytkownika.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 185
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co oznacza skrót DOM ?",
+      "questionCode": "",
+      "answerContent": "DOM - Obiektowy model dokumentu HTML (Document Object Model). Język HTML jest tekstem, który piszemy edytorach, a DOM jest jego reprezentacją w pamięci przeglądarki. Poszczególne elementy HTML stają się węzłami w DOM",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 186
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest wirtualny DOM?",
+      "questionCode": "",
+      "answerContent": "Wirtualny DOM to kopia HTML DOM, z której korzysta React. Tworzy on prostą kopię HTML DOM, na której dokonuje różnych operacji, a następnie porównuje nową i starą wersje, a w rzeczywistym DOMie odświeża tylko to, co trzeba.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 187
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest JSX?",
+      "questionCode": "",
+      "answerContent": "JSX to wprowadzone przez React rozszerzenie jązyka JavaScript o tagi podobne do tych, które stosujemy w HTML/XML. JSX ułatwia pisanie kodu, w którym znajduje się dużo informacji o strukturze HTML.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 188
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega jednostronne powiązanie (One-way binding / One-way flow) występujące w Reacie?",
+      "questionCode": "",
+      "answerContent": "React i kod w nim napisany jest jedynym źródłem prawdy (single source of truth). Zmiany wprowadzane w strukturze programu mają wpływ na DOM, ale nie na odwrót.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 189
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób JSX umożliwia zagnieżdżanie wyrażeń? Jak można zdefiniować wyrażenie?",
+      "questionCode": "",
+      "answerContent": "Wyrażeniem jest dowolny kod JavaScript, który coś zwraca. Aby umieścić wyrażenie w dowolnym miejscu elementu należy otoczyć je nawiasami klamrowymi – {wyrażenie}.",
+      "answerCode": "<span>{ 2 + 2 }</span> // kod wypisze w elemencie span liczbę 4",
+      "tags": [
+        "React"
+      ],
+      "id": 190
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w JSX możemy umieścić wartość zmiennej?",
+      "questionCode": "const name = 'Mieszko';\nconst count = name.length;",
+      "answerContent": "W celu umieszczenia w JSX wartości zmiennej należy zastosowac zapis klamrowy:",
+      "answerCode": "const name = 'Mieszko';\nconst count = name.length;\n---JSX---\n<span>\n  Twoje imię ma { count } znaków\n</span>",
+      "tags": [
+        "React"
+      ],
+      "id": 191
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób w Reacie należy przekazywać do tagu lub komponentu stałe wartości, ale inne niż stringi?",
+      "questionCode": "",
+      "answerContent": "W Reacie przekazwanie do tagu lub komponentu stałych wartości, ale innych niż stringi musi odbywać się za pomocą wyrażń z wykorzystaniem nawiasów klamrowych.",
+      "answerCode": "<div contentEditable={ true }>Sample<∕div>//wartośc typu boolean\n<input minLength={ 10 } /> // wartość typu number",
+      "tags": [
+        "React"
+      ],
+      "id": 192
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak zmienia się kod stylowanie inline w HTML w JSX?",
+      "questionCode": "<div style=\"color: blue; background-color: green;\"></div>",
+      "answerContent": "W JSC można korzystać z atrybtu style w tagach, ale w większości przypadków nazwy styli zapisywane są camelCasem. Tworzą one klucze obiektu, którego wartości pozostają jak CSS.",
+      "answerCode": "const style = {\n  color: \"blue\",\n  backgroundColor: \"green\"\n};\n<div style = {style}></div> // ze zmienną pomocniczą\n<div style={{color: \"blue\", backgroundColor: \"green\"}}><∕div> //bez zmiennej pomocniczej",
+      "tags": [
+        "React"
+      ],
+      "id": 193
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Ile tagów można zwrócić w JSX?",
+      "questionCode": "",
+      "answerContent": "W JSX zawsze należy zwrócic jeden główny tag, w środku którego może być zagnieżdżona ich dowolna liczba. ",
+      "answerCode": "<div>\n  <span>Witaj, { name }</span>\n  <div className=\"user-info\">\n    <span className=\"age\">Wiek: {age}</span>\n  </div>\n</div>",
+      "tags": [
+        "React"
+      ],
+      "id": 194
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak zastosować obiekt Fragment, który w Reacie może zastąpić diva lub inny element będącym głównym tagiem?",
+      "questionCode": "",
+      "answerContent": "Poprzez zaimportowanie komponentu Fragment z biblioteki React lub poprzez użycie zapisu skrótowego:",
+      "answerCode": "import React, {Fragment} from \"react\"; //opcja 1\n<Fragment>\n  <span>Anna Kowalska</span>\n</Fragment>\n<> // zapis skrócony, bez konieczności importowania\n  <span>Anna Kowalska</span>\n</>",
+      "tags": [
+        "React"
+      ],
+      "id": 195
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jakich przypadkach i w jakim celu należy stosować w Reacie atrybut key?",
+      "questionCode": "",
+      "answerContent": "W renderowaniu elementów list w Reacie należy stosować atrybut key - unikalny w ramach jednej listy klucz (ID, unikalny element, ewentualnie indeks). Klucze ograniczają konieczność wykonywanych porównań zmian. ",
+      "answerCode": "const tab = [1, 2, 5, 2, 4, 1];\nconst list = tab.map((element, index) => <li key={index}>{element}</li>); // z zastosowaniem metody map\n<ul> //bezpośrednio\n  <li key=\"Jan\">Jan</li>\n  <li key=\"Anna\">Anna</li>\n</ul>\n",
+      "tags": [
+        "React"
+      ],
+      "id": 196
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest komponent w Reacie?",
+      "questionCode": "",
+      "answerContent": "Komponent to pojedynczy element interfejsu użytkownika odpowiedzialny za konkretną część aplikacji. Składa się z elementów i/lub innych komponentów.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 197
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie są dwa podstawowe sposoby zapisywania komponentów w React?",
+      "questionCode": "",
+      "answerContent": "Komponenty można zapisywać w React na dwa podstawowe sposoby: funkcyjnie - każdy komponent to osobna funkcja zwracająca określoną strukturę JSX, lub klasowo - analogicznie jak klasy wprowadzone w ES6",
+      "answerCode": "function FunkcionComponent() {\n  return <h1>Komponent funkcyjny</h1>;\n}\nclass ClassComponent extends Component {\n  render() {\n    return <h1>Komponent klasowy</h1>;\n  }\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 198
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak powinna zostać zadeklarowana funkcja przy tworzeniu komponentu funkcyjnego - zapis standardowy, wyrażenie anonimowe czy funkcja strzłkowa?",
+      "questionCode": "",
+      "answerContent": "Przy tworzeniu komponentu funkcyjnego nie ma znaczneia w jaki sposób zadeklarowana jest funkcja. Wszystie sposoby są dopuszczalne.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 199
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co należy zaimportować by stworzyć komponent klasowy w React?",
+      "questionCode": "",
+      "answerContent": "Aby stworzyć komponent klasowy w React należy zaimportować całą bibliotekę React, jak i osobno jej części, czyli klasy Component. ",
+      "answerCode": "import React, {Component} from \"react\";\n \nclass HelloWorld extends Component {\n  render() {\n    return <h1>Hello, World!</h1>;\n  }\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 200
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy komponent w React może nie zwracać niczego?",
+      "questionCode": "",
+      "answerContent": "Komponent w React musi zawsze zwrócić jakąś wartość, w przeciwnym razie zostanie zwrócony błąd. Komponent może zwrócić wartość null. ",
+      "answerCode": "const HelloWorld = () => null;",
+      "tags": [
+        "React"
+      ],
+      "id": 201
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy zwracany tag w komponencie w React może znajdować się w innej linii niż return?",
+      "questionCode": "",
+      "answerContent": "Zwracany tag w komponencie React musi znajdować się w tej samej linii co return. Zwracane elementy można opleść okrągłymi nawiasami. ",
+      "answerCode": "const HelloWorld = () => {\n  return <h1>Hello World!</h1>;\n}\nconst HelloWorld = () => {\n  return ( //nawias rozpoczyna się w linii z return\n    <div> ... ",
+      "tags": [
+        "React"
+      ],
+      "id": 202
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak należy nazywać komponenty w React?",
+      "questionCode": "",
+      "answerContent": "Komponenty w React, zarówno klasowe jak i funkcyjne, należy zawsze nazywać z wielkiej litery. ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 203
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób wykonać destrukturyzacje obiektu props w komponencie funkcyjnym w React?",
+      "questionCode": "",
+      "answerContent": "W komponencie funkcyjnym destrukturyzacje props można wykonać na dwa sposoby: wewnątrz funkcji lub w momencie deklaracji",
+      "answerCode": "const Calc = (props) => {\n  const {numberA, numberB} = props; //wewnątrz funkcji\n  return <h1>{numberA + numberB}</h1>\n}\nconst Calc = ({numberA, numberB}) => { //przy delkaracji\n  return <h1>{numberA + numberB}</h1> \n}",
+      "tags": [
+        "React"sowała
+      ],
+      "id": 204
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "\"W jaki sposób wykonać destrukturyzacje obiektu props w komponencie klasowym w React?\"",
+      "questionCode": "",
+      "answerContent": "W komponencie klasowym w react destrukturyzacje props należy przeprowadzić w metodzie render:",
+      "answerCode": "class Calculator extends Component {\n  render() { // Odwołujemy się do this.props\n    const {numberA, numberB} = this.props;\n    return <h1>{numberA + numberB}</h1>\n  }\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 205
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Na czym polega kompozycja w React?",
+      "questionCode": "",
+      "answerContent": "Kompozycja polega na tym, że bardziej specyficzne komponenty zwracają w swoim wyjściu te bardziej generyczne. Komponent zagnieżdżony w innym komponencie jest wyświetlany pod kluczem props.children",
+      "answerCode": "const Wrapper = (props) => {\n  return (\n    <div className=\"wrapper\">\n      <h1>{props.title}</h1>\n      {props.children}  //komponent zagnieżdżony\n    </div>\n  );\n};",
+      "tags": [
+        "React"
+      ],
+      "id": 206
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym charakteryzują się Pure functions?",
+      "questionCode": "",
+      "answerContent": "Pure function (czysta funkcja) to taka funkcja, która zawsze zwraca te same dane gdy przyjmuje te same parametry oraz nie posiada skutków ubocznych. Czysta funkcja zależna jest tylko od wartości przekazywanej do niej bezpośrednio.",
+      "answerCode": "const add1 = (a, b) => a + b; //add1  to czysta funkcja\nadd(2, 5) // return 7\nconst add2 = (a,b) => {\n  result = a + b;\n  return result; //add2 nie można nazwać czystą funckją\n};",
+      "tags": [
+        "React"
+      ],
+      "id": 207
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co oznacza stwierdzenie, że komponenty w React w sosunku do props mają zachowywać się jak czyste funkcje ?",
+      "questionCode": "",
+      "answerContent": "komponenty w React w sosunku do props mają zachowywać się jak czyste funkcje tzn. komponent nie może w żadnej chwili zmienić niczego, co otrzymał w swoich props. Dozwolone jest jedynie wykonywanie na nich obliczeń czy metod iteracyjnych.",
+      "answerCode": "this.props.numberA = 123; // niedozwolona modyfikacja bezpośrednia",
+      "tags": [
+        "React"
+      ],
+      "id": 208
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy atrybut key przekazywany do dowlonego komponentu jest widoczny w props tego komponentu? ",
+      "questionCode": "",
+      "answerContent": "Atrybut key przekazywany do dowolnego komponentu nie jest widoczny w props tego komponentu. Jest on jedynie wykorzystywany wewnętrznie przez React. ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 209
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy atrybut key powinien być przekazywany do komponentu? ",
+      "questionCode": "",
+      "answerContent": "Atrybut key powinien być przekazywany bezpośrednio do każdego powtarzającego się elementu lub komponentu.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 210
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Gdzie powinny być przechowywane funkcje wywoływane prze zdarzeniach w React?",
+      "questionCode": "",
+      "answerContent": "W praktyce, z powodu tego, że komponenty w React powinny być zamkniętą, samowystarczalną jednostką, zdarzenia powinny być metodami w komponencie (powinny znajdować się wewnątrz komponentu).",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 211
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Chcąc skorzystać ze stanu (state) w komponencie klasowym zawsze na początku powinniśmy przyjąć props. W jakim celu i jak można (w komponencie klasowym) uniknąć takiego zapisu?",
+      "questionCode": "class User extends Component{\n  constructor(props) {\n    super(props); // Zawsze pierwsza linijka! \n    this.state = {\n    //Dowolne elementy do przechowania\n  };\n  }",
+      "answerContent": "W komponencie klasowym należy wywołać super(props) alby mieć dostęp do this.props wewnątrz komponentu. Aby uniknąć tego zapisu należy skorzystać z plugina property initializer (inicjalizator własciwości)",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 212
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie trzy najważniejsze fazy życia komponentu rozróżnia React?",
+      "questionCode": "",
+      "answerContent": "1. Zamontowanie (mount)-pierwsze realne pojawienie się komponentu w DOM. 2. Aktualizacja (update) - akutalizacja np o nowy zestaw props od komponentu nadrzędnego. 3. Odmontowanie (unmont) - usunięcie komponentu z DOM bez aktualizacji.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 213
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest poprawna kolejnoś uruchamiania poniższych metod w cyklu życia komponentu klasowego w React? ",
+      "questionCode": "componentDidMount\ncomponentWillUnmomnt (w razie odmontowania)\nrender\nconstructor\n",
+      "answerContent": "Poprawna kolejnośc uruchamiania metod cyklu życia komponentu klasowego w React:",
+      "answerCode": "constructor\nrender\ncomponentDidMount\ncomponentWillUnmomnt (w razie odmontowania)",
+      "tags": [
+        "React"
+      ],
+      "id": 214
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym są React Hooks dostępne od wersji 16.8 React?",
+      "questionCode": "",
+      "answerContent": "Ract Hooks to funkcje JavaScriptowe pozwalające zaszczepić w komponentach funkcyjnych właściwości znane z komponentów klasowych: m.in. stan komponentu i cykl życia. Najważniejsze Hooki w React to useState i useEffect ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 215
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy React Hooks działają w komponentach klasowych?",
+      "questionCode": "",
+      "answerContent": "React Hooks nie działają w komponentach klasowych.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 216
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy React Hooks można definiować w pętlach, warunkach czy zagnieżdżonych funkcjach?",
+      "questionCode": "",
+      "answerContent": "React Hooks nie można definiować w pętlach, warunkach czy zagnieżdżonych funkcjach?",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 217
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Gdzie można używać React Hooks?",
+      "questionCode": "",
+      "answerContent": "React Hooks mogą być używane tylko w komponencie funkcyjnym lub w innym Hooku. Nie możemy więc używać Hooków w funkcjach nie związanych z komponentem Reactowym.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 218
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest metoda useState z React?",
+      "questionCode": "",
+      "answerContent": "Metoda useState to podstawowy Hook w React pozwalający zaszczepić stan wewnętrzny do komponentu funkcyjnego. ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 219
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co należy zrobić, by móc skorzystac z metody useState?",
+      "questionCode": "",
+      "answerContent": "Aby skorzystać z metody useState należy zaimportować ją z biblioteki \"react\":",
+      "answerCode": "import React, {useState} from \"react\";",
+      "tags": [
+        "React"
+      ],
+      "id": 220
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Z czego składa się zmienna state w React Hook useState?",
+      "questionCode": "",
+      "answerContent": "Zmienna state z React Hook useState składa się z tablicy z dwoma elementami: aktualnym stanem i funkcją do zmiany stanu.",
+      "answerCode": "const Counter = () => {\n  const [counter, setCounter] = useState(0);\n  return null;\n} /*counter - zmienna do odczytu stanu\n   setCounter - funkcja do zapisu stanu\n   0 - stan początkowy */",
+      "tags": [
+        "React"
+      ],
+      "id": 221
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy za pomocą metody useState (React Hook) można przetrzymywac więcej niż jeden stan komponentu?",
+      "questionCode": "",
+      "answerContent": "Metoda useState zaczepia pojedynczy stan komponentu. Jeżeli potrzebne jest przetrzymywanie większej ilości danych należy wielokrotnie uruchomić metodę useState w komponencie:",
+      "answerCode": "const Cart = () => {\n  const [sum, setSum] = useState(0);\n  const [products, setProducts] = useState([]);\n  const [invoice, setInvoice] = useState(false);\n  // reszta logiki aplikacji\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 222
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób sprawić, by React Hook useEffect uruchamiał się tylko przy zamontowaniu komponentu?",
+      "questionCode": "",
+      "answerContent": "Aby useEffect uruchomił się tylko raz należy jak drugi parametr (tablica elementów, które po zmianie spowodują ponowne uruchomienie przesłanej do useEffacet funkcji) przekazać pustą tablicę. ",
+      "answerCode": "useEffect(() => {\n    const interval = setInterval(() => {\n      setCounter(prevState => prevState + 1);\n    }, 1000)\n  }, []);",
+      "tags": [
+        "React"
+      ],
+      "id": 223
     }
   ]
 }

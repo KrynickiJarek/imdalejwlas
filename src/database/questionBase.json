@@ -2337,6 +2337,160 @@
         "React"
       ],
       "id": 211
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Chcąc skorzystać ze stanu (state) w komponencie klasowym zawsze na początku powinniśmy przyjąć props. W jakim celu i jak można (w komponencie klasowym) uniknąć takiego zapisu?",
+      "questionCode": "class User extends Component{\n  constructor(props) {\n    super(props); // Zawsze pierwsza linijka! \n    this.state = {\n    //Dowolne elementy do przechowania\n  };\n  }",
+      "answerContent": "W komponencie klasowym należy wywołać super(props) alby mieć dostęp do this.props wewnątrz komponentu. Aby uniknąć tego zapisu należy skorzystać z plugina property initializer (inicjalizator własciwości)",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 212
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie trzy najważniejsze fazy życia komponentu rozróżnia React?",
+      "questionCode": "",
+      "answerContent": "1. Zamontowanie (mount)-pierwsze realne pojawienie się komponentu w DOM. 2. Aktualizacja (update) - akutalizacja np o nowy zestaw props od komponentu nadrzędnego. 3. Odmontowanie (unmont) - usunięcie komponentu z DOM bez aktualizacji.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 213
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest poprawna kolejnoś uruchamiania poniższych metod w cyklu życia komponentu klasowego w React? ",
+      "questionCode": "componentDidMount\ncomponentWillUnmomnt (w razie odmontowania)\nrender\nconstructor\n",
+      "answerContent": "Poprawna kolejnośc uruchamiania metod cyklu życia komponentu klasowego w React:",
+      "answerCode": "constructor\nrender\ncomponentDidMount\ncomponentWillUnmomnt (w razie odmontowania)",
+      "tags": [
+        "React"
+      ],
+      "id": 214
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym są React Hooks dostępne od wersji 16.8 React?",
+      "questionCode": "",
+      "answerContent": "Ract Hooks to funkcje JavaScriptowe pozwalające zaszczepić w komponentach funkcyjnych właściwości znane z komponentów klasowych: m.in. stan komponentu i cykl życia. Najważniejsze Hooki w React to useState i useEffect ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 215
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy React Hooks działają w komponentach klasowych?",
+      "questionCode": "",
+      "answerContent": "React Hooks nie działają w komponentach klasowych.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 216
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy React Hooks można definiować w pętlach, warunkach czy zagnieżdżonych funkcjach?",
+      "questionCode": "",
+      "answerContent": "React Hooks nie można definiować w pętlach, warunkach czy zagnieżdżonych funkcjach?",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 217
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Gdzie można używać React Hooks?",
+      "questionCode": "",
+      "answerContent": "React Hooks mogą być używane tylko w komponencie funkcyjnym lub w innym Hooku. Nie możemy więc używać Hooków w funkcjach nie związanych z komponentem Reactowym.",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 218
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czym jest metoda useState z React?",
+      "questionCode": "",
+      "answerContent": "Metoda useState to podstawowy Hook w React pozwalający zaszczepić stan wewnętrzny do komponentu funkcyjnego. ",
+      "answerCode": "",
+      "tags": [
+        "React"
+      ],
+      "id": 219
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Co należy zrobić, by móc skorzystac z metody useState?",
+      "questionCode": "",
+      "answerContent": "Aby skorzystać z metody useState należy zaimportować ją z biblioteki \"react\":",
+      "answerCode": "import React, {useState} from \"react\";",
+      "tags": [
+        "React"
+      ],
+      "id": 220
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Z czego składa się zmienna state w React Hook useState?",
+      "questionCode": "",
+      "answerContent": "Zmienna state z React Hook useState składa się z tablicy z dwoma elementami: aktualnym stanem i funkcją do zmiany stanu.",
+      "answerCode": "const Counter = () => {\n  const [counter, setCounter] = useState(0);\n  return null;\n} /*counter - zmienna do odczytu stanu\n   setCounter - funkcja do zapisu stanu\n   0 - stan początkowy */",
+      "tags": [
+        "React"
+      ],
+      "id": 221
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Czy za pomocą metody useState (React Hook) można przetrzymywac więcej niż jeden stan komponentu?",
+      "questionCode": "",
+      "answerContent": "Metoda useState zaczepia pojedynczy stan komponentu. Jeżeli potrzebne jest przetrzymywanie większej ilości danych należy wielokrotnie uruchomić metodę useState w komponencie:",
+      "answerCode": "const Cart = () => {\n  const [sum, setSum] = useState(0);\n  const [products, setProducts] = useState([]);\n  const [invoice, setInvoice] = useState(false);\n  // reszta logiki aplikacji\n}",
+      "tags": [
+        "React"
+      ],
+      "id": 222
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "W jaki sposób sprawić, by React Hook useEffect uruchamiał się tylko przy zamontowaniu komponentu?",
+      "questionCode": "",
+      "answerContent": "Aby useEffect uruchomił się tylko raz należy jak drugi parametr (tablica elementów, które po zmianie spowodują ponowne uruchomienie przesłanej do useEffacet funkcji) przekazać pustą tablicę. ",
+      "answerCode": "useEffect(() => {\n    const interval = setInterval(() => {\n      setCounter(prevState => prevState + 1);\n    }, 1000)\n  }, []);",
+      "tags": [
+        "React"
+      ],
+      "id": 223
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jak działa operator && w renderowaniu warunkowym w React?",
+      "questionCode": "",
+      "answerContent": "condition && expression\n\njeżeli condition jest logiczną prawdą (true), to zwróć expression; w przeciwnym przypadku zwróć false.",
+      "answerCode": "return (\n  <div>\n    <h1>Twoja skrzynka e-mail</h1>\n    {unreadMsg.length > 0 && <b>Masz {unreadMsg.length} nowe wiadomości.</b>}\n  </div>\n);",
+      "tags": [
+        "React"
+      ],
+      "id": 224
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jaka jest składania opeartora trójargumentowego w React?",
+      "questionCode": "",
+      "answerContent": "Zgodnie z poniższym przykadem:",
+      "answerCode": "<div>\n  { this.state.isAnyUnreadMsg ? 'Są nowe' : 'Brak nowych' } wiadomości.\n</div>",
+      "tags": [
+        "React"
+      ],
+      "id": 225
     }
   ]
 }
