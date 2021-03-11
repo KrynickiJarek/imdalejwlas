@@ -2491,6 +2491,28 @@
         "React"
       ],
       "id": 225
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie 3 stany może mieć Promise?",
+      "questionCode": "",
+      "answerContent": "Promise może mieć 3 stany: 1. Oczekujący (pending)-stan początkowy, oczekiwanie na rozwiązanie; 2. Spełnony (fulfilled) - zakończył się i zawiera daną zwrotną; 3. Odrzucony (rejected) - operacja nie powiodła sie, dostępny jest powód błędu",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 226
+    },
+    {
+      "difficulty": 1,
+      "questionContent": "Jakie trzy ścieżki stanów może mieć Promise?",
+      "questionCode": "",
+      "answerContent": "Promise może miec trzy ścieżki stanów: 1. Oczekujący, 2 Oczekujący -> Odrzucony, 3. Oczekujący -> Spełniony",
+      "answerCode": "",
+      "tags": [
+        "JavaScript"
+      ],
+      "id": 227
     }
   ]
 }
